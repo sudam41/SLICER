@@ -37,7 +37,8 @@ class Component:
 
 		:return: string - representation of this Component object
 		"""
-		return "Id: {}\nWCET: {}\nPower: {}\nLoc: {}".format(self.ID, self.execution,self.power, self.loc)
+#		return "Id: {}\nWCET: {}\nPower: {}\nLoc: {}".format(self.ID, self.execution,self.power, self.loc)
+		return "component Id: {}".format(self.ID)
 		
 
 
@@ -51,7 +52,9 @@ class Component:
 		
 	@execution.setter
 	def execution(self, val):
-		""" Setter function for the execution instance variable."""
+		""" Setter function for the execution instance variable.
+		:param val: [float] - execution time
+		"""
 		if type(val) is not dict:
 			raise TypeError("execution should be of type dict")
 		
@@ -60,9 +63,9 @@ class Component:
 			if type(taskid) is not int:
 				raise TypeError("Task Id should be of type inteager")
 				
-			if type(time) is not float:
-				raise TypeError("Task Id should be of type float")
-				
+#			if type(time) is not float:
+#				raise TypeError("Execution time should be of type float")
+#				
 			if time <= 0 :
 				raise ValueError("Execution time of task {} on component {} has to greater than 0".format(taskid,self.ID))	
 		
@@ -79,7 +82,9 @@ class Component:
 		
 	@power.setter
 	def power(self, val):
-		""" Setter function for the power instance variable."""
+		""" Setter function for the power instance variable.
+		:param val:[float] - power
+		"""
 		if type(val) is not dict:
 			raise TypeError("power should be of type dict")		
 		
@@ -88,9 +93,9 @@ class Component:
 			if type(taskid) is not int:
 				raise TypeError("Task Id should be of type inteager")
 				
-			if type(powr) is not float:
-				raise TypeError("Power should be of type float")
-				
+#			if type(powr) is not float:
+#				raise TypeError("Power should be of type float")
+#				
 			if powr <= 0 :
 				raise ValueError("power of task {} on component {} has to greater than 0".format(taskid,self.ID))	
 		
@@ -108,7 +113,10 @@ class Component:
 
 	@time.setter
 	def time(self,val):
-			
+		""" Setter function for the time instance variable.
+		
+		:param val:[float] - time that the last task executed on this component.
+		"""	
 		if val < 0 :
 			raise ValueError("time variable cannot be set to a neagative value")	
 		#TODO make sure that time does not redudce
@@ -134,11 +142,17 @@ class Component:
 		return self._loc
 		
 	def assigntask(self,task):
+		"""Assigns a task to this component.
+		
+		:param task: [Task object] - the task to be assigned
+		"""
+	
 		self.assigned_tasks.append(task)
 		
 	def idletime(self,endtime):
-		"""returns the components idle time until a given point
-		:parm endtime: [float] - the idle time is calculated from the start until this point.
+		"""Returns the component's idle time until a given point
+		
+		:parm endtime: [float] - the idle time is calculated from the start (i.e. time = 0) until this point.
 		:return [float] - total idel time on the component.
 		"""
 		total_exe_time = 0

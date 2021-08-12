@@ -61,6 +61,8 @@ class Application:
 	@deadline.setter
 	def deadline(self, val):
 		""" Setter function for the deadline instance variable.
+		
+		param cal:[float] - deadline
 		"""
 		if deadline < 0:
 			raise ValueError("The deadline cannot be a negative value.")

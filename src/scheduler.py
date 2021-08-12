@@ -2,6 +2,8 @@
 
 """ Scheduler class that can schedule tasks into components
 """
+import copy
+import sys
 
 class Scheduler:
 
@@ -76,36 +78,45 @@ class Scheduler:
 
 	
 	def _execute_task(self,task, component):
-		"""Executes a task by moving it from the ready queue to the executed pool. Also updates the time to the end time of the task.
+		"""Executes a task by moving it from the ready queue to the executed pool. 
+		
+		:param task: [Task object] - the task to be executed.
+		:param component: [Component object] - the component that the task will be executed on.
 		"""
-
+		component.assigntask(task)
 		component.time = task.end
 		if component.time>self._app.deadline:
 			return False,component
 		self.executed.append(task)
-		self.readyqueue.remove(self._findinlist(task.ID,self.readyqueue))
-		
 		
 
-#		self._addto_readyqueue()
-		
+		self.readyqueue.remove(self._findinlist(task.ID,self.readyqueue))
 		
 		
 		#TODO: look at the queue dynnamics
 		return True, component
 	
 	def _assign_task(self,task, component):
-#			
+		"""Assigns a task to a component. Updates the start time and the end time of the task.
+		
+		:param task: [Task object] - the task to be assigned.
+		:param component: [Component object] - the component that the task will be assigned to.
+		"""	
 		task.start= max(task.earliest_start,component.time)
 			
 		task.end = task.start+component.execution[task.ID]
-		component.assigntask(task)
-		return task, component
+#		component.assigntask(task)
+		return task
 		
 		
 		
 	def MET(self):
+		"""Schedules the tasks with Minimum Execution Time Algorithm. 
+		Each task in the ready queue is assigned to the component with the minimum execution time in FIFO order. 
+		If two components have the same minimum value, the component with the least idle time is chosen.  
 		
+		:Return: [Bool] - Possibility of scheduling all the tasks in the task pool before the deadline.
+		"""
 		while len(self.readyqueue)>0 or len(self.taskpool)>0:
 			self._addto_readyqueue()
 
@@ -137,8 +148,8 @@ class Scheduler:
 				
 				idx = self.cluster.components.index(best_comp)
 						
-				assignedtask,assignedcomp = self._assign_task(t,best_comp)
-				corr, execomp  = self._execute_task (assignedtask,assignedcomp) 
+				assignedtask = self._assign_task(t,best_comp)
+				corr, execomp  = self._execute_task (assignedtask,best_comp) 
 				
 				if corr:
 					self.cluster.components[idx] = execomp
@@ -146,8 +157,47 @@ class Scheduler:
 			
 			if correct_assignments == 0:
 				return False	
-		return True		
+		return True
+		
+		
+	def ETF(self):
+		"""Schedules the tasks with Earliest Task First Algorithm. 
+		Estimated Completion Time (ECT) for each task in the ready queue for each component is calculated and the combination with the least ECT i completed
+		
+		:Return: [Bool] - Possibility of scheduling all the tasks in the task pool before the deadline.
+		"""
+		while len(self.readyqueue)>0 or len(self.taskpool)>0:
 					
+			self._addto_readyqueue()
+			correct_assignments =0
+			
+			while len(self.readyqueue)>0:
+				ECT_all = [] #Estimated Completion Time
+				for task in self.readyqueue:
+					for comp in self.cluster.components:
+						ECT = comp.execution[task.ID] + max(task.earliest_start,comp.time)
+						ECT_all.append((task,comp,ECT))
+		
+#				
+
+				best_task, best_comp,tim = min(ECT_all, key=lambda x: x[2])		
+				print(best_task, best_comp)	
+				
+				assignedtask = self._assign_task(best_task,best_comp)		
+				corr, execomp = self._execute_task(assignedtask,best_comp)
+				
+				idx = self.cluster.components.index(best_comp)
+				
+				if corr:
+					self.cluster.components[idx] = execomp
+					correct_assignments+=1
+				else:
+					break
+				
+			if correct_assignments == 0:
+				return False	
+		return True
+				
 
 			
 

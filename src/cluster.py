@@ -35,12 +35,18 @@ class Cluster:
 	
 	def add_component(self, comp):
 		""" Add component into the cluster
+		
+		:param comp:[component object] - the component to be added into this cluster.
 		"""
 		self._clus.append(comp)
 		
 	
 	@property
 	def components(self):
+		""" Getter function for the components instance variable.
+
+		:return: list of all components in this cluster.
+		"""
 		return self._clus
 		
 

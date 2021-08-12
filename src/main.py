@@ -23,13 +23,29 @@ from scheduler import Scheduler
 #print ("Task 3 : ", repr(t3))
 
 #second implementation
-edges = ({},{0:2},{0:4.5},{1:1.5,2:1.5})
+edges = ({},{0:2},{0:4.5},{1:1.5,2:0})
 tasks = [0,1,2,3]
 
-A = Application(tasks,edges,9)
+##second implementation
+#edges = ({},{0:2},{0:4.5},{1:1.5,2:0},{})
+#tasks = [0,1,2,3,4]
+
+
+A = Application(tasks,edges,15)
 print("alltasks: ", A.alltasks)
 
 
+
+
+
+##hardcode component for testing
+#power1 = {0:1.1, 1:2.2, 2:3.3, 3:4.4, 4:1}
+#power2 = {0:1.2, 1:2.2, 2:3.3, 3:4.4, 4:1}
+#power3 = {0:1.3, 1:2.2, 2:3.3, 3:4.4, 4:1}
+
+#WCET1 = {0:1.1, 1:2.8, 2:1.6, 3:1.3, 4:11}
+#WCET2 = {0:1.2, 1:2.2, 2:1.0, 3:1.5, 4:11}
+#WCET3 = {0:1.3, 1:3.0, 2:1.6, 3:1.2, 4:10}
 
 
 
@@ -40,7 +56,7 @@ power2 = {0:1.2, 1:2.2, 2:3.3, 3:4.4}
 power3 = {0:1.3, 1:2.2, 2:3.3, 3:4.4}
 
 WCET1 = {0:1.1, 1:2.8, 2:1.6, 3:1.3}
-WCET2 = {0:1.2, 1:2.2, 2:1.6, 3:1.5}
+WCET2 = {0:1.2, 1:2.2, 2:1.0, 3:1.5}
 WCET3 = {0:1.3, 1:3.0, 2:1.6, 3:1.2}
 
 
@@ -56,13 +72,21 @@ clus.add_component(c2)
 #print("\n\n", clus)
 
 S = Scheduler(A,clus)
-go = S.MET()
+#go = S.MET()
 
+#print("final res:",go)
+#for c in clus.components:
+#	print("component:",c.ID)
+#	print (c.assigned_tasks)
+#	
+#	
+print("-----------")
+go = S.ETF()
+print("-----------")
 print("final res:",go)
 for c in clus.components:
 	print("component:",c.ID)
 	print (c.assigned_tasks)
-
 
 
 
