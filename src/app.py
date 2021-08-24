@@ -8,13 +8,18 @@
 from task import Task
 
 class Application:
-	def __init__(self, taskIDs, edges, deadline):
+	def __init__(self, taskIDs, edges, execution, power, deadline):
 		""" Initiaslize an application 
 		
 		:param taskIDs: [list] - contains the IDs of tasks (nodes on the DAG) on this application.
 		:param edges: [tuple of dicts] - contains the edges of the task graph. Index of the tuple represents a target node and contains a dict where the key = source node and value = cost.
+		:param execution: [dict of dicts] - contains the WCET of each task on each type of component.
+		:param power: [dict of dicts] - contains the power of each task on each type of component.
 		:param deadline: [float] - the deadline of the entire application.
 		"""
+		self._execution = execution
+		self._power = power
+
 		self._deadline = deadline
 		
 		self._alltasks = self.__createtasks(taskIDs, edges)
@@ -41,6 +46,23 @@ class Application:
 			
 		return alltasks  
 		
+		
+		
+	@property
+	def execution(self):
+		""" Getter function for the execution instance variable.
+
+		:return: dict indicating the execution time for each task on this component.
+		"""
+		return self._execution
+	
+	@property
+	def power(self):
+		""" Getter function for the power instance variable.
+
+		:return: dict indicating the power for each task on this component.
+		"""
+		return self._power	
 	
 	@property
 	def alltasks(self):

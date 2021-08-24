@@ -92,8 +92,6 @@ class Scheduler:
 
 		self.readyqueue.remove(self._findinlist(task.ID,self.readyqueue))
 		
-		
-		#TODO: look at the queue dynnamics
 		return True, component
 	
 	def _assign_task(self,task, component):
@@ -104,7 +102,7 @@ class Scheduler:
 		"""	
 		task.start= max(task.earliest_start,component.time)
 			
-		task.end = task.start+component.execution[task.ID]
+		task.end = task.start+ self._app.execution[task.ID][component.com_type]
 #		component.assigntask(task)
 		return task
 		
@@ -127,11 +125,11 @@ class Scheduler:
 				min_comp = []
 				for comp in self.cluster.components:
 				
-					if comp.execution[t.ID]< minimum:
-						minimum = comp.execution[t.ID]
+					if self._app.execution[t.ID][comp.com_type]< minimum:
+						minimum = self._app.execution[t.ID][comp.com_type]
 						min_comp.clear()
 						min_comp.append(comp)
-					elif comp.execution[t.ID] == minimum:
+					elif self._app.execution[t.ID][comp.com_type] == minimum:
 						min_comp.append(comp)
 
 				best_comp = min_comp[0]
@@ -175,7 +173,7 @@ class Scheduler:
 				ECT_all = [] #Estimated Completion Time
 				for task in self.readyqueue:
 					for comp in self.cluster.components:
-						ECT = comp.execution[task.ID] + max(task.earliest_start,comp.time)
+						ECT = self._app.execution[task.ID][comp.com_type] + max(task.earliest_start,comp.time)
 						ECT_all.append((task,comp,ECT))
 		
 #				

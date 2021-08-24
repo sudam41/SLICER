@@ -8,11 +8,11 @@
 class Component:
 	"""Represents a computing component within a design point."""
 
-	def __init__(self, ID, execution, power, location, self_temp=50, time=0):
+	def __init__(self, ID, com_type, location, self_temp=50, time=0):
 		""" Initialize a component representing a CPU.
 
-		:param execution: [dict] - execution time of each task on this component.
-		:param power: [dict] - power consumption of each task on this component.
+		:param ID: [Inteager] - ID of this component.
+		:param com_type: [Inteager] - Type of this component.
 		:param location: (x, y) tuple of the location of the component on the grid.
 				 Each component in a designpoint should have a unique location
 		:param self_temp: temperature of cpu upon 100% utilization
@@ -24,9 +24,8 @@ class Component:
 		#        assert self_temp > 0, "Max_temp has to be greater than 0"
 
 		self.ID = ID
+		self.com_type = com_type
 		self._self_temp = self_temp
-		self.execution = execution
-		self.power = power
 		self._loc = location
 		self._time = time
 		self.assigned_tasks = []
@@ -42,64 +41,64 @@ class Component:
 		
 
 
-	@property
-	def execution(self):
-		""" Getter function for the execution instance variable.
+#	@property
+#	def execution(self):
+#		""" Getter function for the execution instance variable.
 
-		:return: dict indicating the execution time for each task on this component.
-		"""
-		return self._execution
-		
-	@execution.setter
-	def execution(self, val):
-		""" Setter function for the execution instance variable.
-		:param val: [float] - execution time
-		"""
-		if type(val) is not dict:
-			raise TypeError("execution should be of type dict")
-		
-		for taskid, time in val.items():
-			
-			if type(taskid) is not int:
-				raise TypeError("Task Id should be of type inteager")
-				
-#			if type(time) is not float:
-#				raise TypeError("Execution time should be of type float")
+#		:return: dict indicating the execution time for each task on this component.
+#		"""
+#		return self._execution
+#		
+#	@execution.setter
+#	def execution(self, val):
+#		""" Setter function for the execution instance variable.
+#		:param val: [float] - execution time
+#		"""
+#		if type(val) is not dict:
+#			raise TypeError("execution should be of type dict")
+#		
+#		for taskid, time in val.items():
+#			
+#			if type(taskid) is not int:
+#				raise TypeError("Task Id should be of type inteager")
 #				
-			if time <= 0 :
-				raise ValueError("Execution time of task {} on component {} has to greater than 0".format(taskid,self.ID))	
-		
-		self._execution= val	
+##			if type(time) is not float:
+##				raise TypeError("Execution time should be of type float")
+##				
+#			if time <= 0 :
+#				raise ValueError("Execution time of task {} on component {} has to greater than 0".format(taskid,self.ID))	
+#		
+#		self._execution= val	
 
 
-	@property
-	def power(self):
-		""" Getter function for the power instance variable.
+#	@property
+#	def power(self):
+#		""" Getter function for the power instance variable.
 
-		:return: dict indicating the power for each task on this component.
-		"""
-		return self._power
-		
-	@power.setter
-	def power(self, val):
-		""" Setter function for the power instance variable.
-		:param val:[float] - power
-		"""
-		if type(val) is not dict:
-			raise TypeError("power should be of type dict")		
-		
-		for taskid,powr in val.items():
-			 
-			if type(taskid) is not int:
-				raise TypeError("Task Id should be of type inteager")
-				
-#			if type(powr) is not float:
-#				raise TypeError("Power should be of type float")
+#		:return: dict indicating the power for each task on this component.
+#		"""
+#		return self._power
+#		
+#	@power.setter
+#	def power(self, val):
+#		""" Setter function for the power instance variable.
+#		:param val:[float] - power
+#		"""
+#		if type(val) is not dict:
+#			raise TypeError("power should be of type dict")		
+#		
+#		for taskid,powr in val.items():
+#			 
+#			if type(taskid) is not int:
+#				raise TypeError("Task Id should be of type inteager")
 #				
-			if powr <= 0 :
-				raise ValueError("power of task {} on component {} has to greater than 0".format(taskid,self.ID))	
-		
-		self._power= val
+##			if type(powr) is not float:
+##				raise TypeError("Power should be of type float")
+##				
+#			if powr <= 0 :
+#				raise ValueError("power of task {} on component {} has to greater than 0".format(taskid,self.ID))	
+#		
+#		self._power= val
 
 
 	@property
