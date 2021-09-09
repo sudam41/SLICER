@@ -10,6 +10,7 @@ class Cluster:
 	"""
 	def __init__(self):
 		self._clus = [] 
+		self._failed_comp = []
 	
 	def __repr__(self):
 		""" Representation of an Cluster object.
@@ -49,6 +50,27 @@ class Cluster:
 		"""
 		return self._clus
 		
+		
+	def fail_component(self,comp_id):
+
+		for comp in _clus:
+			if comp_id == comp.ID:
+				self._failed_comp.append(comp)
+				self._clus.remove(comp)
+				break
+				
+	def get_time_intervals(self):
+		intervals = []
+		for comp in self._clus:
+			for task in comp.assigned_tasks:
+				intervals.append(task.start)
+				intervals.append(task.end)
+		
+		
+#		intervals = list(dict.fromkeys(intervals))
+#		print(intervals)
+		intervals.sort()	
+		return intervals 
 
 	
 	

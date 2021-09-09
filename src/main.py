@@ -5,6 +5,7 @@ from component import Component
 from app import Application
 from cluster import Cluster
 from scheduler import Scheduler
+from simulator import Simulator
 
 #hardcode simple DAG for testing 
 #    t0
@@ -46,9 +47,18 @@ clus.add_component(c0)
 clus.add_component(c1)
 clus.add_component(c2)
 
+
+
+sim =  Simulator(A,clus,"MET")
+
+sim.run()
+
+
+
+
 #print("\n\n", clus)
 
-S = Scheduler(A,clus)
+#S = Scheduler(A,clus)
 
 
 #go = S.MET()
@@ -58,13 +68,13 @@ S = Scheduler(A,clus)
 #	print (c.assigned_tasks)
 	
 	
-print("-----------")
-go = S.ETF()
-print("-----------")
-print("final res:",go)
-for c in clus.components:
-	print("component:",c.ID)
-	print (c.assigned_tasks)
+#print("-----------")
+#go = S.ETF()
+#print("-----------")
+#print("final res:",go)
+#for c in clus.components:
+#	print("component:",c.ID)
+#	print (c.assigned_tasks)
 
 
 

@@ -29,6 +29,7 @@ class Component:
 		self._loc = location
 		self._time = time
 		self.assigned_tasks = []
+		self.alive = True
 		
 
 	def __repr__(self):
