@@ -1,27 +1,57 @@
 #!/usr/bin/env python
 import numpy as np
+import os
+from pyparsing import Word, alphas ,nums, Literal, restOfLine, OneOrMore, ParserElement, White,Optional
 
-C_FACTOR = 0.333
 class Thermal_Parameters():
-	def __init__(self, config, floorplan):
-		self.config = config
-		self.floorplan = floorplan
+	def __init__(self):
+		pass
 #		print(len(floorplan))
+
+	def getThermalParameters(self):
+		"Call Matex to calculate the conductance and capacitance matrices and store in cap.txt and cond.txt"
 		
-	def calcCapacitance(self):
-		cond = np.zeros((len(self.floorplan),len(self.floorplan)))
-		for i,unit in enumerate(self.floorplan):
-			cond[i,i] = self.config["p_chip"] * self.config["t_chip"]* unit[1] *unit[2] * C_FACTOR
+		os.system("../MatEx/MatEx -c matex.config -f multicore.flp -p multicore.ptrace >/dev/null 2>&1")
+		
+		
+	def loadCapacitance(self):
+		conffile = open("../MatEx/cap.txt", "r")
+		val = Word('-'+nums+'.'+'e'+nums).setParseAction(lambda tokens: float(tokens[0])) 
+		results = OneOrMore(val).parseFile(conffile)
+		
+		cap = np.zeros((len(results),len(results)))
+		print(cap)
+		for i,r in enumerate(results):
+			cap[i][i]=r
 			
-		print(cond)
-		return cond
+		return(cap)
 		
-	def calcConductance(self):
-		Gx = np.zeros(len(self.floorplan))
-		Gy = np.zeros(len(self.floorplan))
 		
-		for i,unit in enumerate(self.floorplan):
-			Gx[i] = 1/((unit[1]/2)/(self.config["k_chip"] * unit[1] *unit[2]))
-			Gy[i] = 1/((unit[2]/2)/(self.config["k_chip"] * unit[1] *unit[2]))
+	def loadConductance(self):
+		conffile = open("../MatEx/cond.txt", "r")
+
+		ParserElement.setDefaultWhitespaceChars(' \t') 
+
+		val = Word('-'+nums+'.'+'e'+nums).setParseAction(lambda tokens: float(tokens[0])) 
+
+		line = OneOrMore(val) + White('\n')
+		val.ignore('#' + restOfLine) 
+
+
+
+		results = OneOrMore(line).parseFile(conffile)
+
+		res = []
+		row = []
+		for r in results:
+			
+			if r != '\n':		
+				row.append(r)
+			else:
+				temp = np.array(row)
+				res.append(temp)
+				row.clear()
+
+		return np.array(res)
 			
 		
