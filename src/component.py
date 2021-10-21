@@ -26,7 +26,7 @@ class Component:
 		self.ID = ID
 		self.com_type = com_type
 		self._self_temp = self_temp
-		self._loc_botleft = location
+		self.loc_botleft = location
 		self.loc_topright = (location[0]+width,location[1]+height)
 		self._time = time
 		self.assigned_tasks = []
@@ -38,8 +38,8 @@ class Component:
 
 		:return: string - representation of this Component object
 		"""
-#		return "Id: {}\nWCET: {}\nPower: {}\nLoc: {}".format(self.ID, self.execution,self.power, self.loc)
-		return "component Id: {}".format(self.ID)
+		return "Id: {}\nType: {}\nLoc: {} | {}".format(self.ID, self.com_type, self.loc_botleft,self.loc_topright)
+#		return "component Id: {}".format(self.ID)
 		
 
 
@@ -140,7 +140,8 @@ class Component:
 
 		:return: integer tuple (x, y) indicating the position of this component.
 		"""
-		return self._loc_botleft
+		print("***HERE!")
+		return self.loc_botleft
 		
 	def assigntask(self,task):
 		"""Assigns a task to this component.

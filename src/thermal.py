@@ -4,31 +4,29 @@
 import numpy as np
 from scipy import linalg
 from scipy import sparse
+from calc_thermal_parameters import Thermal_Parameters
+class Thermal():
 
-class thermal():
 
-
-	def __init__(self,start_time,t, alive_components, power ,init_temp, cond, cap, tick):
+	def __init__(self, no_of_comp):
 	
-		self.start = start_time
-		self.end = t
-		self.alive = alive_components
-		self.power = power
-		self.init_temp = init_temp
-		self.cond = cond
-		self.cap = cap
-		self.tick= tick
+		self.parameters = Thermal_Parameters()	
+		self.no_of_comp = no_of_comp
 		
-		self.gamma = (linalg.inv(cap)).dot(cond)
-		self.psi = linalg.exppm(-gamma)
+		self.parameters.getThermalParameters()
+		self.cap = self.parameters.cap[0:no_of_comp,0:no_of_comp]
+		self.cond = self.parameters.cond[0:no_of_comp,0:no_of_comp]
+		
+		self.gamma = (linalg.inv(self.cap)).dot(self.cond)
+		self.psi = linalg.expm(-self.gamma)
 		
 		I_minus_psi = sparse.identity(self.psi.shape[0]) - self.psi
-		self.phi = (linalg.inv(gamma).dot(I_minus_psi)).dot(linalg.inv(cap))
+		self.phi = (linalg.inv(self.gamma).dot(I_minus_psi)).dot(linalg.inv(self.cap))
 		
 		
 	def step_without_power_change(self,start,end,tick,init_temp,prev_temp):
 		
-		time = np.aragne(start,stop,tick)
+		time = np.arange(start,end,tick)
 		Tk_minus_1 = prev_temp
 		Tk = init_temp
 		temp = [] 

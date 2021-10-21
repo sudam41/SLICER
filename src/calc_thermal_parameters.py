@@ -8,10 +8,13 @@ class Thermal_Parameters():
 		pass
 #		print(len(floorplan))
 
-	def getThermalParameters(self):
+	def getThermalParameters(self,source = 'matex'):
 		"Call Matex to calculate the conductance and capacitance matrices and store in cap.txt and cond.txt"
 		
-		os.system("../MatEx/MatEx -c matex.config -f multicore.flp -p multicore.ptrace >/dev/null 2>&1")
+		if source == 'matex':
+			os.system("../MatEx/MatEx -c matex.config -f multicore.flp -p multicore.ptrace >/dev/null 2>&1")
+			self.cap = self.loadCapacitance()
+			self.cond =  self.loadConductance()
 		
 		
 	def loadCapacitance(self):
@@ -20,7 +23,7 @@ class Thermal_Parameters():
 		results = OneOrMore(val).parseFile(conffile)
 		
 		cap = np.zeros((len(results),len(results)))
-		print(cap)
+		
 		for i,r in enumerate(results):
 			cap[i][i]=r
 			

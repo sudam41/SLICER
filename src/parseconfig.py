@@ -5,8 +5,9 @@ from pyparsing import Word, alphas ,nums, Literal, restOfLine, OneOrMore
 class Parsing():
 
 	def __init__(self, conffile,floorplanfile):
-		self.conffile = conffile
-		self.floorfile = floorplanfile
+	
+		self.conffile = "../MatEx/{}".format(conffile)
+		self.floorfile = "../MatEx/{}".format(floorplanfile)
 		
 	def parseconfig(self):
 

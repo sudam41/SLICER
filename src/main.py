@@ -6,6 +6,7 @@ from app import Application
 from cluster import Cluster
 from scheduler import Scheduler
 from simulator import Simulator
+from parseconfig import Parsing
 
 #hardcode simple DAG for testing 
 #    t0
@@ -32,20 +33,26 @@ A = Application(tasks, edges, WCET, power, 15)
 print("alltasks: ", A.alltasks)
 
 
+#parsing floorplan to opbtain the components
+P = Parsing("matex.config","multicore.flp")
+flp = P.parsefloorplan()
 
-
-
-
-
-#hardcode component for testing
-c0 = Component(0, 0, (0,0))
-c1 = Component(1, 1, (0,1))
-c2 = Component(2, 2, (1,0))
-
+#create cluster and add components
 clus = Cluster()
-clus.add_component(c0)
-clus.add_component(c1)
-clus.add_component(c2)
+for i,unit in enumerate(flp):
+	clus.add_component(Component(i, 0, (unit[3],unit[4]),unit[1],unit[2]))
+
+
+
+##hardcode component for testing
+#c0 = Component(0, 0, (0,0))
+#c1 = Component(1, 1, (0,1))
+#c2 = Component(2, 2, (1,0))
+
+#clus = Cluster()
+#clus.add_component(c0)
+#clus.add_component(c1)
+#clus.add_component(c2)
 
 
 
@@ -66,8 +73,8 @@ sim.run()
 #for c in clus.components:
 #	print("component:",c.ID)
 #	print (c.assigned_tasks)
-	
-	
+#	
+#	
 #print("-----------")
 #go = S.ETF()
 #print("-----------")

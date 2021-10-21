@@ -21,8 +21,8 @@ class Cluster:
 		compids = [ [ None for y in range( size) ] for x in range( size ) ]
 		
 		for comp in self._clus:
-			x= comp.loc[0]
-			y= comp.loc[1]
+#			x= comp.loc[0]
+#			y= comp.loc[1]
 			
 			compids[x][y] = comp.ID
 		
@@ -40,6 +40,13 @@ class Cluster:
 		:param comp:[component object] - the component to be added into this cluster.
 		"""
 		self._clus.append(comp)
+		
+	def number_of_comps(self):
+		""" return the number of components in the cluster.
+		
+		:return: number of components.
+		"""
+		return(len(self._clus))
 		
 	
 	@property
