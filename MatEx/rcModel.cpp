@@ -483,6 +483,7 @@ bool RCmodel::loadCblock(const ConfigurationParameters &configuration, Floorplan
 				C(i,j) = - C(i,j);
 
 	//output the capacitance into a text file
+	cout<<numberThermalNodes;
 	ofstream myfile;
   	myfile.open ("cap.txt");
   	myfile << A;

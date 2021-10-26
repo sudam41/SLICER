@@ -45,10 +45,11 @@ class Simulator():
 		"""
 		temp_itter = []
 		start_temp = initial_temp
+#		print("starttemp:",start_temp.shape)
 		prev_temp = initial_temp
 		prev_time = time_intervals[0]
-		prev_power = np.zeros(num_comp)
-		power = np.zeros(num_comp)
+		prev_power = np.zeros((num_comp,1),dtype=float)
+		power = np.zeros((num_comp,1),dtype=float)
 		
 		
 		for t in time_intervals[1:]:
@@ -60,23 +61,36 @@ class Simulator():
 						if task.start <= prev_time and task.end>= t:
 							power[comp.ID] = self._app.power[task.ID][comp.com_type]
 			
-			temp_itter.append(thermalModel.step_with_power_change(prev_time, tick, power,prev_power,start_temp,prev_temp))
-			print(temp_itter)
+
 			
-			temp_itter.append(thermalModel.step_without_power_change(prev_time+tick,t,tick,start_temp,prev_temp))
-			print(temp_itter)
+#			print(power)
+			temp_itter = temp_itter + thermalModel.step_with_power_change(prev_time, tick, power,prev_power,start_temp,prev_temp)
+			print("with power:",temp_itter[-1])
+
+
+
+			prev_temp = start_temp
+			start_temp = temp_itter[-1][1]
+#			print("After prev:",prev_temp,"\nstart:",start_temp)
+			
+			
+			temp_itter = temp_itter + thermalModel.step_without_power_change(prev_time+tick,t,tick,start_temp,prev_temp)
+			print("without power:",temp_itter[-1])
 
 
 			prev_power = power
 			prev_time = t-tick
-			prev_temp = temp_itter[prev_time]
+			prev_temp = start_temp
+			start_temp = temp_itter[-1][1]
+#			print("temp_ittr:",len(temp_itter))
+#			print("prevtemp_simu:",prev_temp)
 			
 #			samples[alive_components] = self.model(temp[alive_components]) * np.random.weibull(5.0,np.sum(alive_components))
 #			wear[alive_components] += np.divide(1, np.floor(samples), out=np.zeros_like(samples), where=samples != 0)
 
+#		print("Temperature in itteration: ",temp_itter)
 		
-		
-		return wear
+#		return wear
 	       	 
 		
 		
@@ -90,11 +104,12 @@ class Simulator():
 		print(time_intervals)
 		num_comp = self._cluster.number_of_comps()
 		alive_components =  np.ones(num_comp,dtype=bool)
-		initial_temp = np.zeros(num_comp,dtype=float)
+		initial_temp = np.zeros((num_comp,1),dtype=float)
+#		print("inittempshape:",initial_temp.shape)
 		
 		thermal_model = Thermal(num_comp)
 		
-		tick=0.001
+		tick=0.1
 		self.simulate_itteration(time_intervals,num_comp, alive_components, initial_temp,thermal_model,tick)
 		
 #		samples = np.zeros(alive_components.shape)

@@ -12,7 +12,8 @@ class Thermal_Parameters():
 		"Call Matex to calculate the conductance and capacitance matrices and store in cap.txt and cond.txt"
 		
 		if source == 'matex':
-			os.system("../MatEx/MatEx -c matex.config -f multicore.flp -p multicore.ptrace >/dev/null 2>&1")
+			os.system("../MatEx/MatEx -c matex.config -f multicore.flp -p multicore.ptrace #>/dev/null 2>&1")
+			print("MatEx...")
 			self.cap = self.loadCapacitance()
 			self.cond =  self.loadConductance()
 		
