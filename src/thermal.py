@@ -64,7 +64,7 @@ class Thermal():
 		Pk_plus_1 = next_power
 		
 #		print("SHAPES: ",Tk_minus_1.shape,Tk.shape,Pk.shape,Pk_plus_1.shape)
-		
+#		print("power change:",Pk_plus_1-Pk)
 		Tk_plus_1 = ((self.psi + sparse.identity(self.psi.shape[0])).dot(Tk) - self.psi.dot(Tk_minus_1)) + self.phi.dot(Pk_plus_1 - Pk)
 		
 		return [(start+tick , Tk_plus_1)]

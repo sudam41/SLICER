@@ -63,9 +63,9 @@ class Simulator():
 			
 
 			
-#			print(power)
+#			print("P:",power,"\nPP:",prev_power)
 			temp_itter = temp_itter + thermalModel.step_with_power_change(prev_time, tick, power,prev_power,start_temp,prev_temp)
-			print("with power:",temp_itter[-1])
+#			print("with power:",temp_itter[-1])
 
 
 
@@ -75,10 +75,10 @@ class Simulator():
 			
 			
 			temp_itter = temp_itter + thermalModel.step_without_power_change(prev_time+tick,t,tick,start_temp,prev_temp)
-			print("without power:",temp_itter[-1])
+#			print("without power:",temp_itter[-1])
 
 
-			prev_power = power
+			prev_power = np.copy(power)
 			prev_time = t-tick
 			prev_temp = start_temp
 			start_temp = temp_itter[-1][1]
@@ -88,7 +88,7 @@ class Simulator():
 #			samples[alive_components] = self.model(temp[alive_components]) * np.random.weibull(5.0,np.sum(alive_components))
 #			wear[alive_components] += np.divide(1, np.floor(samples), out=np.zeros_like(samples), where=samples != 0)
 
-#		print("Temperature in itteration: ",temp_itter)
+		print("Temperature in itteration: ",temp_itter)
 		
 #		return wear
 	       	 
