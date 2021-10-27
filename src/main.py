@@ -7,17 +7,18 @@ from cluster import Cluster
 from scheduler import Scheduler
 from simulator import Simulator
 from parseconfig import Parsing
+from plotter import Plotter
 
 #hardcode simple DAG for testing 
 #    t0
 #    /\
-#  2/  \4.5
+#0.5/  \2.5
 #  t1   t2
 #   \   /
-#1.5 \ /1.5
+#0.75\ /1
 #     t3
 
-edges = ({},{0:2},{0:4.5},{1:1.5,2:0})
+edges = ({},{0:0.5},{0:2.5},{1:0.75,2:1})
 tasks = [0,1,2,3]
 
 #
@@ -25,11 +26,11 @@ tasks = [0,1,2,3]
 #tasks = [0,1,2,3,4]
 
 
-power = {0:{0:1.1, 1:11.0, 2:5.1}, 1:{0:2.2, 1:7.4, 2:2.2}, 2:{0:15.0, 1:4.3, 2:3.3}, 3:{0:11.2, 1:4.4, 2:10.4}}
-WCET = {0:{0:1.1, 1:1.2, 2:1.3}, 1:{0:2.8, 1:2.2, 2:3.0}, 2:{0:1.6, 1:1.0, 2:1.6}, 3:{0:1.3, 1:1.5, 2:1.2}}
+power = {0:{0:1.1, 1:11.0, 2:5.1}, 1:{0:2.2, 1:50.0, 2:2.2}, 2:{0:15.0, 1:4.3, 2:3.3}, 3:{0:11.2, 1:4.4, 2:10.4}}
+WCET = {0:{0:5.0, 1:14.0, 2:7.0}, 1:{0:6.1, 1:40.0, 2:7.2}, 2:{0:3.0, 1:25.0, 2:4.5}, 3:{0:8.4, 1:30.0, 2:7.9}}
 
 
-A = Application(tasks, edges, WCET, power, 15)
+A = Application(tasks, edges, WCET, power, 100000)
 print("alltasks: ", A.alltasks)
 
 
@@ -40,9 +41,14 @@ flp = P.parsefloorplan()
 #create cluster and add components
 clus = Cluster()
 for i,unit in enumerate(flp):
-	clus.add_component(Component(i, 0, (unit[3],unit[4]),unit[1],unit[2]))
+	clus.add_component(Component(i, 1, (unit[3],unit[4]),unit[1],unit[2]))
 
 
+print("cluster: ")
+for comp in clus._clus:
+	print(comp)
+	
+print("clus end")
 
 ##hardcode component for testing
 #c0 = Component(0, 0, (0,0))
@@ -59,6 +65,8 @@ for i,unit in enumerate(flp):
 sim =  Simulator(A,clus,"MET")
 
 sim.run()
+
+
 
 
 

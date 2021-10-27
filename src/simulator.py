@@ -9,7 +9,7 @@ import numpy as np
 from electromigration import electro_migration
 from scheduler import Scheduler
 from thermal import Thermal
-
+from plotter import Plotter
 
 class Simulator():
 
@@ -49,18 +49,24 @@ class Simulator():
 		prev_temp = initial_temp
 		prev_time = time_intervals[0]
 		prev_power = np.zeros((num_comp,1),dtype=float)
-		power = np.zeros((num_comp,1),dtype=float)
 		
 		
+#		time= time_intervals[0]
+		power_over_time=[]
 		for t in time_intervals[1:]:
 		
+			power = np.zeros((num_comp,1),dtype=float)
 #			time = t - prev_time
 			for comp in self._cluster._clus:
 				if(alive_components[comp.ID] == True):
 					for task in comp.assigned_tasks:
-						if task.start <= prev_time and task.end>= t:
+#						print("start:",task.start," prev+tick:",prev_time+tick, " end:", task.end, " t:",t)
+						if task.start <= prev_time+tick and task.end>= t:
 							power[comp.ID] = self._app.power[task.ID][comp.com_type]
 			
+			power_over_time.append(power)
+			
+				
 
 			
 #			print("P:",power,"\nPP:",prev_power)
@@ -68,18 +74,18 @@ class Simulator():
 #			print("with power:",temp_itter[-1])
 
 
-
+			prev_time = temp_itter[-1][0]
 			prev_temp = start_temp
 			start_temp = temp_itter[-1][1]
 #			print("After prev:",prev_temp,"\nstart:",start_temp)
 			
 			
-			temp_itter = temp_itter + thermalModel.step_without_power_change(prev_time+tick,t,tick,start_temp,prev_temp)
+			temp_itter = temp_itter + thermalModel.step_without_power_change(prev_time,t,tick,start_temp,prev_temp)
 #			print("without power:",temp_itter[-1])
 
-
+			
 			prev_power = np.copy(power)
-			prev_time = t-tick
+			prev_time = temp_itter[-1][0]
 			prev_temp = start_temp
 			start_temp = temp_itter[-1][1]
 #			print("temp_ittr:",len(temp_itter))
@@ -88,7 +94,13 @@ class Simulator():
 #			samples[alive_components] = self.model(temp[alive_components]) * np.random.weibull(5.0,np.sum(alive_components))
 #			wear[alive_components] += np.divide(1, np.floor(samples), out=np.zeros_like(samples), where=samples != 0)
 
-		print("Temperature in itteration: ",temp_itter)
+#		print("Temperature in itteration: ",temp_itter)
+	
+		
+		Plot = Plotter()
+		Plot.plot_schedule(self._cluster)
+		Plot.plot_power(time_intervals,power_over_time)
+		Plot.plot_temp(temp_itter)
 		
 #		return wear
 	       	 
@@ -109,7 +121,7 @@ class Simulator():
 		
 		thermal_model = Thermal(num_comp)
 		
-		tick=0.1
+		tick=0.01
 		self.simulate_itteration(time_intervals,num_comp, alive_components, initial_temp,thermal_model,tick)
 		
 #		samples = np.zeros(alive_components.shape)

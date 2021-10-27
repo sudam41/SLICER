@@ -48,7 +48,7 @@ class Scheduler:
 		"""Updates the ready queue by adding tasks from the task pool, if they have no dependancies, into the ready queue and then removes those tasks from the task pool. 
 		"""
 		temp = []
-	
+
 		for t in self.taskpool:
 			if t.dep == None :
 				t.earliest_start = 0
@@ -118,13 +118,13 @@ class Scheduler:
 		while len(self.readyqueue)>0 or len(self.taskpool)>0:
 			self._addto_readyqueue()
 
-					
+
 			correct_assignments =0
 			for t in self.readyqueue:
 				minimum = 100000
 				min_comp = []
 				for comp in self.cluster.components:
-				
+
 					if self._app.execution[t.ID][comp.com_type]< minimum:
 						minimum = self._app.execution[t.ID][comp.com_type]
 						min_comp.clear()
