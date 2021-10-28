@@ -43,6 +43,7 @@ class Parsing():
 		
 		results = OneOrMore(line).parseFile(floorfile)
 		
+		print("results:",results)
 		res = []
 		name = ""
 		width = 0

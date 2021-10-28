@@ -9,6 +9,8 @@ from simulator import Simulator
 from parseconfig import Parsing
 from plotter import Plotter
 
+import sys
+
 #hardcode simple DAG for testing 
 #    t0
 #    /\
@@ -26,7 +28,7 @@ tasks = [0,1,2,3]
 #tasks = [0,1,2,3,4]
 
 
-power = {0:{0:1.1, 1:11.0, 2:5.1}, 1:{0:2.2, 1:50.0, 2:2.2}, 2:{0:15.0, 1:4.3, 2:3.3}, 3:{0:11.2, 1:4.4, 2:10.4}}
+power = {0:{0:1.1, 1:11.0, 2:0.01}, 1:{0:2.2, 1:50.0, 2:0.02}, 2:{0:15.0, 1:4.3, 2:0.05}, 3:{0:11.2, 1:4.4, 2:0.04}}
 WCET = {0:{0:5.0, 1:14.0, 2:7.0}, 1:{0:6.1, 1:40.0, 2:7.2}, 2:{0:3.0, 1:25.0, 2:4.5}, 3:{0:8.4, 1:30.0, 2:7.9}}
 
 
@@ -38,6 +40,7 @@ print("alltasks: ", A.alltasks)
 P = Parsing("matex.config","multicore.flp")
 flp = P.parsefloorplan()
 
+print("flp size:",len(flp))
 #create cluster and add components
 clus = Cluster()
 for i,unit in enumerate(flp):
@@ -49,6 +52,7 @@ for comp in clus._clus:
 	print(comp)
 	
 print("clus end")
+#sys.exit()
 
 ##hardcode component for testing
 #c0 = Component(0, 0, (0,0))

@@ -11,6 +11,8 @@ from scheduler import Scheduler
 from thermal import Thermal
 from plotter import Plotter
 
+import sys
+
 class Simulator():
 
 	def __init__(self, app, cluster,scheduler_type,model=electro_migration):
@@ -44,9 +46,9 @@ class Simulator():
 		:return: float - wear of a single itteration
 		"""
 		temp_itter = []
-		start_temp = initial_temp
+		start_temp = np.copy(initial_temp)
 #		print("starttemp:",start_temp.shape)
-		prev_temp = initial_temp
+		prev_temp = np.copy(initial_temp)
 		prev_time = time_intervals[0]
 		prev_power = np.zeros((num_comp,1),dtype=float)
 		
@@ -66,41 +68,54 @@ class Simulator():
 			
 			power_over_time.append(power)
 			
+#			print("power:",power,np.zeros((18,1)))
+			power_all = np.concatenate((power,np.zeros((18,1))),axis=0)
+
+
+			
+			temp_itter = temp_itter + thermalModel.step_all(start_temp,power_all,prev_time,t,tick)
 				
-
-			
-#			print("P:",power,"\nPP:",prev_power)
-			temp_itter = temp_itter + thermalModel.step_with_power_change(prev_time, tick, power,prev_power,start_temp,prev_temp)
-#			print("with power:",temp_itter[-1])
-
-
-			prev_time = temp_itter[-1][0]
-			prev_temp = start_temp
 			start_temp = temp_itter[-1][1]
-#			print("After prev:",prev_temp,"\nstart:",start_temp)
-			
-			
-			temp_itter = temp_itter + thermalModel.step_without_power_change(prev_time,t,tick,start_temp,prev_temp)
-#			print("without power:",temp_itter[-1])
-
-			
-			prev_power = np.copy(power)
 			prev_time = temp_itter[-1][0]
-			prev_temp = start_temp
-			start_temp = temp_itter[-1][1]
-#			print("temp_ittr:",len(temp_itter))
-#			print("prevtemp_simu:",prev_temp)
 			
-#			samples[alive_components] = self.model(temp[alive_components]) * np.random.weibull(5.0,np.sum(alive_components))
-#			wear[alive_components] += np.divide(1, np.floor(samples), out=np.zeros_like(samples), where=samples != 0)
+##			print("P:",power,"\nPP:",prev_power)
+#			withpower = thermalModel.step_with_power_change(prev_time, tick, power,prev_power,start_temp,prev_temp)
+#			print("size",len(withpower))
+#			temp_itter = temp_itter + withpower
+			
 
-#		print("Temperature in itteration: ",temp_itter)
-	
-		
-		Plot = Plotter()
+#			prev_time = temp_itter[-1][0]
+#			prev_temp = np.copy(start_temp)
+#			start_temp = temp_itter[-1][1]
+##			print("After prev:",prev_temp,"\nstart:",start_temp)
+#			
+#			withoutpower = thermalModel.step_without_power_change(prev_time,t,tick,start_temp,prev_temp)
+#			print("size",len(withoutpower))
+#			temp_itter = temp_itter + withoutpower
+##			print("without power:",temp_itter[-1])
+
+#			
+#			prev_power = np.copy(power)
+#			prev_time = temp_itter[-1][0]
+#			prev_temp = np.copy(start_temp)
+#			start_temp = temp_itter[-1][1]
+##			print("temp_ittr:",len(temp_itter))
+##			print("prevtemp_simu:",prev_temp)
+#			
+##			samples[alive_components] = self.model(temp[alive_components]) * np.random.weibull(5.0,np.sum(alive_components))
+##			wear[alive_components] += np.divide(1, np.floor(samples), out=np.zeros_like(samples), where=samples != 0)
+
+		print("Temperature in itteration: ",temp_itter[0:100])
+		temp_comp =[]
+		for t in temp_itter:
+			temp_comp.append((t[0],t[1][:num_comp]))
+			
+#		print("temp_comp",temp_comp)
+#		sys.exit()
+		Plot = Plotter(len(self._cluster._clus))
 		Plot.plot_schedule(self._cluster)
 		Plot.plot_power(time_intervals,power_over_time)
-		Plot.plot_temp(temp_itter)
+		Plot.plot_temp(temp_comp)
 		
 #		return wear
 	       	 
@@ -116,12 +131,16 @@ class Simulator():
 		print(time_intervals)
 		num_comp = self._cluster.number_of_comps()
 		alive_components =  np.ones(num_comp,dtype=bool)
-		initial_temp = np.zeros((num_comp,1),dtype=float)
+#		initial_temp = np.array([[45],[45]])
+#		initial_temp = np.zeros((num_comp,1),dtype=float)
+		initial_temp = np.zeros((20,1),dtype=float)
+		
 #		print("inittempshape:",initial_temp.shape)
-		
-		thermal_model = Thermal(num_comp)
-		
+
 		tick=0.01
+		thermal_model = Thermal(num_comp,tick)
+		
+
 		self.simulate_itteration(time_intervals,num_comp, alive_components, initial_temp,thermal_model,tick)
 		
 #		samples = np.zeros(alive_components.shape)

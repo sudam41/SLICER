@@ -4,9 +4,9 @@ import numpy as np
 from cluster import Cluster
 
 class Plotter():
-	def __init__(self):
+	def __init__(self,no_of_comp):
 		self.fig1, self.gnt = plt.subplots()
-		self.fig2, self.ax = plt.subplots(2,2)
+		self.fig2, self.ax = plt.subplots(2,no_of_comp)
 	
 	def plot_schedule(self, cluster):
 #		self.fig, self.gnt = plt.subplots()
