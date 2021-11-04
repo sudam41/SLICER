@@ -10,8 +10,11 @@ from electromigration import electro_migration
 from scheduler import Scheduler
 from thermal import Thermal
 from plotter import Plotter
+from savepowertrace import WriteToFile
+from matexdata import import_matex_data
 
 import sys
+import os
 
 class Simulator():
 
@@ -40,7 +43,7 @@ class Simulator():
 
 
 		
-	def simulate_itteration(self, time_intervals, num_comp, alive_components, initial_temp,thermalModel,tick):
+	def simulate_itteration(self, time_intervals, num_comp, alive_components, initial_temp,thermalModel,tick,num_itter):
 		"""simulate a single itteration of the thermal and aging behavior
 
 		:return: float - wear of a single itteration
@@ -68,21 +71,24 @@ class Simulator():
 			
 			power_over_time.append(power)
 			
-#			print("power:",power,np.zeros((18,1)))
-			power_all = np.concatenate((power,np.zeros((18,1))),axis=0)
+			
+			##############
+###			print("power:",power,np.zeros((18,1)))
+##			power_all = np.concatenate((power,np.zeros((18,1))),axis=0)
 
 
-			
-			temp_itter = temp_itter + thermalModel.step_all(start_temp,power_all,prev_time,t,tick)
-				
-			start_temp = temp_itter[-1][1]
-			prev_time = temp_itter[-1][0]
-			
+##			
+##			temp_itter = temp_itter + thermalModel.step_all(start_temp,power_all,prev_time,t,tick)
+##				
+##			start_temp = temp_itter[-1][1]
+##			prev_time = temp_itter[-1][0]
+#			#############
+#			
 ##			print("P:",power,"\nPP:",prev_power)
 #			withpower = thermalModel.step_with_power_change(prev_time, tick, power,prev_power,start_temp,prev_temp)
 #			print("size",len(withpower))
 #			temp_itter = temp_itter + withpower
-			
+#			
 
 #			prev_time = temp_itter[-1][0]
 #			prev_temp = np.copy(start_temp)
@@ -104,19 +110,44 @@ class Simulator():
 #			
 ##			samples[alive_components] = self.model(temp[alive_components]) * np.random.weibull(5.0,np.sum(alive_components))
 ##			wear[alive_components] += np.divide(1, np.floor(samples), out=np.zeros_like(samples), where=samples != 0)
-
-		print("Temperature in itteration: ",temp_itter[0:100])
-		temp_comp =[]
-		for t in temp_itter:
-			temp_comp.append((t[0],t[1][:num_comp]))
-			
-#		print("temp_comp",temp_comp)
-#		sys.exit()
-		Plot = Plotter(len(self._cluster._clus))
-		Plot.plot_schedule(self._cluster)
-		Plot.plot_power(time_intervals,power_over_time)
-		Plot.plot_temp(temp_comp)
 		
+		print("powerover:",power_over_time)
+		
+		#Save power information on powertrace file
+		n=numb_itter
+		time_all = []
+		power_all = []
+		end = 0
+		time_all.append(time_intervals[0])
+		for i in range(n):
+			for t in time_intervals[1:]: 
+				time_all.append(t + end )
+			end = time_all[-1]
+			
+			for p in power_over_time:
+				power_all.append(p)
+		write = WriteToFile()
+		write.powertrace("../MatEx/multicore2.ptrace",power_all,time_all)
+		
+		#Call MatEx
+		os.system("../MatEx/MatEx -c ../MatEx/matex.config -f ../MatEx/multicore.flp -p ../MatEx/multicore2.ptrace -transient_file_block ../MatEx/allTemp.data")
+		
+		#Import temperature data from matex
+		temp_matex = import_matex_data((1,2)) #TODO:change argument to the number of components
+		
+		
+
+##		temp_comp =[]
+##		for t in temp_itter:
+##			temp_comp.append((t[0],t[1][:num_comp]))
+#			
+##		print("temp_comp",temp_comp)
+##		sys.exit()
+#		Plot = Plotter(len(self._cluster._clus))
+#		Plot.plot_schedule(self._cluster)
+#		Plot.plot_power(time_intervals,power_over_time)
+#		Plot.plot_temp(temp_comp)
+#		
 #		return wear
 	       	 
 		
@@ -132,16 +163,16 @@ class Simulator():
 		num_comp = self._cluster.number_of_comps()
 		alive_components =  np.ones(num_comp,dtype=bool)
 #		initial_temp = np.array([[45],[45]])
-#		initial_temp = np.zeros((num_comp,1),dtype=float)
-		initial_temp = np.zeros((20,1),dtype=float)
+		initial_temp = np.zeros((num_comp,1),dtype=float)
+#		initial_temp = np.zeros((20,1),dtype=float)
 		
 #		print("inittempshape:",initial_temp.shape)
 
-		tick=0.01
+		tick=0.0001
 		thermal_model = Thermal(num_comp,tick)
-		
+		numb_itter = 3
 
-		self.simulate_itteration(time_intervals,num_comp, alive_components, initial_temp,thermal_model,tick)
+		self.simulate_itteration(time_intervals,num_comp, alive_components, initial_temp,thermal_model,tick,numb_itter)
 		
 #		samples = np.zeros(alive_components.shape)
 #		samples[alive_components] = self.model(initial_temp[alive_components]) * np.random.weibull(5.0,np.sum(alive_components))

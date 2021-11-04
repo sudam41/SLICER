@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from cluster import Cluster
 
+import sys
+
 class Plotter():
 	def __init__(self,no_of_comp):
 		self.fig1, self.gnt = plt.subplots()
@@ -18,7 +20,10 @@ class Plotter():
 					self.gnt.broken_barh([(task.start,task.end-task.start)],(i*1.5,1),facecolors ='tab:blue',)
 		self.gnt.set_yticks([0.5,2.0])
 		self.gnt.set_yticklabels(['Component 0', 'Component 1'])
-		self.gnt.set_xticks(range(0,90,5))
+		self.gnt.set_xticks(np.arange(0,1,0.05))
+		
+#		plt.show()
+#		sys.exit()
 #		plt.savefig("schedule.png")
 		
 		
@@ -41,7 +46,8 @@ class Plotter():
 						power_plot[i] = power[j][c]
 				time = time + plot_tick
 				 
-#			fig, powr = plt.subplots()
+			fig, powr = plt.subplots()
+			print(xaxis.shape,power_plot.shape)
 			self.ax[0,c].plot(xaxis,power_plot)
 			self.ax[0, c].set_xlabel('Time')
 			self.ax[0, c].set_ylabel('Power')
@@ -60,6 +66,7 @@ class Plotter():
 				comp_temp[i] = t[1][comp]
 				xaxis[i] = t[0] 
 #			fig, tmp = plt.subplots()
+			print("tempshape:",len(temp))
 			self.ax[1,comp].plot(xaxis,comp_temp)
 			self.ax[1,comp].set_xlabel('Time')
 			self.ax[1,comp].set_ylabel('Temperature')

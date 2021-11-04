@@ -46,8 +46,8 @@ class Thermal():
 		
 
 #		sys.exit()
-#		self.psi = psi_all[0:no_of_comp,0:no_of_comp]
-#		self.phi = phi_all[0:no_of_comp,0:no_of_comp]
+		self.psi = self.psi_all[0:no_of_comp,0:no_of_comp]
+		self.phi = self.phi_all[0:no_of_comp,0:no_of_comp]
 
 #		print("psi_simu:",self.psi)
 #		print("phi_simu:",self.phi)
@@ -55,23 +55,23 @@ class Thermal():
 		
 	def step_without_power_change(self,start,end,tick,init_temp,prev_temp):
 		
-		print("step without power change!")
+#		print("step without power change!")
 		time = np.arange(start,end,tick)
 		
 #		print("prevtemp",prev_temp)
 		Tk_minus_1 = np.copy(prev_temp)
 		Tk = np.copy(init_temp)
 		temp = [] 
-		print("psi:",self.psi)
+#		print("psi:",self.psi)
 		for t in time[1:]:
 			
-			print("Tk",Tk)
+#			print("Tk",Tk)
 
 #			print("Tk-1.shape:",Tk_minus_1.shape)
-			print("Tk-1:",Tk_minus_1)
+#			print("Tk-1:",Tk_minus_1)
 			Tk_plus_1 = np.matmul((self.psi + sparse.identity(self.psi.shape[0])),Tk) - np.matmul(self.psi,Tk_minus_1)
 
-			print("Tk+1:",Tk_plus_1)
+#			print("Tk+1:",Tk_plus_1)
 			Tk_minus_1 = np.copy(Tk)
 			Tk = np.copy(Tk_plus_1)
 			temp.append((t,Tk_plus_1))
@@ -81,25 +81,25 @@ class Thermal():
 		return temp
 			
 	def step_with_power_change(self,start, tick, next_power,cur_power,init_temp,prev_temp):
-		print("step with power change!")
+#		print("step with power change!")
 		Tk_minus_1 = prev_temp
 		Tk = init_temp
 		
 		Pk = cur_power
 		Pk_plus_1 = next_power
 		
-		print("Pk",Pk)
-		print("Pk-1:",Pk_plus_1)
-		print("powchange:",Pk_plus_1 - Pk)
-		print("Tk",Tk)
-		print("Tk-1:",Tk_minus_1)
-		print("phi:",self.phi)
+#		print("Pk",Pk)
+#		print("Pk-1:",Pk_plus_1)
+#		print("powchange:",Pk_plus_1 - Pk)
+#		print("Tk",Tk)
+#		print("Tk-1:",Tk_minus_1)
+#		print("phi:",self.phi)
 		
 		
 #		print("SHAPES: ",Tk_minus_1.shape,Tk.shape,Pk.shape,Pk_plus_1.shape)
 #		print("power change:",Pk_plus_1-Pk)
 		Tk_plus_1 = ((self.psi + sparse.identity(self.psi.shape[0])).dot(Tk) - self.psi.dot(Tk_minus_1)) + self.phi.dot(Pk_plus_1 - Pk)
-		print("Tk+1:",Tk_plus_1)
+#		print("Tk+1:",Tk_plus_1)
 #		sys.exit()
 		return [(start+tick , Tk_plus_1)]
 		
