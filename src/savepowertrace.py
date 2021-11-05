@@ -19,6 +19,7 @@ class WriteToFile():
 				file.write("{}".format(t))
 				for p in power_val:
 					file.write("\t{}".format(p[0]))
+				file.write("\n{}\t{}\t{}".format(t+0.01,power_val[0][0]+0.01,power_val[1][0]+0.01))
 			else:	
 				power_val = power[i]
 				file.write("{}".format(t))

@@ -60,21 +60,26 @@ class Cluster:
 		
 	def fail_component(self,comp_id):
 
-		for comp in _clus:
+		for comp in self._clus:
 			if comp_id == comp.ID:
 				self._failed_comp.append(comp)
 				self._clus.remove(comp)
 				break
 				
+	def reset_alive_components(self):
+		for i in range(len(self._clus)):
+			self._clus[i].reset()
+				
 	def get_time_intervals(self):
 		intervals = []
 		for comp in self._clus:
+			print("ass task size:",len(comp.assigned_tasks))
 			for task in comp.assigned_tasks:
 				intervals.append(task.start)
 				intervals.append(task.end)
 		
 		
-#		intervals = list(dict.fromkeys(intervals))
+		intervals = list(dict.fromkeys(intervals))
 #		print(intervals)
 		intervals.sort()	
 		return intervals 

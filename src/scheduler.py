@@ -16,7 +16,7 @@ class Scheduler:
 		self._app = application
 		self.cluster = cluster
 		
-		self.taskpool = self._app.alltasks
+		self.taskpool = copy.deepcopy(self._app.alltasks)
 #		self.componentpool = self.cluster.components
 		
 		self.executed = []
@@ -48,7 +48,8 @@ class Scheduler:
 		"""Updates the ready queue by adding tasks from the task pool, if they have no dependancies, into the ready queue and then removes those tasks from the task pool. 
 		"""
 		temp = []
-
+		print("@@@@here")
+		print("TP:",self.taskpool)
 		for t in self.taskpool:
 			if t.dep == None :
 				t.earliest_start = 0
@@ -83,6 +84,7 @@ class Scheduler:
 		:param task: [Task object] - the task to be executed.
 		:param component: [Component object] - the component that the task will be executed on.
 		"""
+		
 		component.assigntask(task)
 		component.time = task.end
 		if component.time>self._app.deadline:

@@ -10,6 +10,8 @@ from parseconfig import Parsing
 from plotter import Plotter
 
 import sys
+import numpy as np
+import copy
 
 #hardcode simple DAG for testing 
 #    t0
@@ -66,9 +68,23 @@ print("clus end")
 
 
 
-sim =  Simulator(A,clus,"MET")
 
-sim.run()
+n=1
+TFF = np.zeros(n)
+for i in range(n):
+	cluster = copy.deepcopy(clus)
+	app = copy.deepcopy(A)
+	sim =  Simulator(app,cluster,"ETF")
+
+	TFF[i] = sim.run()
+
+print("MTTF:",np.average(TFF))
+
+
+
+
+
+
 
 
 

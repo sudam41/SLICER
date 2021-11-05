@@ -41,7 +41,12 @@ class Component:
 		return "Id: {}\nType: {}\nLoc: {} | {}".format(self.ID, self.com_type, self.loc_botleft,self.loc_topright)
 #		return "component Id: {}".format(self.ID)
 		
+	def reset(self):
+		""" Reset Component object.
 
+		"""
+		self._time = 0
+		self.assigned_tasks.clear()
 
 #	@property
 #	def execution(self):
