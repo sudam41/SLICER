@@ -70,7 +70,11 @@ class Task:
 
 		:return: [float] -  the start time for this application.
 		"""
-		return self._start
+		if self._start != None:
+			start = round(self._start,4)
+		else:
+			start = self._start
+		return start
 
 	@start.setter
 	def start(self, val):
@@ -88,7 +92,11 @@ class Task:
 
 		:return: [float] - the end time for this application.
 		"""
-		return self._end
+		if self._end != None:
+			end = round(self._end,4)
+		else:
+			end = self._end
+		return end
 
 	@end.setter
 	def end(self, val):

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import numpy as np
+import pandas as pd
 
 
 class WriteToFile():
@@ -26,3 +27,19 @@ class WriteToFile():
 				for p in power_val:
 					file.write("\t{}".format(p[0]))
 				file.write("\n")
+				
+	def powertrace_all(self,filename,power,time):
+
+#		power[0] = np.insert(power[0],0,0)
+#		power[1] = np.insert(power[1],0,0)
+#		print("pow:",power[0][0:5],"  tim:",time[0:5])
+#		print("Size:",time.size," ",power[0].size," ",power[1].size )
+		data = {"time":time,"Core_1,1":power[0],"Core_1,2":power[1]}
+		df = pd.DataFrame(data = data)
+
+		df.to_csv("../MatEx/{}".format(filename),index = False,sep='\t')
+		
+		
+		
+		
+		

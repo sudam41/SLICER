@@ -13,7 +13,13 @@ from plotter import Plotter
 from savepowertrace import WriteToFile
 from matexdata import import_matex_data
 from ageing import Ageing
+from parse_power_trace import parse_power
+
+
+
 import matplotlib.pyplot as plt
+import pandas as pd
+import math
 
 import sys
 import os
@@ -22,7 +28,7 @@ import subprocess
 
 class Simulator():
 
-	def __init__(self, app, cluster,scheduler_type,model=electro_migration):
+	def __init__(self, app, cluster,scheduler_type,ageing_interval,pow_ave_interval,num_itter,model=electro_migration):
 		"""Creates a simulator to calculate the TTF, temperatures and comp_need output given a designpoint.
 		"""
 		self._timesteps = 0
@@ -30,10 +36,14 @@ class Simulator():
 		self._cluster = cluster
 		self.scheduler_type = scheduler_type
 		self.model = model
+		
+		self.ageing_interval = ageing_interval
+		self.pow_ave_interval = pow_ave_interval
+		self.num_itter = num_itter
 
 
 	def schedule(self, scheduler_type):
-		print("AT",self._app.alltasks)
+#		print("AT",self._app.alltasks)
 		S = Scheduler(self._app, self._cluster)
 		
 		if scheduler_type == "MET":
@@ -61,10 +71,16 @@ class Simulator():
 		prev_power = np.zeros((num_comp,1),dtype=float)
 		
 		
+		ptrace = True
+		interval = 0.0001
+#		interval = 0.0000001
+		tasks_over_time=[]
 #		time= time_intervals[0]
 		power_over_time=[]
 		for t in time_intervals[1:]:
-		
+			
+			assigned_tasks = np.empty(num_comp)
+			assigned_tasks[:] = np.NaN
 			power = np.zeros((num_comp,1),dtype=float)
 #			time = t - prev_time
 			for comp in self._cluster._clus:
@@ -73,11 +89,19 @@ class Simulator():
 #						print("@#start:",task.start," prev+tick:",prev_time+tick, " end:", task.end, " t:",t)
 						if task.start <= prev_time and task.end>= t:
 #							print("YESS")
-							power[comp.ID] = self._app.power[task.ID][comp.com_type]
-			
+
+							if ptrace == False:
+								power[comp.ID] = self._app.power[task.ID][comp.com_type]
+							else:
+								assigned_tasks[comp.ID] = task.ID
+#								print("Tid",task.ID)
+								
+			tasks_over_time.append(assigned_tasks)
 			power_over_time.append(power)
 			prev_time =copy.copy(t) 
 			
+#			Plot = Plotter(num_comp)
+#			Plot.plot_power(time_intervals,power_over_time)
 			##############
 ###			print("power:",power,np.zeros((18,1)))
 ##			power_all = np.concatenate((power,np.zeros((18,1))),axis=0)
@@ -118,36 +142,179 @@ class Simulator():
 ##			wear[alive_components] += np.divide(1, np.floor(samples), out=np.zeros_like(samples), where=samples != 0)
 		
 #		print("powerover:",power_over_time)
-		
+#		print("TOT:",tasks_over_time)
 		#Save power information on powertrace file
 		n=num_itter
 		time_all = []
 		power_all = []
+		
+#		time_all_p = np.zeros(1)
+		
+		power_all_p = []
+		for i in range (num_comp):
+			power_all_p.append(np.zeros(1))
+		
+		
 		end = 0
 		time_all.append(time_intervals[0])
 		for i in range(n):
-			for t in time_intervals[1:]: 
-				time_all.append(t + end )
-			end = time_all[-1]
-			
-			for p in power_over_time:
-				power_all.append(p)
+			if ptrace == False:
+				for t in time_intervals[1:]: 
+					time_all.append(t + end )
+				end = time_all[-1]
 				
-#		print("t:",time_all,"p:",power_all)
+				for p in power_over_time:
+					power_all.append(p)
+			else:
+				prev_task = ["x","x"]
+#				time_all_p = np.concatenate((time_all_p,np.arange(end,time_intervals[-1]+end,interval)))
+				for j,t in enumerate(time_intervals[1:]):
+#					tim = np.arange(time_intervals[j]+end,t+end,interval)
+					
+#					print("timallp:",time_all_p,"  tim:",tim)
+#					timtried toe_all_p=np.concatenate((time_all_p,tim),axis=0)
+					
+					comps = tasks_over_time[j]
+					for c,tsk in enumerate(comps):
+						if prev_task[c]!=tsk:
+							if tsk==tsk:
+								pow_data = parse_power(int(tsk),c)
+							else:
+								pow_data = np.zeros(int(round((t-time_intervals[j])/interval)))
+#							print("i:",i,"  comp:",c,"  tasks:",tsk,"  p.size:",pow_data.size,"  tim.size:",int(round((t-time_intervals[j])/interval)),"  t-1:",time_intervals[j],"  t:",t)
+							power_all_p[c]=np.concatenate((power_all_p[c],pow_data))
+							
+					prev_task = copy.deepcopy(comps)		
+#				end = time_all_p[-1]
+				end += time_intervals[-1]
+				
+#		print("end:",end)	
+#		time_all_p = np.arange(time_intervals[0],end,interval)
+		time_all_p = np.linspace(time_intervals[0],end,int(round((end-time_intervals[0])/interval)))
+#		print
+#				for comps in tasks_over_time:
+#					for t,c in enumerate(comps):
+#						print("tasks:",t,"  comp:",c)
+#						if t==t:
+#							p = parse_power(t,c)
+#							power_all_p[i]=np.concatenate((power_all_p[i],p))
+#						else:
+							
+				
+#		print("t:",time_all,"\np0:",power_all,"\np1:",power_all_p[1].size)
 		
+##plot w ptrace
+##		time_all_p = np.delete(time_all_p,0)
+#		plt.plot(time_all_p,power_all_p[0][1:],color='red')
+#		plt.plot(time_all_p,power_all_p[1][1:],color='blue')
+#		plt.xlabel('Time')
+#		plt.ylabel('Power')
+#		plt.show()
+		
+
+###plot w/o ptrace
+#		ttt= np.array([0])
+#		ppp1 = np.array([0])
+#		ppp2 = np.array([0])
+#		pw1 = np.zeros(len(time_all))
+#		pw2 = np.zeros(len(time_all))
+#		for i,t in time_all[1:]:
+#			tim = np.linspace(time_all[i],t,10)
+#			pww1 = np.ones(10)*power_all[i][0][0]
+#			pww2 = np.ones(10)*power_all[i][1][0]
+#			
+#			ttt=np.concatenate(ttt,tim)
+#			ppp1 =np.concatenate(ppp1,pww1)
+#			ppp2 =np.concatenate(ppp2,pww2)
+#			
+#		plt.plot(ttt,ppp1)
+#		plt.show()	
+
+
+#		for i,p in enumerate(power_all):
+#			pw1[i] = p[0][0]
+#			pw2[i] = p[1][0]
+#			
+#		
+#		print("pw:",pw1)
+#		
+#		plt.plot(time_all,pw1,color='red')
+#		plt.plot(time_all,pw2,color='blue')
+#		plt.xlabel('Time')
+#		plt.ylabel('Power')
+#		plt.show()
+
+		#Averaging each num_sample values
+		average = False
+		if average:
+
+#			for i in range(len(power_all_p)):
+#				power_all_p[i] = np.delete(power_all_p[i],0)
+			
+			num_sample = self.pow_ave_interval
+			
+			power_size = power_all_p[0][1:].size
+#			print("PS",power_size,"TS",time_all_p.size)
+			power_all_ave=[]
+			
+			time_all_ave = time_all_p[::num_sample]
+			for com in range(num_comp):
+				if power_size%num_sample !=0:
+					pow_com = np.insert(power_all_p[com][1:],-1,np.zeros(num_sample-(power_size%num_sample)))
+					
+				else:
+					pow_com = power_all_p[com][1:]
+					
+#				print("nfgfh:",num_sample-(power_size%num_sample),"  Powcom",pow_com.size)
+				
+				power_all_ave.append( np.mean(pow_com.reshape(-1,num_sample),1))
+#				power_all_ave.append( np.mean(power_all_p[com][0:(math.floor(power_size/num_sample)*num_sample)].reshape(-1,num_sample),1))
+			
+#			
+#			if power_size%num_sample !=0:
+#				time_all_ave = np.insert(time_all_ave,-1,time_all_ave[-1]+interval)
+			time_all_ave[0]=-1
+#			print("TIM SIZE:",time_all_ave.size,"  AVE SIZE:",power_all_ave[1].size)
+		elif ptrace==True:	
+			time_all_ave = time_all_p
+			power_all_ave = power_all_p
+			time_all_ave = np.insert(time_all_ave,0,-1)
+#			print("TIM SIZE:",time_all_ave.size,"  AVE SIZE:",power_all_ave[1].size)
+		else:
+			time_all_ave = time_all
+			power_all_ave = power_all
+		
+#		print("t.begin:",time_all[0],"  t.end:",time_all[-1])
+#		print("TIM SIZE:",time_all_ave.size,"  AVE SIZE:",power_all_ave[1].size)
+#		sys.exit()
+
+		
+
 		write = WriteToFile()
-		write.powertrace("../MatEx/multicore2.ptrace",power_all,time_all)
-		
+		if ptrace == False:
+#			print("here")
+			write.powertrace("../MatEx/multicore2.ptrace",power_all,time_all)
+#			print("Call Matex")
+			subprocess.run(["../MatEx/MatEx", "-c" ,"../MatEx/matex.config", "-f" ,"../MatEx/multicore.flp", "-p", "../MatEx/multicore2.ptrace", "-transient_file_block", "../MatEx/allTemp.data"])
+#			print("Matex completed")
+		else:
+			write.powertrace_all("../MatEx/multicore3.ptrace",power_all_ave,time_all_ave)
+#			print("Call Matex")
+			subprocess.run(["../MatEx/MatEx", "-c" ,"../MatEx/matex.config", "-f" ,"../MatEx/multicore.flp", "-p", "../MatEx/multicore3.ptrace", "-transient_file_block", "../MatEx/allTemp.data"])
+			print("Matex completed")
+#		ip = input()
+#		sys.exit()
 		#Call MatEx
-		subprocess.run(["../MatEx/MatEx", "-c" ,"../MatEx/matex.config", "-f" ,"../MatEx/multicore.flp", "-p", "../MatEx/multicore2.ptrace", "-transient_file_block", "../MatEx/allTemp.data"])
+		
 #		os.system("../MatEx/MatEx -c ../MatEx/matex.config -f ../MatEx/multicore.flp -p ../MatEx/multicore2.ptrace -transient_file_block ../MatEx/allTemp.data")
 #		sys.exit()
 		#Import temperature data from matex
+#		sys.exit()
 		temp_matex = import_matex_data((1,2)) #TODO:change argument to the number of components
 		
 		temp_all = temp_matex
 		
-		return time_all, power_all, temp_all
+		return time_all_ave, power_all_ave, temp_all
 		
 		
 		
@@ -160,6 +327,7 @@ class Simulator():
 ##		sys.exit()
 #		Plot = Plotter(len(self._cluster._clus))
 #		Plot.plot_schedule(self._cluster)
+		
 #		Plot.plot_power(time_intervals,power_over_time)
 #		Plot.plot_temp(temp_comp)
 #		
@@ -177,21 +345,24 @@ class Simulator():
 		tot_num_comp = copy.copy(num_comp)
 		alive_comp =  np.ones(num_comp,dtype=bool)
 		initial_temp = np.zeros((num_comp,1),dtype=float)
-		ageing_simulator = Ageing()
+		data = {}
+		ageing_simulator = Ageing(data,self.ageing_interval)
 		
 		current_rel = np.ones(num_comp)
 		tick=0.0001
 #		thermal_model = Thermal(num_comp,tick)
 		thermal_model= False
-		numb_itter = 4
+		numb_itter = self.num_itter
 		min_comp = 0
 		schedulable = True
 		
-		plot = Plotter(num_comp)
-		rel_res = []
+#		plot = Plotter(num_comp)
+		firstrun = True
 		fail_time = 0
 		while schedulable ==True and num_comp>min_comp:
 			schedulable = self.schedule(self.scheduler_type)
+			
+			
 ###			
 #			print("sched",schedulable)
 #			plot.plot_schedule(self._cluster)
@@ -205,12 +376,12 @@ class Simulator():
 #			gnt.set_yticklabels(['Component 0', 'Component 1'])
 #			gnt.set_xticks(np.arange(0,1,0.05))
 
-
+			
 
 
 
 			time_intervals = self._cluster.get_time_intervals()
-			print(time_intervals)
+#			print(time_intervals)
 			
 	#		initial_temp = np.array([[45],[45]])
 			
@@ -220,10 +391,17 @@ class Simulator():
 			
 
 			time, power, temp = self.simulate_thermal(time_intervals,tot_num_comp, alive_comp, initial_temp,thermal_model,tick,numb_itter)
+#			print("temp",temp)
 #			print("timeI: ",time)
+#			fig, ax = plt.subplots(2,1)
+#			
+#			ax[0].plot(temp[0][0:],temp[1][0:])
+#			ax[0].set_title("core 0")
+#			ax[1].plot(temp[0][0:],temp[2][0:])
+#			ax[1].set_title("core 1")
 			
 			
-			alive_comp, current_rel,fail_time = ageing_simulator.run(alive_comp,current_rel,time,temp,num_comp,fail_time)
+			alive_comp, current_rel,fail_time = ageing_simulator.run(alive_comp,current_rel,time_intervals,temp,num_comp,fail_time)
 			
 			failed_comp = np.where(alive_comp==False)[0]
 #			print("NC bef:",num_comp)
@@ -234,11 +412,20 @@ class Simulator():
 			num_comp = self._cluster.number_of_comps()
 #			print("NC aft:",num_comp)
 
-			print("Alive:", alive_comp, "CR:", current_rel )	
+#			print("Alive:", alive_comp, "CR:", current_rel )	
 
+			if firstrun ==True:
+				firstfail = failed_comp[0]
+				firstfail_time = copy.copy(ageing_simulator.totTime)
+				firstrun=False
+#			print("F:",firstfail)
 		
+#		##Store alpha values for plotting
+#		print("DATA:",data)
+#		df = pd.DataFrame(data=data)
+#		df.to_csv("data.csv")
+#		print("TTF:", ageing_simulator.totTime)
+#		
 		
-		plt.show()
-		print("TTF:", ageing_simulator.totTime)
-		return ageing_simulator.totTime
+		return firstfail_time,firstfail, ageing_simulator.totTime
 

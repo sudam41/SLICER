@@ -1027,8 +1027,8 @@ int main(int argc, char *argv[])
 	double totalExecutionTime = (((double)(endProgram.tv_sec - startProgram.tv_sec))*SECONDS_TO_EXEC_TIME_UNIT + ((double)(endProgram.tv_nsec - startProgram.tv_nsec))/NANOSECONDS_TO_EXEC_TIME_UNIT);
 	double computationExecutionTime = (((double)(endComputation.tv_sec - startComputation.tv_sec))*SECONDS_TO_EXEC_TIME_UNIT + ((double)(endComputation.tv_nsec - startComputation.tv_nsec))/NANOSECONDS_TO_EXEC_TIME_UNIT);
 
-	cout << "Total Execution Time [ms]: " << totalExecutionTime/(SECONDS_TO_EXEC_TIME_UNIT/1000) << endl;
-	cout << "Comp. Execution Time [ms]: " << computationExecutionTime/(SECONDS_TO_EXEC_TIME_UNIT/1000) << endl;
+//	cout << "Total Execution Time [ms]: " << totalExecutionTime/(SECONDS_TO_EXEC_TIME_UNIT/1000) << endl;
+//	cout << "Comp. Execution Time [ms]: " << computationExecutionTime/(SECONDS_TO_EXEC_TIME_UNIT/1000) << endl;
 
 	exit(0);
 }

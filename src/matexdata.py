@@ -17,7 +17,7 @@ def import_matex_data(num_cores):
 	for i in range(num_cores[0]):
 		for j in range(num_cores[1]):
 			col = "Core_{},{}".format(i+1,j+1)
-			print(col)
+#			print(col)
 			temp.append(np.array(data[col]))
 		
 	return temp

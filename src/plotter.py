@@ -20,9 +20,9 @@ class Plotter():
 					self.gnt.broken_barh([(task.start,task.end-task.start)],(i*1.5,1),facecolors ='tab:blue',)
 		self.gnt.set_yticks([0.5,2.0])
 		self.gnt.set_yticklabels(['Component 0', 'Component 1'])
-		self.gnt.set_xticks(np.arange(0,1,0.05))
+		self.gnt.set_xticks(np.arange(0,0.3,0.05))
 		
-#		plt.show()
+		plt.show()
 #		sys.exit()
 #		plt.savefig("schedule.png")
 		

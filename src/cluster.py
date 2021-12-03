@@ -73,10 +73,10 @@ class Cluster:
 	def get_time_intervals(self):
 		intervals = []
 		for comp in self._clus:
-			print("ass task size:",len(comp.assigned_tasks))
+#			print("assigned task size:",len(comp.assigned_tasks))
 			for task in comp.assigned_tasks:
-				intervals.append(task.start)
-				intervals.append(task.end)
+				intervals.append(round(task.start,4))
+				intervals.append(round(task.end,4))
 		
 		
 		intervals = list(dict.fromkeys(intervals))

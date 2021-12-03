@@ -48,8 +48,8 @@ class Scheduler:
 		"""Updates the ready queue by adding tasks from the task pool, if they have no dependancies, into the ready queue and then removes those tasks from the task pool. 
 		"""
 		temp = []
-		print("@@@@here")
-		print("TP:",self.taskpool)
+#		print("@@@@here")
+#		print("TP:",self.taskpool)
 		for t in self.taskpool:
 			if t.dep == None :
 				t.earliest_start = 0
@@ -181,7 +181,7 @@ class Scheduler:
 #				
 
 				best_task, best_comp,tim = min(ECT_all, key=lambda x: x[2])		
-				print(best_task, best_comp)	
+#				print(best_task, best_comp)	
 				
 				assignedtask = self._assign_task(best_task,best_comp)		
 				corr, execomp = self._execute_task(assignedtask,best_comp)

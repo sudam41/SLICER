@@ -2,22 +2,24 @@
 
 """ Contains all logical operations that are required for the ageing of components in the simulation
 
-Ageings are stored as a 2D numpy float array.
 """
 
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
+import copy
 
 from electromigration import electro_migration
 
 
 class Ageing():
 	""" Contains all logical operators based on the aging of components.""" 
-	def __init__ (self, model=electro_migration):
+	def __init__ (self, data,interval,model=electro_migration):
 		self.model = model
 		self.beta = 2
 		self.totTime=0
+		self.data = data
+		self.interval = interval
 		
 	def _reliability(self, time, alpha):
 		R = np.exp(-np.power(np.divide(time,alpha), self.beta))
@@ -29,36 +31,79 @@ class Ageing():
 #		print("time:",T)
 		return T
 		
-	def _avarage_ageing_rate(self,time_intervals,temp,num_comp):
+	def _avarage_ageing_rate(self,time_intervals,temp,alive_comp):
 		tot_time= temp[0][-1]-temp[0][0]
 #		print("total time:",tot_time)
 #		print("$ti:",time_intervals)
+		num_comp = len(alive_comp)
+#		print("TI:",time_intervals)
+#		sys.exit()
 		age_rate=np.zeros((num_comp,len(time_intervals)-1))
 		for i,t in enumerate(time_intervals[1:]):
 			interval_time = t-time_intervals[i]
 			idx = np.where(temp[0]<t,temp[0],0)
 			idx = np.where(idx>time_intervals[i])
+#			print("time_intervals[i]:",time_intervals[i],"  t:",t)
+#			print("temp:",temp[0][30000:30010])
 #			if idx[0].size ==0:
 #				print("time_intervals[i]:",time_intervals[i],"  t:",t)
-#				print("temp:",temp[0])
+#				print("temp:",temp[0][30000:30010])
 #				sys.exit()
 #			print("%%%idx:",idx)
 			for comp in range(num_comp):
 #				print("np.average(temp[comp+1][idx]):",np.average(temp[comp+1][idx]),"  idx:",idx)
-				age_rate[comp][i] = interval_time/self.model(np.average(temp[comp+1][idx])) 
+				if alive_comp[comp] == True:
+					age_rate[comp][i] = interval_time/self.model(np.average(temp[comp+1][idx])) 
+#					print("MTTF:",self.model(np.average(temp[comp+1][idx]))*0.88623) 
 		
 #		print("age rate:",age_rate)
-		alpha=np.zeros(num_comp)
+		alpha=np.empty(num_comp)
+		alpha[:] =np.NaN
 		for comp in range(num_comp):
-			alpha[comp] = tot_time/np.sum(age_rate[comp])
-			
+			if alive_comp[comp] == True: 
+#				print("@Here","agerate:",age_rate)
+				alpha[comp] = tot_time/np.sum(age_rate[comp])
+#				print("@lpha:",alpha)
 		return alpha
+		
+	def _average_ageing_rate_uniform(self,temp,start,stop,interval,alive_comp):
+		tot_time = stop - start
+		num_comp = len(alive_comp)
+		age_rate_max=np.zeros((num_comp,int(tot_time/interval)+1))
+		age_rate_ave=np.zeros((num_comp,int(tot_time/interval)+1))
+		
+		time = start
+		i=0
+		while time<stop:
+			idx = np.where(temp[0]<(time+interval),temp[0],0)
+			idx = np.where(idx>time)
+#			print("i:",i," time:",time," stop:",stop)
+			for comp in range(num_comp):
+				if alive_comp[comp] == True:
+					age_rate_max[comp][i] = interval/self.model(np.amax(temp[comp+1][idx]))
+					age_rate_ave[comp][i] = interval/self.model(np.average(temp[comp+1][idx]))
+					
+			time += interval
+			i+=1
+			
+		alpha_max=np.empty(num_comp)
+		alpha_max[:] =np.NaN
+		
+		alpha_ave=np.empty(num_comp)
+		alpha_ave[:] =np.NaN
+		for comp in range(num_comp):
+			if alive_comp[comp] == True: 
+#				print("@Here","agerate:",age_rate)
+				alpha_max[comp] = tot_time/np.sum(age_rate_max[comp])
+				alpha_ave[comp] = tot_time/np.sum(age_rate_ave[comp])
+#				print("@lpha:",alpha)
+		return alpha_max, alpha_ave
 			
 	def fail_component(self, current_rel, alive_comp, alpha):
 		numb_alive = np.count_nonzero(alive_comp)
 		randval = np.random.random_sample(len(alive_comp))
 		randrel = randval * current_rel
-		print("random:",randrel)
+#		print("random:",randrel)
 		
 		t = self._time(randrel,alpha)
 		eqT = self._time(current_rel,alpha)
@@ -77,25 +122,35 @@ class Ageing():
 		return alive_comp, current_rel,fail_time
 	
 	def run(self, alive_comp, current_rel, time_intervals,temp,num_comp,p_fail_time):
+#		print("time int:",time_intervals, "  temp:",temp)
+#		alpha_ti = self._avarage_ageing_rate(time_intervals,temp,alive_comp)
+		temp[0] = temp[0]/3600
 		
-		alpha = self._avarage_ageing_rate(time_intervals,temp,num_comp)
-#		print("alpha:",alpha)
+		alpha_max,alpha_ave = self._average_ageing_rate_uniform(temp,temp[0][0],temp[0][-1],self.interval/3600,alive_comp) 
+#		print("AC:",alive_comp, "Alpha:",alpha)
 		
 		
 #		fig2,ax = plt.subplots()
-		for i,a in enumerate(alpha): 
-			e_time = self._time(0.0001,a)
-			st_time = self._time(current_rel[i],a)
-			tim_shift = p_fail_time-st_time
-#			print("eee",e_time)
-			tim = np.arange(st_time,e_time,1)
-#			print("tim:",tim)
-			rel = self._reliability(tim,a)
-			plt.plot(tim+tim_shift,rel)
-#			rel_res.append(rel)
-#		sys.exit()
+#		for i,a in enumerate(alpha[alive_comp]): 
+#			e_time = self._time(0.0001,a)
+#			st_time = self._time(current_rel[i],a)
+#			tim_shift = p_fail_time-st_time
+#			print("eee",e_time,"  st",st_time)
+#			tim = np.arange(st_time,e_time,1)
+##			print("tim:",tim)
+#			rel = self._reliability(tim,a)
+#			plt.plot(tim,rel)
+##			rel_res.append(rel)
+##		sys.exit()
 #		
-		alive_comp, current_rel,fail_time = self.fail_component(current_rel, alive_comp,alpha)
+#		a= copy.copy(alive_comp)
+#		c= copy.copy(current_rel)
+		alive_comp, current_rel,fail_time = self.fail_component(current_rel, alive_comp,alpha_max[alive_comp])
+		
+#		a, c,fail_time_ave = self.fail_component(c, a,alpha_ave[a])
+		
+#		print("alpha_max",alpha,"  alpha_ave:",alpha_ave)
+		self.data[fail_time] = alpha_ave
 		
 		return alive_comp, current_rel,fail_time
 		
