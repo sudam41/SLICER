@@ -104,7 +104,7 @@ class Scheduler:
 		"""	
 		task.start= max(task.earliest_start,component.time)
 			
-		task.end = task.start+ self._app.execution[task.ID][component.com_type]
+		task.end = task.start+ self._app.execution[task.ID][component.com_type]#TODO add DVFS here
 #		component.assigntask(task)
 		return task
 		

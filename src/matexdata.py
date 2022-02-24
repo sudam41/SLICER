@@ -1,25 +1,28 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 # reading csv files
 #data =  pd.read_csv('file.data', sep=",")
 #print(data)
  
 # reading tsv files
 
-def import_matex_data(num_cores):
-	data = pd.read_csv('../MatEx/allTemp.data', sep="\t")
+def import_matex_data(names,mc_instance):
+	data = pd.read_csv('../MatEx/results/allTemp_{}.data'.format(mc_instance), sep="\t")
 #	print(data['time'])
 
 	time = np.array(data['time'])
 	temp = []
 	temp.append(time)
-	for i in range(num_cores[0]):
-		for j in range(num_cores[1]):
-			col = "Core_{},{}".format(i+1,j+1)
+	for i in names:
+#		for j in range(num_cores[1]):
+#			col = "Core_{},{}".format(i+1,j+1)
 #			print(col)
-			temp.append(np.array(data[col]))
-		
+		temp.append(np.array(data[i]))
+#	print(temp)	
+
+	os.remove('../MatEx/results/allTemp_{}.data'.format(mc_instance))
 	return temp
 	
 	

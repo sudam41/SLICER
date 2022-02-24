@@ -11,6 +11,9 @@ class Cluster:
 	def __init__(self):
 		self._clus = [] 
 		self._failed_comp = []
+		self.names = ["Core_1,1","Core_1,2","Core_1,3","Core_2,1","Core_2,2","Core_2,3","Core_3,1","Core_3,2","Core_3,3"]
+		self.enabled_comp=[]
+		self.idle_power = 0.872341
 	
 	def __repr__(self):
 		""" Representation of an Cluster object.
@@ -39,6 +42,7 @@ class Cluster:
 		
 		:param comp:[component object] - the component to be added into this cluster.
 		"""
+#		self.names.append(comp.name)
 		self._clus.append(comp)
 		
 	def number_of_comps(self):

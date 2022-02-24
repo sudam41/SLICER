@@ -27,6 +27,7 @@ class Ageing():
 		return R
 		
 	def _time(self,rel,alpha):
+#		print("alpha: ",alpha)
 		T = alpha* np.power(-np.log(rel),(1/self.beta))
 #		print("time:",T)
 		return T
@@ -96,7 +97,7 @@ class Ageing():
 #				print("@Here","agerate:",age_rate)
 				alpha_max[comp] = tot_time/np.sum(age_rate_max[comp])
 				alpha_ave[comp] = tot_time/np.sum(age_rate_ave[comp])
-#				print("@lpha:",alpha)
+#				print("@lpha:",alpha_max)
 		return alpha_max, alpha_ave
 			
 	def fail_component(self, current_rel, alive_comp, alpha):
@@ -115,6 +116,7 @@ class Ageing():
 
 		self.totTime +=t[minIdx]
 		alive_comp[minIdx] = False
+#		print("AC: ",alive_comp)
 		
 		current_rel = self._reliability(t[minIdx]+eqT,alpha)
 #		current_rel[minIdx]=0
@@ -127,7 +129,7 @@ class Ageing():
 		temp[0] = temp[0]/3600
 		
 		alpha_max,alpha_ave = self._average_ageing_rate_uniform(temp,temp[0][0],temp[0][-1],self.interval/3600,alive_comp) 
-#		print("AC:",alive_comp, "Alpha:",alpha)
+#		print("\n:::AC:",alive_comp, "alpha_max:",alpha_max)
 		
 		
 #		fig2,ax = plt.subplots()
@@ -145,7 +147,7 @@ class Ageing():
 #		
 #		a= copy.copy(alive_comp)
 #		c= copy.copy(current_rel)
-		alive_comp, current_rel,fail_time = self.fail_component(current_rel, alive_comp,alpha_max[alive_comp])
+		alive_comp, current_rel,fail_time = self.fail_component(current_rel, alive_comp,alpha_max)
 		
 #		a, c,fail_time_ave = self.fail_component(c, a,alpha_ave[a])
 		

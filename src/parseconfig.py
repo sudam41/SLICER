@@ -7,7 +7,7 @@ class Parsing():
 	def __init__(self, conffile,floorplanfile):
 	
 		self.conffile = "../MatEx/{}".format(conffile)
-		self.floorfile = "../MatEx/{}".format(floorplanfile)
+		self.floorfile = "../MatEx/floorplans/{}".format(floorplanfile)
 		
 	def parseconfig(self):
 

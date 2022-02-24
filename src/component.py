@@ -8,7 +8,7 @@
 class Component:
 	"""Represents a computing component within a design point."""
 
-	def __init__(self, ID, com_type, location, width,height, self_temp=50, time=0):
+	def __init__(self, ID, com_type, name, location, width,height,idle, self_temp=50, time=0):
 		""" Initialize a component representing a CPU.
 
 		:param ID: [Inteager] - ID of this component.
@@ -25,12 +25,14 @@ class Component:
 
 		self.ID = ID
 		self.com_type = com_type
+		self.name = name
 		self._self_temp = self_temp
 		self.loc_botleft = location
 		self.loc_topright = (location[0]+width,location[1]+height)
 		self._time = time
 		self.assigned_tasks = []
 		self.alive = True
+		self.idle_power = idle 
 		
 
 	def __repr__(self):
@@ -38,7 +40,7 @@ class Component:
 
 		:return: string - representation of this Component object
 		"""
-		return "Id: {}\nType: {}\nLoc: {} | {}".format(self.ID, self.com_type, self.loc_botleft,self.loc_topright)
+		return "Id: {}\nType: {}\nName: {}\nLoc: {} | {}".format(self.ID, self.com_type,self.name, self.loc_botleft,self.loc_topright)
 #		return "component Id: {}".format(self.ID)
 		
 	def reset(self):
