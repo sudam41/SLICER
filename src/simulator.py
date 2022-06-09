@@ -46,13 +46,20 @@ class Simulator():
 
 	def schedule(self, scheduler_type):
 #		print("AT",self._app.alltasks)
-		S = Scheduler(self._app, self._cluster)
+#		print("CLUS:",len(self._cluster._clus))
+#		x= input("input X: ")
+		S = Scheduler(self._app, self._cluster,scheduler_type)
 		
 		if scheduler_type == "MET":
 			schedulable = S.MET()
 		elif scheduler_type == "ETF":
 			schedulable = S.ETF()
-		
+		elif scheduler_type == "HEFT":
+			schedulable = S.HEFT()
+		elif scheduler_type == "DNDS":
+			schedulable = S.DNDS()
+		elif scheduler_type == "DWDS":
+			schedulable = S.DWDS()
 		return schedulable
 		
 
@@ -60,7 +67,7 @@ class Simulator():
 
 		
 	def simulate_thermal(self, time_intervals, num_comp, alive_components, initial_temp,thermalModel,tick,num_itter):
-		"""simulate a single itteration of the thermal and aging behavior
+		"""simulate a single itteration of the thermal behavior
 
 		:return: float - wear of a single itteration
 		"""
@@ -81,7 +88,7 @@ class Simulator():
 		tic = TT.perf_counter()  ##Timing
 		
 		ptrace = True
-		interval = 0.0001
+		interval = 0.001
 #		interval = 0.0000001
 		tasks_over_time=[]
 #		time= time_intervals[0]
@@ -165,135 +172,194 @@ class Simulator():
 		
 #		print("powerover:",power_over_time)
 #		print("TOT:",tasks_over_time)
-		#Save power information on powertrace file
-		n=num_itter
-		time_all = []
-		power_all = []
-		
-#		time_all_p = np.zeros(1)
-		
+############
+		self._cluster._clus[0].order_assigned_tasks()
+#		print("cluster:",self._cluster._clus)
 		power_all_p = []
-
+		
+		idle_time = np.zeros(num_comp)
 		for i in range (len(alive_components)):
 			power_all_p.append(np.zeros(1))
-		
-		
-		end = 0
-		time_all.append(time_intervals[0])
-		for i in range(n):
-			idle_time = np.zeros(num_comp)
-			if ptrace == False:
-				for t in time_intervals[1:]: 
-					time_all.append(t + end )
-				end = time_all[-1]
-				
-				for p in power_over_time:
-					power_all.append(p)
+			
+#		print("ac:",alive_components)
+		for c in range (len(alive_components)):
+#		for comp in self._cluster._clus:
+#			print("Comp:",c)
+			if(alive_components[c] == True):
+				comp = self._cluster.find_alive_component(c)
+				pow_data = np.empty(int(round(self._app.deadline/interval)))
+#				print("ip",self._cluster.idle_power)
+				pow_data.fill(self._cluster.idle_power[comp.curr_freq])
+				comp.order_assigned_tasks()
+				idle_time[c] = comp.idletime(self._app.deadline)
+				for task in comp.assigned_tasks:
+					start = int(round(task.start/interval))
+					end = int(round(task.end/interval))
+#					print("task:",task.ID,"  start:",start,"  stop:",end)
+					pow_data[start:end] = parse_power(task.ID,comp.com_type,comp.curr_freq)
+					
+					
 			else:
-				prev_task = ["x","x","x","x","x","x","x","x","x","x","x","x","x","x","x","x"] #TODO***********
-#				time_all_p = np.concatenate((time_all_p,np.arange(end,time_intervals[-1]+end,interval)))
-				for j,t in enumerate(time_intervals[1:]):
-#					tim = np.arange(time_intervals[j]+end,t+end,interval)
-					
-#					print("timallp:",time_all_p,"  tim:",tim)
-#					timtried toe_all_p=np.concatenate((time_all_p,tim),axis=0)
-					
-					comps = tasks_over_time[j]
-#					print("tasks_over_time:",tasks_over_time)
-#					for c,tsk in enumerate(comps):
-					for c in range(len(alive_components)):
-#						print("comp:",c)
-						if alive_components[c]:
-							
-							tsk = comps[c]
-#							print("task:",tsk,"   prev:",prev_task[c])
-							if prev_task[c]!=tsk:
-								if tsk==tsk:
-									pow_data = parse_power(int(tsk),c)#TODO: also pass in the dvfs level
-								else:
-#									print("AC:",alive_components)	
-									pow_data = np.empty(int(round((t-time_intervals[j])/interval)))
-									pow_data.fill(self._cluster.idle_power)
-#									print("idle pow:",pow_data)
-									idle_time[c]+=t-time_intervals[j]
+				pow_data = np.zeros(int(round(self._app.deadline/interval)))
+			
+#			print("powdata:",len(pow_data)," comp:",c)
+			pow_data_list = []
+			for j in range(num_itter):
+				pow_data_list.append(pow_data)
+			power_all_p[c]= np.concatenate(tuple(pow_data_list)) 
+			
+#			print("new_powdata:",len(power_all_p[c])," comp:",c)
+		time_all_p = np.arange(0,self._app.deadline*num_itter,interval)
+#		print("TIME:",len(time_all_p))
+#		sys.exit()
 
-							else:
-								continue
-							
-							
-						else:
-							pow_data = np.zeros(int(round((t-time_intervals[j])/interval))) 
-#							print("dead pow:",pow_data)
-							
+
+
+
+
+#############
+#		#Save power information on powertrace file
+#		n=num_itter
+#		time_all = []
+#		power_all = []
+#		
+##		time_all_p = np.zeros(1)
+#		
+#		power_all_p = []
+
+#		for i in range (len(alive_components)):
+#			power_all_p.append(np.zeros(1))
+#		
+#		
+#		end = 0
+#		time_all.append(time_intervals[0])
+#		for i in range(n):
+#			idle_time = np.zeros(num_comp)
+#			if ptrace == False:
+#				for t in time_intervals[1:]: 
+##					time_all.append(t + end )
+#					time_all.append(t + self._app.deadline )
+#				end = time_all[-1]
+#				
+#				for p in power_over_time:
+#					power_all.append(p)
+#			else:
+#				prev_task = ["x","x","x","x","x","x","x","x","x","x","x","x","x","x","x","x"] #TODO***********
+##				time_all_p = np.concatenate((time_all_p,np.arange(end,time_intervals[-1]+end,interval)))
+#				for j,t in enumerate(time_intervals[1:]):
+##					tim = np.arange(time_intervals[j]+end,t+end,interval)
+#					
+##					print("timallp:",time_all_p,"  tim:",tim)
+##					timtried toe_all_p=np.concatenate((time_all_p,tim),axis=0)
+#					
+#					comps = tasks_over_time[j]
+#					print("tasks_over_time:",tasks_over_time[-1])
+##					for c,tsk in enumerate(comps):
+#					for c in range(len(alive_components)):
+##						print("comp:",c)
+#						if alive_components[c]:
+#							
+#							tsk = comps[c]
+##							print("task:",tsk,"   prev:",prev_task[c])
+#							if prev_task[c]!=tsk:
+#								if tsk==tsk:
+#									pow_data = parse_power(int(tsk),c)#TODO: also pass in the dvfs level
+#								else:
+##									print("AC:",alive_components)	
+#									pow_data = np.empty(int(round((t-time_intervals[j])/interval)))
+#									pow_data.fill(self._cluster.idle_power)
+##									print("idle pow:",pow_data)
+#									idle_time[c]+=t-time_intervals[j]
+#								if time_intervals[-1]==t:
+#									pow_data_idle = np.empty(int(round((self._app.deadline-t)/interval)))
+#									pow_data_idle.fill(self._cluster.idle_power)
+#									pow_data = np.concatenate((pow_data,pow_data_idle))
+#							else:
+#								if time_intervals[-1]==t:
+#									pow_data = np.empty(int(round((self._app.deadline-t)/interval)))
+#									pow_data.fill(self._cluster.idle_power)
+##									pow_data = np.concatenate((pow_data,pow_data_idle))
+##								continue
+#							
+#							
+#						else:
+#							if time_intervals[-1]==t:
+#								pow_data = np.zeros(int(round((self._app.deadline-time_intervals[j])/interval)))
+#							else:
+#								pow_data = np.zeros(int(round((t-time_intervals[j])/interval))) 
+#							
+#							
+##							print("dead pow:",pow_data)
+#							
 #						print("pow size:",len(pow_data))	
 
-						power_all_p[c]=np.concatenate((power_all_p[c],pow_data))
-							
-					prev_task = copy.deepcopy(comps)		
-#				end = time_all_p[-1]
-				end += time_intervals[-1]
-			
-#			print("Idle Time:",np.sum(idle_time)/num_alive,"  Total time:", time_intervals[-1])	
-#		print("end:",end)	
-#		print("PA:",power_all_p)
-#		sys.exit()
-#		time_all_p = np.arange(time_intervals[0],end,interval)
-		time_all_p = np.linspace(time_intervals[0],end,int(round((end-time_intervals[0])/interval)))
-#		print
-#				for comps in tasks_over_time:
-#					for t,c in enumerate(comps):
-#						print("tasks:",t,"  comp:",c)
-#						if t==t:
-#							p = parse_power(t,c)
-#							power_all_p[i]=np.concatenate((power_all_p[i],p))
-#						else:
-		
-		
-#		toc = TT.perf_counter()  ##Timing
-#		print("Time to parse power:",toc-tic)					
-				
-#		print("t:",time_all,"\np0:",power_all,"\np1:",power_all_p[1].size)
-		
-##plot w ptrace
-##		time_all_p = np.delete(time_all_p,0)
-#		plt.plot(time_all_p,power_all_p[0][1:],color='red')
-#		plt.plot(time_all_p,power_all_p[1][1:],color='blue')
-#		plt.xlabel('Time')
-#		plt.ylabel('Power')
-#		plt.show()
-		
-
-###plot w/o ptrace
-#		ttt= np.array([0])
-#		ppp1 = np.array([0])
-#		ppp2 = np.array([0])
-#		pw1 = np.zeros(len(time_all))
-#		pw2 = np.zeros(len(time_all))
-#		for i,t in time_all[1:]:
-#			tim = np.linspace(time_all[i],t,10)
-#			pww1 = np.ones(10)*power_all[i][0][0]
-#			pww2 = np.ones(10)*power_all[i][1][0]
-#			
-#			ttt=np.concatenate(ttt,tim)
-#			ppp1 =np.concatenate(ppp1,pww1)
-#			ppp2 =np.concatenate(ppp2,pww2)
-#			
-#		plt.plot(ttt,ppp1)
-#		plt.show()	
-
-
-#		for i,p in enumerate(power_all):
-#			pw1[i] = p[0][0]
-#			pw2[i] = p[1][0]
-#			
+#						power_all_p[c]=np.concatenate((power_all_p[c],pow_data))
+#							
+#					prev_task = copy.deepcopy(comps)		
+##				end = time_all_p[-1]
+##				end += time_intervals[-1]
+#				end+=self._app.deadline			
+##			print("Idle Time:",np.sum(idle_time)/num_alive,"  Total time:", time_intervals[-1])	
+##		print("end:",end)	
+##		print("PA:",power_all_p)
+##		sys.exit()
+##		time_all_p = np.arange(time_intervals[0],end,interval)
+#		time_all_p = np.linspace(time_intervals[0],end,int(round((end-time_intervals[0])/interval)))
+##		print
+##				for comps in tasks_over_time:
+##					for t,c in enumerate(comps):
+##						print("tasks:",t,"  comp:",c)
+##						if t==t:
+##							p = parse_power(t,c)
+##							power_all_p[i]=np.concatenate((power_all_p[i],p))
+##						else:
 #		
-#		print("pw:",pw1)
 #		
-#		plt.plot(time_all,pw1,color='red')
-#		plt.plot(time_all,pw2,color='blue')
-#		plt.xlabel('Time')
-#		plt.ylabel('Power')
-#		plt.show()
+##		toc = TT.perf_counter()  ##Timing
+##		print("Time to parse power:",toc-tic)					
+#				
+##		print("t:",time_all,"\np0:",power_all,"\np1:",power_all_p[1].size)
+#		
+###plot w ptrace
+###		time_all_p = np.delete(time_all_p,0)
+##		plt.plot(time_all_p,power_all_p[0][1:],color='red')
+##		plt.plot(time_all_p,power_all_p[1][1:],color='blue')
+##		plt.xlabel('Time')
+##		plt.ylabel('Power')
+##		plt.show()
+#		
+
+####plot w/o ptrace
+##		ttt= np.array([0])
+##		ppp1 = np.array([0])
+##		ppp2 = np.array([0])
+##		pw1 = np.zeros(len(time_all))
+##		pw2 = np.zeros(len(time_all))
+##		for i,t in time_all[1:]:
+##			tim = np.linspace(time_all[i],t,10)
+##			pww1 = np.ones(10)*power_all[i][0][0]
+##			pww2 = np.ones(10)*power_all[i][1][0]
+##			
+##			ttt=np.concatenate(ttt,tim)
+##			ppp1 =np.concatenate(ppp1,pww1)
+##			ppp2 =np.concatenate(ppp2,pww2)
+##			
+##		plt.plot(ttt,ppp1)
+##		plt.show()	
+
+
+##		for i,p in enumerate(power_all):
+##			pw1[i] = p[0][0]
+##			pw2[i] = p[1][0]
+##			
+##		
+##		print("pw:",pw1)
+##		
+##		plt.plot(time_all,pw1,color='red')
+##		plt.plot(time_all,pw2,color='blue')
+##		plt.xlabel('Time')
+##		plt.ylabel('Power')
+##		plt.show()
 
 		#Averaging each num_sample values
 		average = False
@@ -334,7 +400,7 @@ class Simulator():
 		elif ptrace==True:	
 			time_all_ave = time_all_p
 			power_all_ave = power_all_p
-			time_all_ave = np.insert(time_all_ave,0,-1)
+#			time_all_ave = np.insert(time_all_ave,0,-1)
 #			print("TIM SIZE:",time_all_ave.size,"  AVE SIZE:",power_all_ave[1].size)
 		else:
 			time_all_ave = time_all
@@ -354,7 +420,7 @@ class Simulator():
 			subprocess.run(["../MatEx/MatEx", "-c" ,"../MatEx/matex.config", "-f" ,"../MatEx/multicore.flp", "-p", "../MatEx/multicore2.ptrace", "-transient_file_block", "../MatEx/allTemp.data"])
 #			print("Matex completed")
 		else:
-			
+#			print("write power")
 #			tic = TT.perf_counter()  ##Timing
 			write.powertrace_all("../MatEx/powertraces/instance_{}.ptrace".format(self.mc_instance),power_all_ave,time_all_ave,self._cluster.names)
 #			print("Call Matex")
@@ -362,15 +428,17 @@ class Simulator():
 #			print("Time to write power:",toc-tic)
 			
 			
-			
+			print("Matex started")
 			subprocess.run(["../MatEx/MatEx", "-c" ,"../MatEx/matex.config", "-f" ,"../MatEx/floorplans/multicore_3x3.flp", "-p", "../MatEx/powertraces/instance_{}.ptrace".format(self.mc_instance), "-transient_file_block", "../MatEx/results/allTemp_{}.data".format(self.mc_instance)])
 			tic = TT.perf_counter()  ##Timing
+#			sys.exit()
+			print("Matex completed")
 			os.remove("../MatEx/powertraces/instance_{}.ptrace".format(self.mc_instance))
 			
 			toc = TT.perf_counter()  ##Timing
 #			print("Time to remove file:",toc-tic)
+#			print("File removed!")
 			
-			print("Matex completed")
 			
 			
 			
@@ -427,7 +495,7 @@ class Simulator():
 #		thermal_model = Thermal(num_comp,tick)
 		thermal_model= False
 		numb_itter = self.num_itter
-		min_comp = 0
+		min_comp = 1
 		schedulable = True
 		
 		tot_idle_time=0
@@ -436,27 +504,42 @@ class Simulator():
 #		plot = Plotter(num_comp)
 		firstrun = True
 		fail_time = 0
+		failcount=0
+		firstfail_time=0
+		firstfail = 0
 		while schedulable ==True and num_comp>min_comp:
 		
+			
 			tic_sch = TT.perf_counter()  ##Timing
 			schedulable = self.schedule(self.scheduler_type)
 			toc_sch = TT.perf_counter()  ##Timing
+			if schedulable ==False:
+				print("%%%%%%NOT Schedulable!!%%%%%")
+				break
 #			print("schedule time:",toc_sch-tic_sch)
-####		
-##			print("sched",schedulable)
-##			plot.plot_schedule(self._cluster)
-##			fig1, gnt = plt.subplots()
+##		
+#			print("sched",schedulable)
+#			plot.plot_schedule(self._cluster)
+#			fig1, gnt = plt.subplots()
 #			for i,comp in enumerate(self._cluster._clus):
-##				if(alive_components[comp.ID] == True):
-#				for task in comp.assigned_tasks:
-#					print("comp:",comp.ID," task:",task.ID," start:",task.start," end:",task.end, " dep:",task.dep)
-##					gnt.broken_barh([(task.start,task.end-task.start)],(i*1.5,1),facecolors ='tab:blue',)
-##			gnt.set_yticks([0.5,2.0])
-##			gnt.set_yticklabels(['Component 0', 'Component 1'])
-##			gnt.set_xticks(np.arange(0,1,0.05))
+#				if(alive_comp[comp.ID] == True):
+#					for task in comp.assigned_tasks:
+#						print("comp:",comp.ID," task:",task.ID," start:",task.start," end:",task.end, " dep:",task.dep)
+#						gnt.broken_barh([(task.start,task.end-task.start)],(i*1.5,1),facecolors ='tab:blue',)
+#			gnt.set_yticks([0.5,2.0])
+#			gnt.set_yticklabels(['Component 0', 'Component 1'])
+#			gnt.set_xticks(np.arange(0,1,0.05))
 
+			shed = []
+			for i,comp in enumerate(self._cluster._clus):
+				for task in comp.assigned_tasks:
+					shed.append([task.ID,comp.ID,comp.curr_freq,task.start,task.end])		
 			
-
+			df = pd.DataFrame(data=shed)
+			df.to_csv("../results/dvfs/shedule_heft_2core{}.csv".format(failcount))
+			failcount+=1
+			print("schedule:",np.array(shed))
+#			sys.exit()
 
 #			tic = TT.perf_counter()  ##Timing
 			time_intervals = self._cluster.get_time_intervals()
@@ -478,7 +561,12 @@ class Simulator():
 #			print("temp len:",self._cluster.number_of_comps())
 #			tot_temp.append((np.sum(temp[1:]))/self._cluster.number_of_comps())
 			
-			tot_temp.append(temp[1:])
+			df = pd.DataFrame(data=temp)
+			df.to_csv("../results/dvfs/temp_heft_2core{}.csv".format(failcount))
+#			sys.exit()
+			
+			
+			tot_temp.append(temp[0:])
 			
 #			print("timeI: ",time)
 #			fig, ax = plt.subplots(2,1)
@@ -520,8 +608,8 @@ class Simulator():
 #		print("DATA:",data)
 #		df = pd.DataFrame(data=data)
 #		df.to_csv("data.csv")
-		print("Temptemp[1:]:", len(tot_temp))
-#		
+#		print("Temptemp[1:]:", len(tot_temp[0]))
+#		sys.exit()
 		
 		return firstfail_time,firstfail, ageing_simulator.totTime, tot_idle_time, tot_temp
 

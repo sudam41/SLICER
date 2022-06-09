@@ -13,7 +13,7 @@ class Cluster:
 		self._failed_comp = []
 		self.names = ["Core_1,1","Core_1,2","Core_1,3","Core_2,1","Core_2,2","Core_2,3","Core_3,1","Core_3,2","Core_3,3"]
 		self.enabled_comp=[]
-		self.idle_power = 0.872341
+		self.idle_power = [0.272063,0.435726,0.649266,0.917593]
 	
 	def __repr__(self):
 		""" Representation of an Cluster object.
@@ -89,5 +89,13 @@ class Cluster:
 		return intervals 
 
 	
-	
+	def find_alive_component(self,ID):
+		
+		for comp in self._clus:
+#			print("compid:",comp.ID,"  ID:",ID)
+			if comp.ID == ID:
+				return comp
+		
+#		print("HERE!!")
+		return False
 

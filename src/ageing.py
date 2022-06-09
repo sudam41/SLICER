@@ -126,6 +126,7 @@ class Ageing():
 	def run(self, alive_comp, current_rel, time_intervals,temp,num_comp,p_fail_time):
 #		print("time int:",time_intervals, "  temp:",temp)
 #		alpha_ti = self._avarage_ageing_rate(time_intervals,temp,alive_comp)
+		print("Temp time:",temp[0][-1],"  temp interval:",temp[0][-1]/len(temp[0]))
 		temp[0] = temp[0]/3600
 		
 		alpha_max,alpha_ave = self._average_ageing_rate_uniform(temp,temp[0][0],temp[0][-1],self.interval/3600,alive_comp) 

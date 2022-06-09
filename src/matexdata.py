@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+import sys
 # reading csv files
 #data =  pd.read_csv('file.data', sep=",")
 #print(data)
@@ -21,7 +22,7 @@ def import_matex_data(names,mc_instance):
 #			print(col)
 		temp.append(np.array(data[i]))
 #	print(temp)	
-
+#	sys.exit()
 	os.remove('../MatEx/results/allTemp_{}.data'.format(mc_instance))
 	return temp
 	

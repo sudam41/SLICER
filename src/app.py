@@ -6,6 +6,8 @@
 """
 
 from task import Task
+from calc_energy import calc_ave_energy_task
+import sys
 
 class Application:
 	def __init__(self, taskIDs, edges, execution, power, deadline):
@@ -19,6 +21,7 @@ class Application:
 		"""
 		self._execution = execution
 		self._power = power
+		self._energy={}
 
 		self._deadline = deadline
 		
@@ -44,9 +47,25 @@ class Application:
 			
 			alltasks.append(t)
 			
+#		for task in alltasks:
+#			for dep in task.dep:
+#				alltasks[dep] =  
+##		print("at:",alltasks)
 		return alltasks  
 		
+	def calc_energy(self,cluster):
+		"""Calculate the average energy for the task on each component/ for each frequency"""	
+		for task in self._alltasks:
+			energy_comp = {}
+			for comp in cluster._clus:
+				energy_freq = []
+				for f in range(4):
+					energy_freq.append(calc_ave_energy_task(task.ID,comp.com_type,f))
+				energy_comp[comp.com_type] = energy_freq
+			self._energy[task.ID] = energy_comp
 		
+#		print("energy:",self._energy)
+#		sys.exit()
 		
 	@property
 	def execution(self):

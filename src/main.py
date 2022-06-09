@@ -10,6 +10,7 @@ from parseconfig import Parsing
 from plotter import Plotter
 from multiprocessing import Pool, cpu_count
 
+
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -18,20 +19,26 @@ import numpy as np
 import copy
 import time
 
+shed_policy = "HEFT"
 
 def simulation (clus,App,ageing_int,pow_int,itter,i):
+	print("\n:::::::::::::::::::::::itteration ",i," ::::::::::::::::::::::")
 	np.random.seed() #re-seed random generator
 	cluster = copy.deepcopy(clus)
 	app = copy.deepcopy(App)
-	sim =  Simulator(app,cluster,"ETF",ageing_int,pow_int,itter,i)
+	app.calc_energy(cluster)
+	sim =  Simulator(app,cluster,shed_policy,ageing_int,pow_int,itter,i)
 	
 	
 #	t_start = time.perf_counter()  
 	firstfail_time,firstfail,TTF,idle,temp = sim.run()
+#	firstfail_time,firstfail,TTF,idle = sim.run()
+#	print("here!")
+#	sys.exit()
 #	t_stop = time.perf_counter()
 #	temp_all.append(temp)
 #	et[i] = t_stop-t_start
-	print("\n:::::::::::::::::::::::itteration ",i," completed::::::::::::::::::::::")
+	
 	return TTF,idle,temp
 
 
@@ -46,10 +53,23 @@ def simulation (clus,App,ageing_int,pow_int,itter,i):
 #   \   /      /  \
 #0.75\ /1     /    \
 #     t3     t5     t6
+#edges = ({},{0:0.003},{0:0.006},{1:0.002,2:0.003},{0:0.003},{4:0.003},{4:0.004})
+#tasks = [0,1,2,3,4,5,6]
 
 
-edges = ({},{0:0.003},{0:0.006},{1:0.002,2:0.003},{0:0.003},{4:0.003},{4:0.004})
-tasks = [0,1,2,3,4,5,6]
+###DAG-2
+#          t0
+#          |
+#  ---------------------
+#  |     |      |      |
+#  t1    t2     t3     t4
+#  |     |      |      |
+#  ---------------------
+#          |  
+#          t5
+
+edges = ({},{0:0.003},{0:0.006},{0:0.003},{0:0.005},{1:0.002,2:0.003,3:0.005,4:0.002})
+tasks = [0,1,2,3,4,5]
 
 
 #edges = ({},{0:0.003},{0:0.006},{1:0.002,2:0.003})
@@ -61,11 +81,16 @@ tasks = [0,1,2,3,4,5,6]
 
 
 power = {0:{0:1.1, 1:1.7012423, 2:0.01}, 1:{0:2.2, 1:1.9807628, 2:0.02}, 2:{0:3.0, 1:1.7012423, 2:0.05}, 3:{0:2.2, 1:2.0810245, 2:0.04},4:{0:2.2, 1:2.0810245, 2:0.04},5:{0:2.2, 1:2.0810245, 2:0.04},6:{0:2.2, 1:2.0810245, 2:0.04}}
-WCET = {0:{0:0.3, 1:0.028, 2:7.0}, 1:{0:0.1, 1:0.1, 2:7.2}, 2:{0:0.2, 1:0.028, 2:4.5}, 3:{0:0.2, 1:0.08, 2:7.9},4:{0:0.2, 1:0.08, 2:7.9},5:{0:0.2, 1:0.08, 2:7.9},6:{0:0.2, 1:0.08, 2:7.9}}
+#WCET = {0:{0:0.3, 1:0.028, 2:7.0}, 1:{0:0.1, 1:0.1, 2:7.2}, 2:{0:0.2, 1:0.028, 2:4.5}, 3:{0:0.2, 1:0.08, 2:7.9},4:{0:0.2, 1:0.08, 2:7.9},5:{0:0.2, 1:0.08, 2:7.9},6:{0:0.2, 1:0.08, 2:7.9}}
+
+WCET = {0:{0:[1.051,0.540,0.375,0.288],1:[1.051,0.540,0.375,0.288],2:[1.051,0.540,0.375,0.288],3:[1.051,0.540,0.375,0.288]},1:{0:[1.051,0.540,0.375,0.288],1:[1.051,0.540,0.375,0.288],2:[1.051,0.540,0.375,0.288],3:[1.051,0.540,0.375,0.288]},2:{0:[1.051,0.540,0.375,0.288],1:[1.051,0.540,0.375,0.288],2:[1.051,0.540,0.375,0.288],3:[1.051,0.540,0.375,0.288]},3:{0:[1.051,0.540,0.375,0.288],1:[1.051,0.540,0.375,0.288],2:[1.051,0.540,0.375,0.288],3:[1.051,0.540,0.375,0.288]},4:{0:[1.051,0.540,0.375,0.288],1:[1.051,0.540,0.375,0.288],2:[1.051,0.540,0.375,0.288],3:[1.051,0.540,0.375,0.288]},5:{0:[1.051,0.540,0.375,0.288],1:[1.051,0.540,0.375,0.288],2:[1.051,0.540,0.375,0.8],3:[1.051,0.540,0.375,0.288]}}
+
+#WCET = {0:{1:[1.051,0.540,0.375,0.288]},1:{1:[1.051,0.540,0.375,0.15]},2:{1:[1.051,0.540,0.375,0.1]},3:{1:[1.051,0.540,0.375,0.1]},4:{1:[1.051,0.540,0.375,0.4]},5:{1:[1.051,0.540,0.375,0.288]}}
 
 
-A = Application(tasks, edges, WCET, power, 100000)
-print("alltasks: ", A.alltasks)
+A = Application(tasks, edges, WCET, power, 1.8)
+
+#print("alltasks: ", A.alltasks)
 
 
 #parsing floorplan to opbtain the components
@@ -75,7 +100,9 @@ flp = P.parsefloorplan()
 print("flp size:",len(flp))
 
 grid_size=9
-idle_power = 0.872341  #0.872385338112
+#idle_power = 0.872341  #0.872385338112
+idle_power = [0.272063,0.435726,0.649266,0.917593]
+dvfs_levels = {0:1,1:2,2:3,3:4} #GHz
 all_clus = []
 
 #create cluster and add components
@@ -90,7 +117,7 @@ for i in range (1,grid_size):
 	enabled_comp = np.zeros(grid_size,dtype=bool)
 	cl = Cluster()
 	for j,unit in enumerate(flp[0:i+1]):
-		cl.add_component(Component(j, 1, unit[0],(unit[3],unit[4]),unit[1],unit[2],idle_power))
+		cl.add_component(Component(j, 2, unit[0],(unit[3],unit[4]),unit[1],unit[2],idle_power,dvfs_levels))
 
 
 #	cl = copy.deepcopy(clus)
@@ -100,7 +127,7 @@ for i in range (1,grid_size):
 	all_clus.append(cl)
 	
 
-	
+
 
 #sys.exit()
 
@@ -135,7 +162,7 @@ ageing_interval = np.array([0.0038])
 pow_interval = np.arange(1,10)		#power interval in number of samples
 #pow_int = [1,2,3,4,5,6,7,8,9,10]
 pow_int=20
-itter = 20#np.arange(5,60,10)#10 #20
+itter = 20  #np.arange(5,60,10)#10 #20
 #ageing_int = 0.0105
 n=1
 ageing_int = 0.0205
@@ -148,10 +175,10 @@ FFT_all={}
 ET_all={}
 temp_all=[]
 allf_temp_all=[]
-j=4
+j=1
 et = np.zeros(len(all_clus))
 all_the_temp = []
-for clus in all_clus[1:2]:
+for clus in all_clus[:1]:
 #	X_axis.append(pow_int*0.0001)
 	X_axis.append(ageing_int)
 	print("no of comp:",j+2)
@@ -183,19 +210,24 @@ for clus in all_clus[1:2]:
 	
 	with Pool() as pool:
 		rslt = pool.starmap(simulation,data_ip)
-	
+		
+#	print("@@@@@@HERE!@@@@@@@@")
 	tok = time.perf_counter() 
 	et[j] = tok-tik
-#	for i,t in enumerate(rslt[0][2]):
+	for i,t in enumerate(rslt):
+		TTF[i] = t[0]
+		firstfail_time[i] = t[1]
 #		print("results:",len(t))
 #	sys.exit()
 #	results = np.array(rslt[0][2])
-#	print("results:",results)
-#	TTF = results[:,0]
+	
+#	TTF = rslt[0][0]
+#	print("results:",rslt)
 #	idle = results[:,1]
 	temp = [rslt[0][2]]
 	
-	
+	df = pd.DataFrame(data=TTF)
+	df.to_csv("../results/dvfs/{}/TTF{}.csv".format(shed_policy,j))
 	
 #	print("rslt:",results,"\n Total time:",tok-tik)
 #	print("Temp:",temp)
@@ -217,12 +249,12 @@ for clus in all_clus[1:2]:
 				sdtemp.append(np.std(core))
 				samp.append(np.array(core,dtype=float))
 		
-			print("samp",np.array(samp).shape)
+#			print("samp",np.array(samp).shape)
 			df = pd.DataFrame(data=samp)
-			df.to_csv("../results/failtemp/fail{}.csv".format(k))
-	
+			df.to_csv("../results/dvfs/fail{}.csv".format(k))
+#			sys.exit()
 
-#			tot_temp.append(corestemp)
+			tot_temp.append(corestemp)
 			max_temp.append(maxtemp)
 			sd_temp.append(sdtemp)
 			all_the_temp.append(samp)
@@ -243,22 +275,25 @@ for clus in all_clus[1:2]:
 	
 
 	df = pd.DataFrame(data=tot_temp)
-	df.to_csv("../results/failtemp/avetemp1.csv")
+	df.to_csv("../results/dvfs/{}/avetemp{}.csv".format(shed_policy,j))
 	
 	df = pd.DataFrame(data=max_temp)
-	df.to_csv("../results/failtemp/maxtemp1.csv")
+	df.to_csv("../results/dvfs/{}/maxtemp{}.csv".format(shed_policy,j))
 	
 	df = pd.DataFrame(data=sd_temp)
-	df.to_csv("../results/failtemp/sdtemp1.csv")
+	df.to_csv("../results/dvfs/{}/sdtemp{}.csv".format(shed_policy,j))
 
 #	df = pd.DataFrame(data=TTF)
-#	df.to_csv("../results/failtemp/ttf{}.csv".format(j))
+#	df.to_csv("../results/dvfs/ttf{}.csv".format(j))
+#	
+#	df = pd.DataFrame(data=firstfail_time)
+#	df.to_csv("../results/dvfs/firstfail{}.csv".format(j))
 #	
 #	df = pd.DataFrame(data=idle)
-#	df.to_csv("../results/failtemp/idle{}.csv".format(j))
+#	df.to_csv("../results/dvfs/idle{}.csv".format(j))
 #	
 #	df = pd.DataFrame(data=temp_all)
-#	df.to_csv("../results/temp_all{}.csv".format(j))
+#	df.to_csv("../results/dvfs{}.csv".format(j))
 #	
 	ET_all["INT{}".format(j)]=et
 	TTF_all["TTF{}".format(j)]=TTF
@@ -278,11 +313,11 @@ for clus in all_clus[1:2]:
 #	MTTF.append(np.average(TTF))
 #	ET.append(t_stop-t_start)
 #	print("TTF:",TTF,"\nMTTF:",np.average(TTF),"  Mean Idle Time:",np.average(idle),"\nSD",np.std(TTF), "\nMean Execution time:",t_stop-t_start, "  Total Execution Time:",tok-tik)
-	print("TTF:",TTF,"\nMTTF:",np.average(TTF),"  Mean Idle Time:",np.average(idle),"\nSD",np.std(TTF),  "  Total Execution Time:",tok-tik)
+	print("TTF:",TTF,"\nMTTF:",np.average(TTF),"  Mean Idle Time:",np.average(idle),"\nSD",np.std(TTF))
 	j+=1
 
 df = pd.DataFrame(data=et)
-df.to_csv("../results/failtemp/et.csv")
+df.to_csv("../results/dvfs/{}/et.csv".format(shed_policy))
 #print("MTTF:::",MTTF)
 
 
@@ -292,12 +327,12 @@ df.to_csv("../results/failtemp/et.csv")
 #df.to_csv("../results/failtemp/allftemp.csv")
 
 
-#ttfdata = {'ttf0':TTF_all[0],'fft0:':FFT_all[0],'ttf1':TTF_all[1],'fft1:':FFT_all[1],'ttf2':TTF_all[2],'fft2:':FFT_all[2]}
-df = pd.DataFrame(data=TTF_all)
-df.to_csv("../results/failtemp/ttf.csv")
+##ttfdata = {'ttf0':TTF_all[0],'fft0:':FFT_all[0],'ttf1':TTF_all[1],'fft1:':FFT_all[1],'ttf2':TTF_all[2],'fft2:':FFT_all[2]}
+#df = pd.DataFrame(data=TTF_all)
+#df.to_csv("../results/dvfs/ttf.csv")
 
-df = pd.DataFrame(data=FFT_all)
-df.to_csv("../results/failtemp/fft.csv")
+#df = pd.DataFrame(data=FFT_all)
+#df.to_csv("../results/dvfs/fft.csv")
 
 
 

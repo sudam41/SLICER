@@ -8,7 +8,7 @@
 class Component:
 	"""Represents a computing component within a design point."""
 
-	def __init__(self, ID, com_type, name, location, width,height,idle, self_temp=50, time=0):
+	def __init__(self, ID, com_type, name, location, width,height,idle, dvfs_levels, time=0):
 		""" Initialize a component representing a CPU.
 
 		:param ID: [Inteager] - ID of this component.
@@ -16,6 +16,7 @@ class Component:
 		:param location: (x, y) tuple of the location of the component on the grid.
 				 Each component in a designpoint should have a unique location
 		:param self_temp: temperature of cpu upon 100% utilization
+		:param dvfs_levels: dict containing frequency of each dvfs level
 		:parm time: [float] - time that the last task executed on this component 
 		"""
 		#        assert comp_capability >= 0, "Power_capacity has to be a non-negative integer"
@@ -26,13 +27,15 @@ class Component:
 		self.ID = ID
 		self.com_type = com_type
 		self.name = name
-		self._self_temp = self_temp
+#		self._self_temp = self_temp
 		self.loc_botleft = location
 		self.loc_topright = (location[0]+width,location[1]+height)
 		self._time = time
 		self.assigned_tasks = []
 		self.alive = True
-		self.idle_power = idle 
+		self.idle_power = idle
+		self.max_freq=dvfs_levels
+		self.curr_freq=3#len(dvfs_levels)-1 #set initial frequency to maximum
 		
 
 	def __repr__(self):
@@ -173,5 +176,8 @@ class Component:
 		
 		return endtime - total_exe_time
 		
-	
+	def order_assigned_tasks(self):
+		print("before:",self.assigned_tasks)
+		self.assigned_tasks.sort(key=lambda x: x.start)
+		print("after:",self.assigned_tasks)
 		

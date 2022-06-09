@@ -37,19 +37,19 @@ class WriteToFile():
 #		print("Size:",time.size," ",power[0].size," ",power[1].size )
 #		names = []
 
-		data = {"time":time}
+		data_ = {"time":time}
 		for i,name in enumerate(names):
-#			print("name:",name,"\npower:",len(power[i]),"\ntime:",len(time))
-			data[name] = power[i]
+			print("name:",name,"\npower:",len(power[i]),"\ntime:",len(time))
+			data_[name] = power[i]
 		
 #		sys.exit()
-#		print("data:" ,data)
+#		print("data:" ,data_)
 
 #		data = {"time":time,"Core_1,1":power[0],"Core_1,2":power[1]}
-		df = pd.DataFrame(data = data)
-
+		df = pd.DataFrame(data = data_)
+#		print("dataframe")
 		df.to_csv("../MatEx/{}".format(filename),index = False,sep='\t')
-		
+#		print("done!")
 #		sys.exit()
 		
 		

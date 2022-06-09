@@ -7,7 +7,7 @@
 
 
 class Task:
-	def __init__(self, ID, start=None, end=None, dep=None, earliest_start=None):
+	def __init__(self, ID, start=None, end=None, dep=None, succ=None, earliest_start=None, comp=None):
 		""" Initialize a task that can be mapped to a component.
 
 		:param ID: [inteager] - Task ID.
@@ -21,9 +21,12 @@ class Task:
 
 		self.ID = ID
 		self.dep = dep
+		self.succ=succ
 		self.start = start
 		self.end = end
 		self.earlliest_start = earliest_start
+		self.allocated_comp=comp
+		
         
 	
 	def __repr__(self):
