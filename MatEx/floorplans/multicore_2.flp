@@ -1,0 +1,3 @@
+# Line Format: <unit-name>\t<width>\t<height>\t<left-x>\t<bottom-y>
+Core_1,1	0.0008	0.00075	0	0
+Core_1,2	0.0008	0.00075	.0008	0
