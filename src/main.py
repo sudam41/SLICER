@@ -19,7 +19,7 @@ import numpy as np
 import copy
 import time
 
-shed_policy = "HEFT"
+shed_policy = "MET"
 
 def simulation (clus,App,ageing_int,pow_int,itter,i):
 	print("\n:::::::::::::::::::::::itteration ",i," ::::::::::::::::::::::")
@@ -164,7 +164,7 @@ pow_interval = np.arange(1,10)		#power interval in number of samples
 pow_int=20
 itter = 20  #np.arange(5,60,10)#10 #20
 #ageing_int = 0.0105
-n=1
+n=10
 ageing_int = 0.0205
 
 MTTF = []

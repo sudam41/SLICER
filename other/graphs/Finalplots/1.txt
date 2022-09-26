@@ -1,0 +1,12 @@
+interval=0.0005   
+pow_int = 1
+itter = 10 #20
+#ageing_int = 0.01
+n=100 #30
+TTF=226888.12533978117
+
+interval=0.0055   
+pow_int = 1
+itter = 10 #20
+n=100 #30
+TTF=228255.8429742071

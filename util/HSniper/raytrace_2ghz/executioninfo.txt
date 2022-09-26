@@ -1,0 +1,5 @@
+started:    2022-02-28 18:35:33
+ended:      2022-02-28 19:37:47
+duration:   1:02:13.884120
+host:       14002f149db8
+tasks:      splash2-raytrace-small-1
