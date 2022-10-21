@@ -632,7 +632,6 @@ class Simulator():
 		AvePowHype = np.average(tot_sys_power,axis=1)
 		VarPowHype = np.var(tot_sys_power,axis=1)
 #		print("AvePow",AvePowHype," VarPow",VarPowHype)
-
 #		sys.exit()
 #		##Store alpha values for plotting
 #		print("DATA:",data)

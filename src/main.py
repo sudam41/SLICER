@@ -283,8 +283,7 @@ print("\nFinal Results:\n""TTF:",TTF,"\nMTTF:",np.average(TTF),"\tSD",np.std(TTF
 #j+=1
 ####end	
 	
-#	
-##		print("results:",len(t))
+#	print("results:",len(t))
 ##	sys.exit()
 ##	results = np.array(rslt[0][2])
 #	
