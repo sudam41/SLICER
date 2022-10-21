@@ -131,7 +131,11 @@ for i in range (1,grid_size):
 	all_clus.append(cl)
 	
 
+if not os.path.exists("../MatEx/powertraces"):
+	os.makedirs("../MatEx/powertraces")
 
+if not os.path.exists("../MatEx/results"):
+	os.makedirs("../MatEx/results")
 
 #sys.exit()
 
