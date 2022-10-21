@@ -39,7 +39,7 @@ class WriteToFile():
 
 		data_ = {"time":time}
 		for i,name in enumerate(names):
-			print("name:",name,"\npower:",len(power[i]),"\ntime:",len(time))
+			#print("name:",name,"\npower:",len(power[i]),"\ntime:",len(time))
 			data_[name] = power[i]
 		
 #		sys.exit()

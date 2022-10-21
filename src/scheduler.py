@@ -314,7 +314,7 @@ class Scheduler:
 		
 		self.calc_HEFT_rank(0)
 		self.heft_ranks.sort(key = lambda x:x[1], reverse=True)
-		print(self.heft_ranks)
+#		print(self.heft_ranks)
 		
 		for t in self.heft_ranks:
 			taskID = t[0]

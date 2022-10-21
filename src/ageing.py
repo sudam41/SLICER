@@ -121,12 +121,13 @@ class Ageing():
 		current_rel = self._reliability(t[minIdx]+eqT,alpha)
 #		current_rel[minIdx]=0
 		fail_time = t[minIdx]
-		return alive_comp, current_rel,fail_time
+		comp_failed = minIdx
+		return alive_comp, current_rel,fail_time,comp_failed
 	
 	def run(self, alive_comp, current_rel, time_intervals,temp,num_comp,p_fail_time):
 #		print("time int:",time_intervals, "  temp:",temp)
 #		alpha_ti = self._avarage_ageing_rate(time_intervals,temp,alive_comp)
-		print("Temp time:",temp[0][-1],"  temp interval:",temp[0][-1]/len(temp[0]))
+#		print("Temp time:",temp[0][-1],"  temp interval:",temp[0][-1]/len(temp[0]))
 		temp[0] = temp[0]/3600
 		
 		alpha_max,alpha_ave = self._average_ageing_rate_uniform(temp,temp[0][0],temp[0][-1],self.interval/3600,alive_comp) 
@@ -148,14 +149,14 @@ class Ageing():
 #		
 #		a= copy.copy(alive_comp)
 #		c= copy.copy(current_rel)
-		alive_comp, current_rel,fail_time = self.fail_component(current_rel, alive_comp,alpha_max)
+		alive_comp, current_rel,fail_time,comp_failed = self.fail_component(current_rel, alive_comp,alpha_max)
 		
 #		a, c,fail_time_ave = self.fail_component(c, a,alpha_ave[a])
 		
 #		print("alpha_max",alpha,"  alpha_ave:",alpha_ave)
 		self.data[fail_time] = alpha_ave
 		
-		return alive_comp, current_rel,fail_time
+		return alive_comp, current_rel,fail_time,comp_failed
 		
 #	def calc_time_until_failure(self, steady_temp, alive_comp, period, current_rel):
 #		curr_period = self.totTime/period

@@ -150,7 +150,7 @@ class Component:
 
 		:return: integer tuple (x, y) indicating the position of this component.
 		"""
-		print("***HERE!")
+#		print("***HERE!")
 		return self.loc_botleft
 		
 	def assigntask(self,task):
@@ -177,7 +177,7 @@ class Component:
 		return endtime - total_exe_time
 		
 	def order_assigned_tasks(self):
-		print("before:",self.assigned_tasks)
+		
 		self.assigned_tasks.sort(key=lambda x: x.start)
-		print("after:",self.assigned_tasks)
+		
 		

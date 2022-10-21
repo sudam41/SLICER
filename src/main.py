@@ -9,6 +9,8 @@ from simulator import Simulator
 from parseconfig import Parsing
 from plotter import Plotter
 from multiprocessing import Pool, cpu_count
+from datetime import datetime
+
 
 
 import matplotlib.pyplot as plt
@@ -18,8 +20,9 @@ import sys
 import numpy as np
 import copy
 import time
+import os
 
-shed_policy = "MET"
+shed_policy = "HEFT"
 
 def simulation (clus,App,ageing_int,pow_int,itter,i):
 	print("\n:::::::::::::::::::::::itteration ",i," ::::::::::::::::::::::")
@@ -31,7 +34,8 @@ def simulation (clus,App,ageing_int,pow_int,itter,i):
 	
 	
 #	t_start = time.perf_counter()  
-	firstfail_time,firstfail,TTF,idle,temp = sim.run()
+#	firstfail_time,firstfail,TTF,idle,temp,power = sim.run()
+	TTF,idle,temp,power,failed_order,failed_times,execution_times,powerhype = sim.run()
 #	firstfail_time,firstfail,TTF,idle = sim.run()
 #	print("here!")
 #	sys.exit()
@@ -39,7 +43,7 @@ def simulation (clus,App,ageing_int,pow_int,itter,i):
 #	temp_all.append(temp)
 #	et[i] = t_stop-t_start
 	
-	return TTF,idle,temp
+	return TTF,idle,temp,power,failed_order,failed_times,execution_times,powerhype
 
 
 
@@ -86,9 +90,9 @@ power = {0:{0:1.1, 1:1.7012423, 2:0.01}, 1:{0:2.2, 1:1.9807628, 2:0.02}, 2:{0:3.
 WCET = {0:{0:[1.051,0.540,0.375,0.288],1:[1.051,0.540,0.375,0.288],2:[1.051,0.540,0.375,0.288],3:[1.051,0.540,0.375,0.288]},1:{0:[1.051,0.540,0.375,0.288],1:[1.051,0.540,0.375,0.288],2:[1.051,0.540,0.375,0.288],3:[1.051,0.540,0.375,0.288]},2:{0:[1.051,0.540,0.375,0.288],1:[1.051,0.540,0.375,0.288],2:[1.051,0.540,0.375,0.288],3:[1.051,0.540,0.375,0.288]},3:{0:[1.051,0.540,0.375,0.288],1:[1.051,0.540,0.375,0.288],2:[1.051,0.540,0.375,0.288],3:[1.051,0.540,0.375,0.288]},4:{0:[1.051,0.540,0.375,0.288],1:[1.051,0.540,0.375,0.288],2:[1.051,0.540,0.375,0.288],3:[1.051,0.540,0.375,0.288]},5:{0:[1.051,0.540,0.375,0.288],1:[1.051,0.540,0.375,0.288],2:[1.051,0.540,0.375,0.8],3:[1.051,0.540,0.375,0.288]}}
 
 #WCET = {0:{1:[1.051,0.540,0.375,0.288]},1:{1:[1.051,0.540,0.375,0.15]},2:{1:[1.051,0.540,0.375,0.1]},3:{1:[1.051,0.540,0.375,0.1]},4:{1:[1.051,0.540,0.375,0.4]},5:{1:[1.051,0.540,0.375,0.288]}}
+deadline = 1.8
 
-
-A = Application(tasks, edges, WCET, power, 1.8)
+A = Application(tasks, edges, WCET, power, deadline)
 
 #print("alltasks: ", A.alltasks)
 
@@ -164,7 +168,7 @@ pow_interval = np.arange(1,10)		#power interval in number of samples
 pow_int=20
 itter = 20  #np.arange(5,60,10)#10 #20
 #ageing_int = 0.0105
-n=10
+n=3
 ageing_int = 0.0205
 
 MTTF = []
@@ -178,205 +182,267 @@ allf_temp_all=[]
 j=1
 et = np.zeros(len(all_clus))
 all_the_temp = []
-for clus in all_clus[:1]:
+
+clus = all_clus[7]
+#start
+#for clus in all_clus[4:5]:
 #	X_axis.append(pow_int*0.0001)
-	X_axis.append(ageing_int)
-	print("no of comp:",j+2)
-#	print("\nno of comp:", len(clus._clus))
-	TTF = np.zeros(n)
-	firstfail = np.zeros(n)
-	firstfail_time = np.zeros(n)
-	
-	idle=np.zeros(n)
+X_axis.append(ageing_int)
+print("_______________________________________________________________________________")
+print("\nNo of components:", len(clus._clus))
+
+TTF = np.zeros(n)
+firstfail = np.zeros(n)
+firstfail_time = np.zeros(n)
+syspower = [] 
+failed_order = []
+failed_times = []
+execution_time = []
+hypepower = []
+
+idle=np.zeros(n)
 #	temp_all = []
-	
-	tik = time.perf_counter() 
-	data_ip = []
-	for i in range(n):
 
-		data_ip.append((clus,A,ageing_int,pow_int,itter,i))
-	
-#		cluster = copy.deepcopy(all_clus[0])
-#		app = copy.deepcopy(A)
-#		sim =  Simulator(app,cluster,"ETF",ageing_int,pow_int,itter,i)
-#		
-#		
-#		t_start = time.perf_counter()  
-#		firstfail_time[i],firstfail[i],TTF[i],idle[i],temp = sim.run()
-#		t_stop = time.perf_counter()
-#		temp_all.append(temp)
-#		et[i] = t_stop-t_start
+tik = time.perf_counter() 
+data_ip = []
+for i in range(n):
+	data_ip.append((clus,A,ageing_int,pow_int,itter,i))
 
+
+with Pool() as pool:
+	rslt = pool.starmap(simulation,data_ip)
 	
-	with Pool() as pool:
-		rslt = pool.starmap(simulation,data_ip)
-		
+	
+
 #	print("@@@@@@HERE!@@@@@@@@")
-	tok = time.perf_counter() 
-	et[j] = tok-tik
-	for i,t in enumerate(rslt):
-		TTF[i] = t[0]
-		firstfail_time[i] = t[1]
-#		print("results:",len(t))
-#	sys.exit()
-#	results = np.array(rslt[0][2])
-	
-#	TTF = rslt[0][0]
-#	print("results:",rslt)
-#	idle = results[:,1]
-	temp = [rslt[0][2]]
-	
-	df = pd.DataFrame(data=TTF)
-	df.to_csv("../results/dvfs/{}/TTF{}.csv".format(shed_policy,j))
-	
-#	print("rslt:",results,"\n Total time:",tok-tik)
-#	print("Temp:",temp)
-	tot_temp = []
-	max_temp=[]
-	sd_temp=[]
-	allf_tot_temp = 0
+tok = time.perf_counter() 
+et[j] = tok-tik
+for i,t in enumerate(rslt):
+	TTF[i] = t[0]
+#		firstfail_time[i] = t[1]
+	syspower.append(t[3])
+	failed_order.append(t[4])
+	failed_times.append(t[5])
+	execution_time.append(t[6])
+	hypepower.append(t[7])
 
-	for x in temp:
-		for k,fail in enumerate(x):
-			corestemp = []
-			maxtemp = []
-			sdtemp=[]
-			samp= []
-			for core in fail:
-#				print("cs",len(core))
-				corestemp.append(np.average(core))
-				maxtemp.append(np.max(core))
-				sdtemp.append(np.std(core))
-				samp.append(np.array(core,dtype=float))
-		
-#			print("samp",np.array(samp).shape)
-			df = pd.DataFrame(data=samp)
-			df.to_csv("../results/dvfs/fail{}.csv".format(k))
-#			sys.exit()
 
-			tot_temp.append(corestemp)
-			max_temp.append(maxtemp)
-			sd_temp.append(sdtemp)
-			all_the_temp.append(samp)
-#	print("ttttttt:",tot_temp)
-#		for i in range(6):
-#			tot_temp[i] += t[i]
-#		allf_tot_temp += np.average(t)
-#		allf_tot_temp +=t[0]
-	
-#	ave_temp = tot_temp/len(temp)
-#	allf_ave_temp = allf_tot_temp/len(temp)
-#	print("Ave Temp:",ave_temp)
-#	sys.exit()
-	temp_all.append(tot_temp)
-#	allf_temp_all.append(allf_ave_temp)
-	
+print("\n\nSimulation Complete!\nSaving Results...")
 
-	
+if not os.path.exists("../results"):
+	os.makedirs("../results")
+now = datetime.now()
+dt= now.strftime("%d_%m_%Y_%H_%M_%S")
+path = "../results/results_"+dt
+os.makedirs(path)
 
-	df = pd.DataFrame(data=tot_temp)
-	df.to_csv("../results/dvfs/{}/avetemp{}.csv".format(shed_policy,j))
+f = open(path+"/finalresults.txt", "w")
+f.write("Final Reslts\n\nMTTF: {} , Variance:{}\n".format(np.average(TTF),np.var(TTF)))
+for i,res in enumerate(rslt):
+	f.write("\n----------\nMonte Carlo Itteration: {}\n".format(i))
+	f.write("Time to system failure: {}\n".format(res[0]))
+	f.write("Order of cores failed: {}\n".format(res[4]))
+	f.write("Time to each Failure: {}\n".format(res[5]))
+	f.write("Execution time (per hyperperiod) for each failure: {}\n".format(res[6]))
+	f.write("Average system power (per hyperperiod) for each failure:{}, variance: {}\n".format(res[7][0],res[7][1]))
+	f.write("Average system power: {}, variance: {}\n".format(res[3][0],res[3][1]))
 	
-	df = pd.DataFrame(data=max_temp)
-	df.to_csv("../results/dvfs/{}/maxtemp{}.csv".format(shed_policy,j))
-	
-	df = pd.DataFrame(data=sd_temp)
-	df.to_csv("../results/dvfs/{}/sdtemp{}.csv".format(shed_policy,j))
+f.close()
 
+
+
+exe = {}
+for i,ex in enumerate(np.array(execution_time).T):
+	exe["failure_{}".format(i+1)]=ex
+	
+powerh = {}
+powerhvar = {}
+for i,po in enumerate(np.array(hypepower).T):
+	powerh["failure_{}".format(i+1)]=po[0]
+	powerhvar["failure_{}".format(i+1)]=po[1]
+	
+powersys = {}
+powersys["Average"]=np.array(syspower).T[0]
+powersys["Var"]=np.array(syspower).T[1]	
+	
+df = pd.DataFrame(data = exe)
+df.to_csv(path+"/ExecutionTime.csv")
+
+df = pd.DataFrame(data = powerh)
+df.to_csv(path+"/PowerAve_perHP.csv")
+
+df = pd.DataFrame(data = powerhvar)
+df.to_csv(path+"/PowerVar_perHP.csv")
+
+df = pd.DataFrame(data = powersys)
+df.to_csv(path+"/PowerUntilFailure.csv")
+
+print("Results saved at "+ path+".")
+print("\nFinal Results:\n""TTF:",TTF,"\nMTTF:",np.average(TTF),"\tSD",np.std(TTF))
+
+#j+=1
+####end	
+	
+#	
+##		print("results:",len(t))
+##	sys.exit()
+##	results = np.array(rslt[0][2])
+#	
+##	TTF = rslt[0][0]
+##	print("results:",rslt)
+##	idle = results[:,1]
+#	temp = [rslt[0][2]]
+#	
 #	df = pd.DataFrame(data=TTF)
-#	df.to_csv("../results/dvfs/ttf{}.csv".format(j))
+#	df.to_csv("../results/dvfs/{}/TTF{}.csv".format(shed_policy,j))
 #	
-#	df = pd.DataFrame(data=firstfail_time)
-#	df.to_csv("../results/dvfs/firstfail{}.csv".format(j))
+##	print("rslt:",results,"\n Total time:",tok-tik)
+##	print("Temp:",temp)
+#	tot_temp = []
+#	max_temp=[]
+#	sd_temp=[]
+#	allf_tot_temp = 0
+
+#	for x in temp:
+#		for k,fail in enumerate(x):
+#			corestemp = []
+#			maxtemp = []
+#			sdtemp=[]
+#			samp= []
+#			for core in fail:
+##				print("cs",len(core))
+#				corestemp.append(np.average(core))
+#				maxtemp.append(np.max(core))
+#				sdtemp.append(np.std(core))
+#				samp.append(np.array(core,dtype=float))
+#		
+##			print("samp",np.array(samp).shape)
+#			df = pd.DataFrame(data=samp)
+#			df.to_csv("../results/dvfs/fail{}.csv".format(k))
+##			sys.exit()
+
+#			tot_temp.append(corestemp)
+#			max_temp.append(maxtemp)
+#			sd_temp.append(sdtemp)
+#			all_the_temp.append(samp)
+##	print("ttttttt:",tot_temp)
+##		for i in range(6):
+##			tot_temp[i] += t[i]
+##		allf_tot_temp += np.average(t)
+##		allf_tot_temp +=t[0]
 #	
-#	df = pd.DataFrame(data=idle)
-#	df.to_csv("../results/dvfs/idle{}.csv".format(j))
+##	ave_temp = tot_temp/len(temp)
+##	allf_ave_temp = allf_tot_temp/len(temp)
+##	print("Ave Temp:",ave_temp)
+##	sys.exit()
+#	temp_all.append(tot_temp)
+##	allf_temp_all.append(allf_ave_temp)
 #	
-#	df = pd.DataFrame(data=temp_all)
-#	df.to_csv("../results/dvfs{}.csv".format(j))
+
 #	
-	ET_all["INT{}".format(j)]=et
-	TTF_all["TTF{}".format(j)]=TTF
-#	FFT_all["FFT{}".format(j)]=firstfail_time
-	
-#	plt.plot(firstfail,TFF,'x')
-#	plt.show()
 
-#	unique, counts = np.unique(firstfail, return_counts=True)
-#	print("FF: ",dict(zip(unique, counts)))
-	
-
-
-#	plt.hist(TTF, density=True, bins=10)
-#	plt.show()
-	
-#	MTTF.append(np.average(TTF))
-#	ET.append(t_stop-t_start)
-#	print("TTF:",TTF,"\nMTTF:",np.average(TTF),"  Mean Idle Time:",np.average(idle),"\nSD",np.std(TTF), "\nMean Execution time:",t_stop-t_start, "  Total Execution Time:",tok-tik)
-	print("TTF:",TTF,"\nMTTF:",np.average(TTF),"  Mean Idle Time:",np.average(idle),"\nSD",np.std(TTF))
-	j+=1
-
-df = pd.DataFrame(data=et)
-df.to_csv("../results/dvfs/{}/et.csv".format(shed_policy))
-#print("MTTF:::",MTTF)
-
-
-
-
-#df = pd.DataFrame(data=allf_temp_all)
-#df.to_csv("../results/failtemp/allftemp.csv")
-
-
-##ttfdata = {'ttf0':TTF_all[0],'fft0:':FFT_all[0],'ttf1':TTF_all[1],'fft1:':FFT_all[1],'ttf2':TTF_all[2],'fft2:':FFT_all[2]}
-#df = pd.DataFrame(data=TTF_all)
-#df.to_csv("../results/dvfs/ttf.csv")
-
-#df = pd.DataFrame(data=FFT_all)
-#df.to_csv("../results/dvfs/fft.csv")
-
-
-
-#data = {'age_int':X_axis,'MTTF': MTTF, 'ET':ET }
-#df = pd.DataFrame(data=data)
-#df.to_csv("age_MTTF_ET_hr.csv")
-
-#plt.plot(X_axis,MTTF)
-#plt.xlabel('Interval')
-#plt.ylabel('MTTF')
-#plt.show()
-
-#plt.plot(X_axis,ET)
-#plt.xlabel('Interval')
-#plt.ylabel('Execution Time')
-#plt.show()
-
-
-
-
-
-
-
-
-
-#print("\n\n", clus)
-
-#S = Scheduler(A,clus)
-
-
-#go = S.MET()
-#print("final res:",go)
-#for c in clus.components:
-#	print("component:",c.ID)
-#	print (c.assigned_tasks)
+#	df = pd.DataFrame(data=tot_temp)
+#	df.to_csv("../results/dvfs/{}/avetemp{}.csv".format(shed_policy,j))
 #	
+#	df = pd.DataFrame(data=max_temp)
+#	df.to_csv("../results/dvfs/{}/maxtemp{}.csv".format(shed_policy,j))
 #	
-#print("-----------")
-#go = S.ETF()
-#print("-----------")
-#print("final res:",go)
-#for c in clus.components:
-#	print("component:",c.ID)
-#	print (c.assigned_tasks)
+#	df = pd.DataFrame(data=sd_temp)
+#	df.to_csv("../results/dvfs/{}/sdtemp{}.csv".format(shed_policy,j))
+
+##	df = pd.DataFrame(data=TTF)
+##	df.to_csv("../results/dvfs/ttf{}.csv".format(j))
+##	
+##	df = pd.DataFrame(data=firstfail_time)
+##	df.to_csv("../results/dvfs/firstfail{}.csv".format(j))
+##	
+##	df = pd.DataFrame(data=idle)
+##	df.to_csv("../results/dvfs/idle{}.csv".format(j))
+##	
+##	df = pd.DataFrame(data=temp_all)
+##	df.to_csv("../results/dvfs{}.csv".format(j))
+##	
+#	ET_all["INT{}".format(j)]=et
+#	TTF_all["TTF{}".format(j)]=TTF
+##	FFT_all["FFT{}".format(j)]=firstfail_time
+#	
+##	plt.plot(firstfail,TFF,'x')
+##	plt.show()
+
+##	unique, counts = np.unique(firstfail, return_counts=True)
+##	print("FF: ",dict(zip(unique, counts)))
+#	
+
+
+##	plt.hist(TTF, density=True, bins=10)
+##	plt.show()
+#	
+##	MTTF.append(np.average(TTF))
+##	ET.append(t_stop-t_start)
+##	print("TTF:",TTF,"\nMTTF:",np.average(TTF),"  Mean Idle Time:",np.average(idle),"\nSD",np.std(TTF), "\nMean Execution time:",t_stop-t_start, "  Total Execution Time:",tok-tik)
+
+
+#df = pd.DataFrame(data=et)
+#df.to_csv("../results/dvfs/{}/et.csv".format(shed_policy))
+##print("MTTF:::",MTTF)
+
+
+
+
+##df = pd.DataFrame(data=allf_temp_all)
+##df.to_csv("../results/failtemp/allftemp.csv")
+
+
+###ttfdata = {'ttf0':TTF_all[0],'fft0:':FFT_all[0],'ttf1':TTF_all[1],'fft1:':FFT_all[1],'ttf2':TTF_all[2],'fft2:':FFT_all[2]}
+##df = pd.DataFrame(data=TTF_all)
+##df.to_csv("../results/dvfs/ttf.csv")
+
+##df = pd.DataFrame(data=FFT_all)
+##df.to_csv("../results/dvfs/fft.csv")
+
+
+
+##data = {'age_int':X_axis,'MTTF': MTTF, 'ET':ET }
+##df = pd.DataFrame(data=data)
+##df.to_csv("age_MTTF_ET_hr.csv")
+
+##plt.plot(X_axis,MTTF)
+##plt.xlabel('Interval')
+##plt.ylabel('MTTF')
+##plt.show()
+
+##plt.plot(X_axis,ET)
+##plt.xlabel('Interval')
+##plt.ylabel('Execution Time')
+##plt.show()
+
+
+
+
+
+
+
+
+
+##print("\n\n", clus)
+
+##S = Scheduler(A,clus)
+
+
+##go = S.MET()
+##print("final res:",go)
+##for c in clus.components:
+##	print("component:",c.ID)
+##	print (c.assigned_tasks)
+##	
+##	
+##print("-----------")
+##go = S.ETF()
+##print("-----------")
+##print("final res:",go)
+##for c in clus.components:
+##	print("component:",c.ID)
+##	print (c.assigned_tasks)
 
 
 

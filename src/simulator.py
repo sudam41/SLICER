@@ -454,7 +454,7 @@ class Simulator():
 		
 		temp_all = temp_matex
 #		print("temp_all:",len(temp_all))
-		return time_all_ave, power_all_ave, temp_all, np.sum(idle_time)/num_alive 
+		return time_all_ave, power_all_ave, temp_all, np.sum(idle_time)/num_alive, 
 		
 		
 		
@@ -507,6 +507,13 @@ class Simulator():
 		failcount=0
 		firstfail_time=0
 		firstfail = 0
+		
+		failed_order = []
+		failed_times = []
+		
+		execution_time = []
+		
+		tot_sys_power = []
 		while schedulable ==True and num_comp>min_comp:
 		
 			
@@ -535,14 +542,16 @@ class Simulator():
 				for task in comp.assigned_tasks:
 					shed.append([task.ID,comp.ID,comp.curr_freq,task.start,task.end])		
 			
-			df = pd.DataFrame(data=shed)
-			df.to_csv("../results/dvfs/shedule_heft_2core{}.csv".format(failcount))
+#			df = pd.DataFrame(data=shed)
+#			df.to_csv("../results/dvfs/shedule_heft_2core{}.csv".format(failcount))
 			failcount+=1
-			print("schedule:",np.array(shed))
+			print("schedule:"," (task.ID, comp.ID, comp.curr_freq, task.start, task.end)\n",np.array(shed))
 #			sys.exit()
 
 #			tic = TT.perf_counter()  ##Timing
 			time_intervals = self._cluster.get_time_intervals()
+			
+			execution_time.append(time_intervals[-1])
 #			toc = TT.perf_counter()  ##Timing
 #			print("TI time:",toc-tic)
 #			print(time_intervals)
@@ -561,13 +570,17 @@ class Simulator():
 #			print("temp len:",self._cluster.number_of_comps())
 #			tot_temp.append((np.sum(temp[1:]))/self._cluster.number_of_comps())
 			
-			df = pd.DataFrame(data=temp)
-			df.to_csv("../results/dvfs/temp_heft_2core{}.csv".format(failcount))
-#			sys.exit()
+			sys_power = np.sum(power,axis=0)
+			tot_sys_power.append(sys_power)
+#			print("power:",len(power)," sys power:",len(sys_power))
+			
+#			df = pd.DataFrame(data=temp)
+#			df.to_csv("../results/dvfs/temp_heft_2core{}.csv".format(failcount))
+##			sys.exit()
 			
 			
 			tot_temp.append(temp[0:])
-			
+			print
 #			print("timeI: ",time)
 #			fig, ax = plt.subplots(2,1)
 #			
@@ -577,19 +590,23 @@ class Simulator():
 #			ax[1].set_title("core 1")
 			
 			tic = TT.perf_counter()  ##Timing
-			alive_comp, current_rel,fail_time = ageing_simulator.run(alive_comp,current_rel,time_intervals,temp,num_comp,fail_time)
+			alive_comp, current_rel,fail_time,comp_failed = ageing_simulator.run(alive_comp,current_rel,time_intervals,temp,num_comp,fail_time)
 			toc = TT.perf_counter()  ##Timing
 #			print("Ageing time:",toc-tic)
-			
+
+			failed_order.append(comp_failed)
+			failed_times.append(fail_time)
+
 			ittr_time= time_intervals[-1]
 			no_itter_to_fail = fail_time*60*60/ittr_time
 			idle_time = (idle*no_itter_to_fail)/3600
 			tot_idle_time+=idle_time
 #			print("tot_idle:",idle_time, "  fail_time:",fail_time)
 			
-			failed_comp = np.where(alive_comp==False)[0]
-#			print("NC bef:",num_comp)
-			for f in failed_comp:
+			failed_comps = np.where(alive_comp==False)[0]
+			
+			
+			for f in failed_comps:
 				self._cluster.fail_component(f)
 				
 			self._cluster.reset_alive_components()
@@ -599,17 +616,32 @@ class Simulator():
 #			print("Alive:", alive_comp, "CR:", current_rel )	
 
 			if firstrun ==True:
-				firstfail = failed_comp[0]
+				firstfail = failed_comps[0]
 				firstfail_time = copy.copy(ageing_simulator.totTime)
 				firstrun=False
 #			print("F:",firstfail)
 		
+
+#		MultiAve = (aveA*n1 + aveB*n2 + aveC*n3)/(n1+n2+n3)
+		noHyperPeriods = np.floor(np.array(failed_times)/self._app.deadline)
+		AvePower = np.sum(np.multiply([np.average(tot_sys_power,axis=1)],noHyperPeriods))/np.sum(noHyperPeriods)
+
+#		MultiVAR = (np.sum(np.square(A-MultiAve))*n1 + np.sum(np.square(B-MultiAve))*n2 + np.sum(np.square(C-MultiAve))*n3)/((n1+n2+n3)*8)
+		VarPower = np.sum(np.multiply(np.sum(np.square(tot_sys_power - AvePower),axis=1),noHyperPeriods))/(np.sum(noHyperPeriods)*len(tot_sys_power[0]))
+#		print("execution times",execution_time)
+		AvePowHype = np.average(tot_sys_power,axis=1)
+		VarPowHype = np.var(tot_sys_power,axis=1)
+#		print("AvePow",AvePowHype," VarPow",VarPowHype)
+
+#		sys.exit()
 #		##Store alpha values for plotting
 #		print("DATA:",data)
 #		df = pd.DataFrame(data=data)
 #		df.to_csv("data.csv")
 #		print("Temptemp[1:]:", len(tot_temp[0]))
 #		sys.exit()
+#		print("FO:",failed_order)
 		
-		return firstfail_time,firstfail, ageing_simulator.totTime, tot_idle_time, tot_temp
+#		return firstfail_time,firstfail, ageing_simulator.totTime, tot_idle_time, tot_temp
+		return ageing_simulator.totTime, tot_idle_time, tot_temp, [AvePower,VarPower], failed_order,failed_times,execution_time,[AvePowHype,VarPowHype]
 
