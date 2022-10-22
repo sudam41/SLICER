@@ -25,7 +25,7 @@ import os
 shed_policy = "HEFT"
 
 def simulation (clus,App,ageing_int,pow_int,itter,i):
-	print("\n:::::::::::::::::::::::itteration ",i," ::::::::::::::::::::::")
+	print("\n:::::::::::::::::::::::iteration ",i," ::::::::::::::::::::::")
 	np.random.seed() #re-seed random generator
 	cluster = copy.deepcopy(clus)
 	app = copy.deepcopy(App)
@@ -243,7 +243,7 @@ os.makedirs(path)
 f = open(path+"/finalresults.txt", "w")
 f.write("Final Reslts\n\nMTTF: {} , Variance:{}\n".format(np.average(TTF),np.var(TTF)))
 for i,res in enumerate(rslt):
-	f.write("\n----------\nMonte Carlo Itteration: {}\n".format(i))
+	f.write("\n----------\nMonte Carlo Iteration: {}\n".format(i))
 	f.write("Time to system failure: {}\n".format(res[0]))
 	f.write("Order of cores failed: {}\n".format(res[4]))
 	f.write("Time to each Failure: {}\n".format(res[5]))
