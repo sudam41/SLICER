@@ -1,0 +1,740 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="FloatSource_1069" WCET="22">
+            <memfootprint local-storage="0 b" code-size="64 b" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1370" WCET="723">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="FloatSource_1069" data-sent="64" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1512" WCET="96">
+            <memfootprint local-storage="544 b" code-size="294 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1370" data-sent="64" data-type="float" />
+        </task>
+        <task id="Butterfly_1514" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1515" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1516" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1517" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1518" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1519" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1520" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1521" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1522" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1523" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1524" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1525" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1526" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1527" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1528" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1529" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1512" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1513" WCET="96">
+            <memfootprint local-storage="544 b" code-size="294 b" />
+            <prev id="Butterfly_1529" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1528" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1527" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1526" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1525" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1524" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1523" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1522" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1521" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1520" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1519" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1518" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1517" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1516" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1515" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1514" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1371" WCET="745">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1513" data-sent="64" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1414" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Post_CollapsedDataParallel_2_1371" data-sent="64" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1373" WCET="363">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1414" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1530" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1373" data-sent="32" data-type="float" />
+        </task>
+        <task id="Butterfly_1532" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1530" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1533" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1530" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1534" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1530" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1535" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1530" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1536" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1530" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1537" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1530" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1538" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1530" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1539" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1530" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1531" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="Butterfly_1539" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1538" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1537" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1536" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1535" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1534" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1533" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1532" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1374" WCET="377">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1531" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1494" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Post_CollapsedDataParallel_2_1374" data-sent="32" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1379" WCET="183">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1494" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1540" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1379" data-sent="16" data-type="float" />
+        </task>
+        <task id="Butterfly_1542" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1540" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1543" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1540" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1544" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1540" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1545" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1540" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1541" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="Butterfly_1545" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1544" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1543" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1542" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1380" WCET="193">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1541" data-sent="16" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1382" WCET="183">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1494" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1546" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1382" data-sent="16" data-type="float" />
+        </task>
+        <task id="Butterfly_1548" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1546" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1549" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1546" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1550" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1546" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1551" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1546" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1547" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="Butterfly_1551" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1550" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1549" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1548" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1383" WCET="193">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1547" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1495" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Post_CollapsedDataParallel_2_1383" data-sent="16" data-type="float" />
+            <prev id="Post_CollapsedDataParallel_2_1380" data-sent="16" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1376" WCET="363">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1414" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1552" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1376" data-sent="32" data-type="float" />
+        </task>
+        <task id="Butterfly_1554" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1552" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1555" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1552" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1556" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1552" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1557" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1552" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1558" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1552" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1559" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1552" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1560" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1552" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1561" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1552" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1553" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="Butterfly_1561" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1560" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1559" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1558" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1557" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1556" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1555" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1554" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1377" WCET="377">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1553" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1496" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Post_CollapsedDataParallel_2_1377" data-sent="32" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1385" WCET="183">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1496" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1562" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1385" data-sent="16" data-type="float" />
+        </task>
+        <task id="Butterfly_1564" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1562" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1565" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1562" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1566" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1562" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1567" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1562" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1563" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="Butterfly_1567" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1566" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1565" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1564" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1386" WCET="193">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1563" data-sent="16" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1388" WCET="183">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1496" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1568" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1388" data-sent="16" data-type="float" />
+        </task>
+        <task id="Butterfly_1570" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1568" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1571" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1568" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1572" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1568" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1573" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1568" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1569" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="Butterfly_1573" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1572" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1571" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1570" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1389" WCET="193">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1569" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1497" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Post_CollapsedDataParallel_2_1389" data-sent="16" data-type="float" />
+            <prev id="Post_CollapsedDataParallel_2_1386" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1498" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1497" data-sent="32" data-type="float" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1495" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1499" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1498" data-sent="64" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1500" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1499" data-sent="32" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1391" WCET="93">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1500" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1574" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1391" data-sent="8" data-type="float" />
+        </task>
+        <task id="Butterfly_1576" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1574" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1577" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1574" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1575" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Butterfly_1577" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1576" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1392" WCET="101">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1575" data-sent="8" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1394" WCET="93">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1500" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1578" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1394" data-sent="8" data-type="float" />
+        </task>
+        <task id="Butterfly_1580" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1578" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1581" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1578" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1579" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Butterfly_1581" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1580" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1395" WCET="101">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1579" data-sent="8" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1397" WCET="93">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1500" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1582" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1397" data-sent="8" data-type="float" />
+        </task>
+        <task id="Butterfly_1584" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1582" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1585" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1582" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1583" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Butterfly_1585" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1584" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1398" WCET="101">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1583" data-sent="8" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1400" WCET="93">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1500" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1586" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1400" data-sent="8" data-type="float" />
+        </task>
+        <task id="Butterfly_1588" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1586" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1589" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1586" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1587" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Butterfly_1589" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1588" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1401" WCET="101">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1587" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1501" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="Post_CollapsedDataParallel_2_1401" data-sent="8" data-type="float" />
+            <prev id="Post_CollapsedDataParallel_2_1398" data-sent="8" data-type="float" />
+            <prev id="Post_CollapsedDataParallel_2_1395" data-sent="8" data-type="float" />
+            <prev id="Post_CollapsedDataParallel_2_1392" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1502" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1499" data-sent="32" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1403" WCET="93">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1502" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1590" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1403" data-sent="8" data-type="float" />
+        </task>
+        <task id="Butterfly_1592" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1590" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1593" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1590" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1591" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Butterfly_1593" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1592" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1404" WCET="101">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1591" data-sent="8" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1406" WCET="93">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1502" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1594" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1406" data-sent="8" data-type="float" />
+        </task>
+        <task id="Butterfly_1596" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1594" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1597" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1594" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1595" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Butterfly_1597" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1596" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1407" WCET="101">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1595" data-sent="8" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1409" WCET="93">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1502" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1598" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1409" data-sent="8" data-type="float" />
+        </task>
+        <task id="Butterfly_1600" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1598" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1601" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1598" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1599" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Butterfly_1601" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1600" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1410" WCET="101">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1599" data-sent="8" data-type="float" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_1412" WCET="93">
+            <memfootprint local-storage="160 b" code-size="64 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1502" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1602" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Pre_CollapsedDataParallel_1_1412" data-sent="8" data-type="float" />
+        </task>
+        <task id="Butterfly_1604" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1602" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1605" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1602" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1603" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="Butterfly_1605" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1604" data-sent="4" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_1413" WCET="101">
+            <memfootprint local-storage="160 b" code-size="68 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1603" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1503" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="Post_CollapsedDataParallel_2_1413" data-sent="8" data-type="float" />
+            <prev id="Post_CollapsedDataParallel_2_1410" data-sent="8" data-type="float" />
+            <prev id="Post_CollapsedDataParallel_2_1407" data-sent="8" data-type="float" />
+            <prev id="Post_CollapsedDataParallel_2_1404" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1504" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1503" data-sent="32" data-type="float" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1501" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1505" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1504" data-sent="64" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1506" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1505" data-sent="32" data-type="float" />
+        </task>
+        <task id="Butterfly_1134" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1506" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1135" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1506" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1136" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1506" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1137" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1506" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1138" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1506" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1139" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1506" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1140" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1506" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1141" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1506" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1507" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="Butterfly_1141" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1140" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1139" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1138" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1137" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1136" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1135" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1134" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_1508" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1505" data-sent="32" data-type="float" />
+        </task>
+        <task id="Butterfly_1142" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1508" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1143" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1508" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1144" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1508" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1145" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1508" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1146" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1508" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1147" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1508" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1148" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1508" data-sent="4" data-type="float" />
+        </task>
+        <task id="Butterfly_1149" WCET="44">
+            <memfootprint local-storage="192 b" code-size="98 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_1508" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1509" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="Butterfly_1149" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1148" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1147" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1146" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1145" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1144" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1143" data-sent="4" data-type="float" />
+            <prev id="Butterfly_1142" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_1510" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1509" data-sent="32" data-type="float" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1507" data-sent="32" data-type="float" />
+        </task>
+        <task id="BitReverse_1150" WCET="2080">
+            <memfootprint local-storage="160 b" code-size="118 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_1510" data-sent="64" data-type="float" />
+        </task>
+        <task id="FloatPrinter_1151" WCET="12">
+            <memfootprint local-storage="0 b" code-size="32 b" />
+            <prev id="BitReverse_1150" data-sent="64" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

@@ -1,0 +1,8 @@
+task	size
+OneSource_67	8
+Identity_70	1
+Multiply_71	3
+WEIGHTED_ROUND_ROBIN_Joiner_77	12
+Add_73	3
+Subtract_74	5
+WEIGHTED_ROUND_ROBIN_Joiner_79	5

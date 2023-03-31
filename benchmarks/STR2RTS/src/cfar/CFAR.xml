@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<appl>
+    <tasks>
+        <task id="cfar_complex_source" WCET="11024">
+            <memfootprint local-storage="64" data-type="bit" code-size="4032 b" />
+        </task>
+        <task id="cfar_square_and_scale" WCET="6480">
+            <memfootprint local-storage="48" data-type="bit" code-size="4352 b" />
+           <prev id="cfar_complex_source" data-sent="64" data-type="complex" />
+        </task>
+        <task id="cfar_gather" WCET="42192">
+            <memfootprint local-storage="40" data-type="bit" code-size="3872 b" />
+           <prev id="cfar_square_and_scale" data-sent="64" data-type="float" />
+        </task>
+        <task id="cfar_printer" WCET="3408">
+            <memfootprint local-storage="32" data-type="bit" code-size="2304 b" />
+           <prev id="cfar_gather" data-sent="64" data-type="float" />
+        </task>
+    </tasks>
+   <config clean="false">
+       <communication type="BUS" arbiter="FAIR" active-window-time="3" token-per-timeunit="1" mechanism="shared" behavior="non-blocking"  />
+       <solving type="worst_concurrency" solve="true" solver="fls" timeout="120"/>
+       <memory>
+           <data-type name="complex" size="64 b" /> <!-- 2*float -->
+       </memory>
+   </config>
+    <processors>
+        <processor id="P16"/>
+        <processor id="P15"/>
+        <processor id="P14"/>
+        <processor id="P13"/>
+        <processor id="P12"/>
+        <processor id="P11"/>
+        <processor id="P10"/>
+        <processor id="P9"/>
+        <processor id="P8"/>
+        <processor id="P7"/>
+        <processor id="P6"/>
+        <processor id="P5"/>
+        <processor id="P4"/>
+        <processor id="P3"/>
+        <processor id="P2"/>
+        <processor id="P1"/>
+    </processors>
+</appl>

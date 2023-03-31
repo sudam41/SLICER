@@ -1,0 +1,9 @@
+digraph CFARtest_19 {
+node0 [label="ComplexSource_14", push="64", pop="0", peek="0", pushType="complex", popType="void", peekType="void", codeSize="309 b", stackSize="544 b", work="61760"];
+node1 [label="SquareAndScale_16", push="64", pop="64", peek="64", pushType="float", popType="complex", peekType="complex", codeSize="73 b", stackSize="544 b", work="361"];
+node0 -> node1;
+node2 [label="CFAR_gather_17", push="64", pop="64", peek="640", pushType="float", popType="float", peekType="float", codeSize="354 b", stackSize="128 b", work="202"];
+node1 -> node2;
+node3 [label="AnonFilter_a0_18", push="0", pop="64", peek="64", pushType="void", popType="float", peekType="float", codeSize="16 b", stackSize="0 b", work="6"];
+node2 -> node3;
+}

@@ -1,0 +1,7 @@
+digraph streamit {
+node2 [ label="FileReader", pop=0, push=2 ]
+node3 [ label="complexfir_fir", push=2, pop=2, peek=2 ]
+node2 -> node3
+node4 [ label="complexfir_printer", push=0, pop=2 ]
+node3 -> node4
+}

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<appl>
+    <tasks>
+        <task id="fft4_add__node6" WCET="1600">
+            <memfootprint local-storage="40 b" code-size="4352 b" />
+            <prev id="fft4_split_duplicate__node4" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_add__node12" WCET="1600">
+            <memfootprint local-storage="40 b" code-size="4352 b" />
+            <prev id="fft4_split_duplicate__node10" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_add__node18" WCET="1600">
+            <memfootprint local-storage="40 b" code-size="4352 b" />
+            <prev id="fft4_split_duplicate__node16" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_add__node24" WCET="1600">
+            <memfootprint local-storage="40 b" code-size="4352 b" />
+            <prev id="fft4_split_duplicate__node22" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_add__node30" WCET="1600">
+            <memfootprint local-storage="40 b" code-size="4352 b" />
+            <prev id="fft4_split_duplicate__node28" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_join_round_robin__node9" WCET="1198">
+            <memfootprint local-storage="32 b" code-size="3264 b" />
+            <prev id="fft4_identity__node8" data-sent="16" data-type="float" />
+            <prev id="fft4_multiply__node7" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_split_weighted_round_robin_2" WCET="750">
+            <memfootprint local-storage="32 b" code-size="3840 b" />
+            <prev id="fft4_join_weighted_round_robin_1" data-sent="32" data-type="float" />
+        </task>
+        <task id="fft4_join_round_robin__node15" WCET="1198">
+            <memfootprint local-storage="32 b" code-size="3264 b" />
+            <prev id="fft4_identity__node14" data-sent="16" data-type="float" />
+            <prev id="fft4_multiply__node13" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_split_weighted_round_robin_4" WCET="526">
+            <memfootprint local-storage="32 b" code-size="4992 b" />
+            <prev id="fft4_join_weighted_round_robin_2" data-sent="32" data-type="float" />
+        </task>
+        <task id="fft4_join_round_robin__node21" WCET="1198">
+            <memfootprint local-storage="32 b" code-size="3264 b" />
+            <prev id="fft4_identity__node20" data-sent="16" data-type="float" />
+            <prev id="fft4_multiply__node19" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_split_weighted_round_robin_8" WCET="939">
+            <memfootprint local-storage="40 b" code-size="4992 b" />
+            <prev id="fft4_join_weighted_round_robin_4" data-sent="32" data-type="float" />
+        </task>
+        <task id="fft4_join_round_robin__node27" WCET="1198">
+            <memfootprint local-storage="32 b" code-size="3264 b" />
+            <prev id="fft4_identity__node26" data-sent="16" data-type="float" />
+            <prev id="fft4_multiply__node25" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_split_weighted_round_robin_16" WCET="1189">
+            <memfootprint local-storage="32 b" code-size="3648 b" />
+            <prev id="fft4_join_weighted_round_robin_8" data-sent="32" data-type="float" />
+        </task>
+        <task id="fft4_join_round_robin__node3" WCET="1198">
+            <memfootprint local-storage="32 b" code-size="3264 b" />
+            <prev id="fft4_identity__node2" data-sent="16" data-type="float" />
+            <prev id="fft4_multiply__node1" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_split_weighted_round_robin_1" WCET="1198">
+            <memfootprint local-storage="32 b" code-size="3264 b" />
+            <prev id="fft4_source" data-sent="32" data-type="float" />
+        </task>
+        <task id="fft4_join_weighted_round_robin_1" WCET="1198">
+            <memfootprint local-storage="32 b" code-size="3264 b" />
+            <prev id="fft4_add__node6" data-sent="16" data-type="float" />
+            <prev id="fft4_subtract__node5" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_split_duplicate__node4" WCET="2286">
+            <memfootprint local-storage="32 b" code-size="3168 b" />
+            <prev id="fft4_join_round_robin__node3" data-sent="32" data-type="float" />
+        </task>
+        <task id="fft4_join_weighted_round_robin_2" WCET="750">
+            <memfootprint local-storage="32 b" code-size="3840 b" />
+            <prev id="fft4_add__node12" data-sent="16" data-type="float" />
+            <prev id="fft4_subtract__node11" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_split_duplicate__node10" WCET="2286">
+            <memfootprint local-storage="32 b" code-size="3168 b" />
+            <prev id="fft4_join_round_robin__node9" data-sent="32" data-type="float" />
+        </task>
+        <task id="fft4_join_weighted_round_robin_4" WCET="526">
+            <memfootprint local-storage="32 b" code-size="4992 b" />
+            <prev id="fft4_add__node18" data-sent="16" data-type="float" />
+            <prev id="fft4_subtract__node17" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_split_duplicate__node16" WCET="2286">
+            <memfootprint local-storage="32 b" code-size="3168 b" />
+            <prev id="fft4_join_round_robin__node15" data-sent="32" data-type="float" />
+        </task>
+        <task id="fft4_join_weighted_round_robin_8" WCET="939">
+            <memfootprint local-storage="40 b" code-size="4992 b" />
+            <prev id="fft4_add__node24" data-sent="16" data-type="float" />
+            <prev id="fft4_subtract__node23" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_split_duplicate__node22" WCET="2286">
+            <memfootprint local-storage="32 b" code-size="3168 b" />
+            <prev id="fft4_join_round_robin__node21" data-sent="32" data-type="float" />
+        </task>
+        <task id="fft4_join_weighted_round_robin_16" WCET="1317">
+            <memfootprint local-storage="32 b" code-size="3648 b" />
+            <prev id="fft4_add__node30" data-sent="16" data-type="float" />
+            <prev id="fft4_subtract__node29" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_split_duplicate__node28" WCET="2286">
+            <memfootprint local-storage="32 b" code-size="3168 b" />
+            <prev id="fft4_join_round_robin__node27" data-sent="32" data-type="float" />
+        </task>
+        <task id="fft4_float_prfloater" WCET="1614">
+            <memfootprint local-storage="32 b" code-size="2240 b" />
+            <prev id="fft4_join_weighted_round_robin_16" data-sent="32" data-type="float" />
+        </task>
+        <task id="fft4_multiply__node1" WCET="1070">
+            <memfootprint local-storage="32 b" code-size="3008 b" />
+            <prev id="fft4_split_weighted_round_robin_1" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_multiply__node7" WCET="1070">
+            <memfootprint local-storage="32 b" code-size="3008 b" />
+            <prev id="fft4_split_weighted_round_robin_2" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_multiply__node13" WCET="1070">
+            <memfootprint local-storage="32 b" code-size="3008 b" />
+            <prev id="fft4_split_weighted_round_robin_4" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_multiply__node19" WCET="1070">
+            <memfootprint local-storage="32 b" code-size="3008 b" />
+            <prev id="fft4_split_weighted_round_robin_8" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_multiply__node25" WCET="1070">
+            <memfootprint local-storage="32 b" code-size="3008 b" />
+            <prev id="fft4_split_weighted_round_robin_16" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_source" WCET="1198">
+            <memfootprint local-storage="32 b" code-size="1824 b" />
+        </task>
+        <task id="fft4_subtract__node5" WCET="1600">
+            <memfootprint local-storage="40 b" code-size="4352 b" />
+            <prev id="fft4_split_duplicate__node4" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_subtract__node11" WCET="1600">
+            <memfootprint local-storage="40 b" code-size="4352 b" />
+            <prev id="fft4_split_duplicate__node10" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_subtract__node17" WCET="1600">
+            <memfootprint local-storage="40 b" code-size="4352 b" />
+            <prev id="fft4_split_duplicate__node16" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_subtract__node23" WCET="1600">
+            <memfootprint local-storage="40 b" code-size="4352 b" />
+            <prev id="fft4_split_duplicate__node22" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_subtract__node29" WCET="1600">
+            <memfootprint local-storage="40 b" code-size="4352 b" />
+            <prev id="fft4_split_duplicate__node28" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_identity__node2" WCET="1054">
+            <memfootprint local-storage="32 b" code-size="2976 b" />
+            <prev id="fft4_split_weighted_round_robin_1" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_identity__node8" WCET="1054">
+            <memfootprint local-storage="32 b" code-size="2976 b" />
+            <prev id="fft4_split_weighted_round_robin_2" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_identity__node14" WCET="1054">
+            <memfootprint local-storage="32 b" code-size="2976 b" />
+            <prev id="fft4_split_weighted_round_robin_4" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_identity__node20" WCET="1054">
+            <memfootprint local-storage="32 b" code-size="2976 b" />
+            <prev id="fft4_split_weighted_round_robin_8" data-sent="16" data-type="float" />
+        </task>
+        <task id="fft4_identity__node26" WCET="1054">
+            <memfootprint local-storage="32 b" code-size="2976 b" />
+            <prev id="fft4_split_weighted_round_robin_16" data-sent="16" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <communication type="BUS" arbiter="FAIR" active-window-time="3" token-per-timeunit="1" mechanism="shared" behavior="non-blocking" />
+        <solving type="worst_concurrency" solve="true" solver="fls" timeout="120"/>
+        <architecture prefetch_code="false">
+            <memory>
+            </memory>
+            <spm store-code="true" assign_region="true" />
+            <processors>
+                <processor id="P16" spm-size="32kb"/>
+                <processor id="P15" spm-size="32kb"/>
+                <processor id="P14" spm-size="32kb"/>
+                <processor id="P13" spm-size="32kb"/>
+                <processor id="P12" spm-size="32kb"/>
+                <processor id="P11" spm-size="32kb"/>
+                <processor id="P10" spm-size="32kb"/>
+                <processor id="P9" spm-size="32kb"/>
+                <processor id="P8" spm-size="32kb"/>
+                <processor id="P7" spm-size="32kb"/>
+                <processor id="P6" spm-size="32kb"/>
+                <processor id="P5" spm-size="32kb"/>
+                <processor id="P4" spm-size="32kb"/>
+                <processor id="P3" spm-size="32kb"/>
+                <processor id="P2" spm-size="32kb"/>
+                <processor id="P1" spm-size="32kb"/>
+            </processors>
+        </architecture>
+    </config>
+</appl>

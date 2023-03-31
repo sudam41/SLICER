@@ -1,0 +1,1114 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_163" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+        </task>
+        <task id="FFTTestSource_165" WCET="632">
+            <memfootprint local-storage="32 b" code-size="40 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_163" data-sent="0" data-type="void" />
+        </task>
+        <task id="FFTTestSource_166" WCET="632">
+            <memfootprint local-storage="32 b" code-size="40 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_163" data-sent="0" data-type="void" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_164" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="FFTTestSource_166" data-sent="128" data-type="float" />
+            <prev id="FFTTestSource_165" data-sent="128" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_155" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_164" data-sent="256" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_132" WCET="1472">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_155" data-sent="128" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_167" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="FFTReorderSimple_132" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_169" WCET="736">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_167" data-sent="64" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_170" WCET="736">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_167" data-sent="64" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_168" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="FFTReorderSimple_170" data-sent="64" data-type="float" />
+            <prev id="FFTReorderSimple_169" data-sent="64" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_171" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_168" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_173" WCET="368">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_171" data-sent="32" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_174" WCET="368">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_171" data-sent="32" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_175" WCET="368">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_171" data-sent="32" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_176" WCET="368">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_171" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_172" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="FFTReorderSimple_176" data-sent="32" data-type="float" />
+            <prev id="FFTReorderSimple_175" data-sent="32" data-type="float" />
+            <prev id="FFTReorderSimple_174" data-sent="32" data-type="float" />
+            <prev id="FFTReorderSimple_173" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_177" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_172" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_179" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_177" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_180" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_177" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_181" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_177" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_182" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_177" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_183" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_177" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_184" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_177" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_185" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_177" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_186" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_177" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_178" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="FFTReorderSimple_186" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_185" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_184" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_183" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_182" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_181" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_180" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_179" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_187" WCET="96">
+            <memfootprint local-storage="544 b" code-size="294 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_178" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_189" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_190" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_191" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_192" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_193" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_194" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_195" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_196" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_197" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_198" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_199" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_200" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_201" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_202" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_203" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_204" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_187" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_188" WCET="96">
+            <memfootprint local-storage="544 b" code-size="294 b" />
+            <prev id="FFTReorderSimple_204" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_203" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_202" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_201" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_200" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_199" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_198" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_197" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_196" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_195" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_194" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_193" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_192" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_191" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_190" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_189" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_205" WCET="192">
+            <memfootprint local-storage="1056 b" code-size="582 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_188" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_207" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_208" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_209" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_210" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_211" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_212" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_213" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_214" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_215" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_216" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_217" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_218" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_219" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_220" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_221" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_222" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_223" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_224" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_225" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_226" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_227" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_228" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_229" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_230" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_231" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_232" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_233" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_234" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_235" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_236" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_237" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_238" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_205" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_206" WCET="192">
+            <memfootprint local-storage="1056 b" code-size="582 b" />
+            <prev id="CombineDFT_238" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_237" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_236" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_235" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_234" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_233" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_232" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_231" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_230" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_229" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_228" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_227" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_226" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_225" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_224" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_223" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_222" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_221" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_220" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_219" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_218" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_217" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_216" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_215" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_214" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_213" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_212" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_211" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_210" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_209" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_208" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_207" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_239" WCET="96">
+            <memfootprint local-storage="544 b" code-size="294 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_206" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_241" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_242" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_243" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_244" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_245" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_246" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_247" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_248" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_249" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_250" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_251" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_252" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_253" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_254" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_255" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_256" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_239" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_240" WCET="96">
+            <memfootprint local-storage="544 b" code-size="294 b" />
+            <prev id="CombineDFT_256" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_255" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_254" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_253" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_252" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_251" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_250" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_249" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_248" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_247" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_246" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_245" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_244" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_243" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_242" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_241" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_257" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_240" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_259" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_257" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_260" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_257" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_261" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_257" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_262" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_257" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_263" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_257" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_264" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_257" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_265" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_257" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_266" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_257" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_258" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="CombineDFT_266" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_265" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_264" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_263" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_262" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_261" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_260" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_259" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_267" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_258" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_269" WCET="616">
+            <memfootprint local-storage="1344 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_267" data-sent="32" data-type="float" />
+        </task>
+        <task id="CombineDFT_270" WCET="616">
+            <memfootprint local-storage="1344 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_267" data-sent="32" data-type="float" />
+        </task>
+        <task id="CombineDFT_271" WCET="616">
+            <memfootprint local-storage="1344 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_267" data-sent="32" data-type="float" />
+        </task>
+        <task id="CombineDFT_272" WCET="616">
+            <memfootprint local-storage="1344 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_267" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_268" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="CombineDFT_272" data-sent="32" data-type="float" />
+            <prev id="CombineDFT_271" data-sent="32" data-type="float" />
+            <prev id="CombineDFT_270" data-sent="32" data-type="float" />
+            <prev id="CombineDFT_269" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_273" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_268" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_275" WCET="1232">
+            <memfootprint local-storage="2368 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_273" data-sent="64" data-type="float" />
+        </task>
+        <task id="CombineDFT_276" WCET="1232">
+            <memfootprint local-storage="2368 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_273" data-sent="64" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_274" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="CombineDFT_276" data-sent="64" data-type="float" />
+            <prev id="CombineDFT_275" data-sent="64" data-type="float" />
+        </task>
+        <task id="CombineDFT_142" WCET="2464">
+            <memfootprint local-storage="4416 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_274" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_143" WCET="1472">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_155" data-sent="128" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_277" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="FFTReorderSimple_143" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_279" WCET="736">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_277" data-sent="64" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_280" WCET="736">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_277" data-sent="64" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_278" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="FFTReorderSimple_280" data-sent="64" data-type="float" />
+            <prev id="FFTReorderSimple_279" data-sent="64" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_281" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_278" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_283" WCET="368">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_281" data-sent="32" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_284" WCET="368">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_281" data-sent="32" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_285" WCET="368">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_281" data-sent="32" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_286" WCET="368">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_281" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_282" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="FFTReorderSimple_286" data-sent="32" data-type="float" />
+            <prev id="FFTReorderSimple_285" data-sent="32" data-type="float" />
+            <prev id="FFTReorderSimple_284" data-sent="32" data-type="float" />
+            <prev id="FFTReorderSimple_283" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_287" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_282" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_289" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_287" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_290" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_287" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_291" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_287" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_292" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_287" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_293" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_287" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_294" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_287" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_295" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_287" data-sent="16" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_296" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_287" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_288" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="FFTReorderSimple_296" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_295" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_294" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_293" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_292" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_291" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_290" data-sent="16" data-type="float" />
+            <prev id="FFTReorderSimple_289" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_297" WCET="96">
+            <memfootprint local-storage="544 b" code-size="294 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_288" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_299" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_300" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_301" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_302" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_303" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_304" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_305" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_306" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_307" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_308" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_309" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_310" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_311" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_312" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_313" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_314" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_297" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_298" WCET="96">
+            <memfootprint local-storage="544 b" code-size="294 b" />
+            <prev id="FFTReorderSimple_314" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_313" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_312" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_311" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_310" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_309" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_308" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_307" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_306" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_305" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_304" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_303" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_302" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_301" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_300" data-sent="8" data-type="float" />
+            <prev id="FFTReorderSimple_299" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_315" WCET="192">
+            <memfootprint local-storage="1056 b" code-size="582 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_298" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_317" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_318" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_319" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_320" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_321" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_322" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_323" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_324" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_325" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_326" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_327" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_328" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_329" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_330" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_331" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_332" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_333" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_334" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_335" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_336" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_337" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_338" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_339" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_340" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_341" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_342" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_343" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_344" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_345" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_346" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_347" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="CombineDFT_348" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_315" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_316" WCET="192">
+            <memfootprint local-storage="1056 b" code-size="582 b" />
+            <prev id="CombineDFT_348" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_347" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_346" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_345" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_344" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_343" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_342" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_341" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_340" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_339" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_338" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_337" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_336" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_335" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_334" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_333" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_332" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_331" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_330" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_329" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_328" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_327" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_326" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_325" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_324" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_323" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_322" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_321" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_320" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_319" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_318" data-sent="4" data-type="float" />
+            <prev id="CombineDFT_317" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_349" WCET="96">
+            <memfootprint local-storage="544 b" code-size="294 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_316" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_351" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_352" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_353" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_354" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_355" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_356" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_357" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_358" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_359" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_360" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_361" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_362" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_363" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_364" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_365" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="CombineDFT_366" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_349" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_350" WCET="96">
+            <memfootprint local-storage="544 b" code-size="294 b" />
+            <prev id="CombineDFT_366" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_365" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_364" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_363" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_362" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_361" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_360" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_359" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_358" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_357" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_356" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_355" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_354" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_353" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_352" data-sent="8" data-type="float" />
+            <prev id="CombineDFT_351" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_367" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_350" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_369" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_367" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_370" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_367" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_371" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_367" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_372" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_367" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_373" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_367" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_374" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_367" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_375" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_367" data-sent="16" data-type="float" />
+        </task>
+        <task id="CombineDFT_376" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_367" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_368" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="CombineDFT_376" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_375" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_374" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_373" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_372" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_371" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_370" data-sent="16" data-type="float" />
+            <prev id="CombineDFT_369" data-sent="16" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_377" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_368" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_379" WCET="616">
+            <memfootprint local-storage="1344 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_377" data-sent="32" data-type="float" />
+        </task>
+        <task id="CombineDFT_380" WCET="616">
+            <memfootprint local-storage="1344 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_377" data-sent="32" data-type="float" />
+        </task>
+        <task id="CombineDFT_381" WCET="616">
+            <memfootprint local-storage="1344 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_377" data-sent="32" data-type="float" />
+        </task>
+        <task id="CombineDFT_382" WCET="616">
+            <memfootprint local-storage="1344 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_377" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_378" WCET="24">
+            <memfootprint local-storage="160 b" code-size="78 b" />
+            <prev id="CombineDFT_382" data-sent="32" data-type="float" />
+            <prev id="CombineDFT_381" data-sent="32" data-type="float" />
+            <prev id="CombineDFT_380" data-sent="32" data-type="float" />
+            <prev id="CombineDFT_379" data-sent="32" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_383" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_378" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_385" WCET="1232">
+            <memfootprint local-storage="2368 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_383" data-sent="64" data-type="float" />
+        </task>
+        <task id="CombineDFT_386" WCET="1232">
+            <memfootprint local-storage="2368 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_383" data-sent="64" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_384" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="CombineDFT_386" data-sent="64" data-type="float" />
+            <prev id="CombineDFT_385" data-sent="64" data-type="float" />
+        </task>
+        <task id="CombineDFT_153" WCET="2464">
+            <memfootprint local-storage="4416 b" code-size="228 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_384" data-sent="128" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_156" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="CombineDFT_153" data-sent="128" data-type="float" />
+            <prev id="CombineDFT_142" data-sent="128" data-type="float" />
+        </task>
+        <task id="FloatPrinter_154" WCET="6">
+            <memfootprint local-storage="0 b" code-size="16 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_156" data-sent="256" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

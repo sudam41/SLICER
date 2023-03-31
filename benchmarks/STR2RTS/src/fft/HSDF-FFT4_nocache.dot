@@ -1,0 +1,30 @@
+digraph FFT4_169 {
+node0 [label="WEIGHTED_ROUND_ROBIN_Splitter_162", push="0", pop="0", peek="0", pushType="void", popType="void", peekType="void", codeSize="30 b", stackSize="32 b", work="0"];
+node1 [label="OneSource_164", push="1", pop="0", peek="0", pushType="float", popType="void", peekType="void", codeSize="6 b", stackSize="0 b", work="3"];
+node0 -> node1;
+node2 [label="OneSource_165", push="1", pop="0", peek="0", pushType="float", popType="void", peekType="void", codeSize="6 b", stackSize="0 b", work="3"];
+node0 -> node2;
+node3 [label="WEIGHTED_ROUND_ROBIN_Joiner_163", push="2", pop="2", peek="0", pushType="float", popType="float", peekType="void", codeSize="30 b", stackSize="32 b", work="0"];
+node1 -> node3;
+node2 -> node3;
+node4 [label="WEIGHTED_ROUND_ROBIN_Splitter_147", push="2", pop="2", peek="0", pushType="float", popType="float", peekType="void", codeSize="30 b", stackSize="32 b", work="0"];
+node3 -> node4;
+node5 [label="Identity_141", push="1", pop="1", peek="1", pushType="float", popType="float", peekType="float", codeSize="12 b", stackSize="32 b", work="6"];
+node4 -> node5;
+node6 [label="Multiply_142", push="1", pop="1", peek="1", pushType="float", popType="float", peekType="float", codeSize="17 b", stackSize="0 b", work="8"];
+node4 -> node6;
+node7 [label="WEIGHTED_ROUND_ROBIN_Joiner_148", push="2", pop="2", peek="0", pushType="float", popType="float", peekType="void", codeSize="30 b", stackSize="32 b", work="0"];
+node5 -> node7;
+node6 -> node7;
+node8 [label="DUPLICATE_Splitter_149", push="2", pop="2", peek="0", pushType="float", popType="float", peekType="void", codeSize="24 b", stackSize="64 b", work="0"];
+node7 -> node8;
+node9 [label="Add_144", push="1", pop="2", peek="2", pushType="float", popType="float", peekType="float", codeSize="43 b", stackSize="0 b", work="17"];
+node8 -> node9;
+node10 [label="Subtract_145", push="1", pop="2", peek="2", pushType="float", popType="float", peekType="float", codeSize="43 b", stackSize="0 b", work="17"];
+node8 -> node10;
+node11 [label="WEIGHTED_ROUND_ROBIN_Joiner_150", push="2", pop="2", peek="0", pushType="float", popType="float", peekType="void", codeSize="30 b", stackSize="32 b", work="0"];
+node9 -> node11;
+node10 -> node11;
+node12 [label="FloatPrinter_146", push="0", pop="2", peek="2", pushType="void", popType="float", peekType="float", codeSize="16 b", stackSize="0 b", work="6"];
+node11 -> node12;
+}

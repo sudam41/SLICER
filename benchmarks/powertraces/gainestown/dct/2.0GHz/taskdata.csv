@@ -1,0 +1,7 @@
+task	size
+AnonFilter_a0_237	149
+DUPLICATE_Splitter_312	18
+iDCT_2D_reference_coarse_240	113
+AnonFilter_a3_243	181
+iDCT8x8_1D_row_fast_263	54
+WEIGHTED_ROUND_ROBIN_Joiner_313	103

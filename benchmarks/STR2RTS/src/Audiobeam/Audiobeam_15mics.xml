@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<appl>
+    <tasks>
+        <task id="audiobeam_interpolate__node1" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_interpolate__node2" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_interpolate__node3" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_interpolate__node4" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_interpolate__node5" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="FileReader" WCET="15">
+        </task>
+        <task id="audiobeam_interpolate__node6" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_interpolate__node7" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_interpolate__node8" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_interpolate__node9" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_interpolate__node10" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_interpolate__node11" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_interpolate__node12" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_interpolate__node13" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_average" WCET="662">
+            <memfootprint local-storage="40 b" code-size="3264 b" />
+            <prev id="audiobeam_join_round_robin" data-sent="15" data-type="float" />
+        </task>
+        <task id="audiobeam_printer" WCET="59">
+            <memfootprint local-storage="40 b" code-size="2336 b" />
+            <prev id="audiobeam_average" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_split_round_robin" WCET="1081">
+            <memfootprint local-storage="32 b" code-size="3488 b" />
+            <prev id="FileReader" data-sent="15" data-type="float" />
+        </task>
+        <task id="audiobeam_join_round_robin" WCET="1094">
+            <memfootprint local-storage="32 b" code-size="3392 b" />
+            <prev id="audiobeam_interpolate__node1" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node2" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node3" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node4" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node5" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node6" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node7" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node8" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node9" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node10" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node11" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node12" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node13" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node14" data-sent="1" data-type="float" />
+            <prev id="audiobeam_interpolate__node15" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_interpolate__node14" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+        <task id="audiobeam_interpolate__node15" WCET="170">
+            <memfootprint local-storage="40 b" code-size="7936 b" />
+            <prev id="audiobeam_split_round_robin" data-sent="1" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <communication type="BUS" arbiter="FAIR" active-window-time="3" token-per-timeunit="1" mechanism="shared" behavior="non-blocking" />
+        <solving type="worst_concurrency" solve="true" solver="gurobi" timeout="120"/>
+        <architecture prefetch_code="false">
+            <memory>
+            </memory>
+            <spm store-code="true" assign_region="true" />
+            <processors>
+                <processor id="P16" spm-size="32kb"/>
+                <processor id="P15" spm-size="32kb"/>
+                <processor id="P14" spm-size="32kb"/>
+                <processor id="P13" spm-size="32kb"/>
+                <processor id="P12" spm-size="32kb"/>
+                <processor id="P11" spm-size="32kb"/>
+                <processor id="P10" spm-size="32kb"/>
+                <processor id="P9" spm-size="32kb"/>
+                <processor id="P8" spm-size="32kb"/>
+                <processor id="P7" spm-size="32kb"/>
+                <processor id="P6" spm-size="32kb"/>
+                <processor id="P5" spm-size="32kb"/>
+                <processor id="P4" spm-size="32kb"/>
+                <processor id="P3" spm-size="32kb"/>
+                <processor id="P2" spm-size="32kb"/>
+                <processor id="P1" spm-size="32kb"/>
+            </processors>
+        </architecture>
+    </config>
+</appl>

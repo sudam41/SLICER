@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="AnonFilter_a0_237" WCET="36480">
+            <memfootprint local-storage="32 b" code-size="44 b" />
+        </task>
+        <task id="DUPLICATE_Splitter_312" WCET="768">
+            <memfootprint local-storage="64 b" code-size="30 b" />
+            <prev id="AnonFilter_a0_237" data-sent="64" data-type="int" />
+        </task>
+        <task id="iDCT_2D_reference_coarse_240" WCET="16032">
+            <memfootprint local-storage="384 b" code-size="273 b" />
+            <prev id="DUPLICATE_Splitter_312" data-sent="64" data-type="int" />
+        </task>
+        <task id="AnonFilter_a3_243" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="DUPLICATE_Splitter_312" data-sent="64" data-type="int" />
+        </task>
+        <task id="Pre_CollapsedDataParallel_1_310" WCET="659">
+            <memfootprint local-storage="96 b" code-size="50 b" />
+            <prev id="AnonFilter_a3_243" data-sent="64" data-type="float" />
+        </task>
+        <task id="iDCT_1D_reference_fine_244" WCET="784">
+            <memfootprint local-storage="128 b" code-size="86 b" />
+            <prev id="Pre_CollapsedDataParallel_1_310" data-sent="64" data-type="float" />
+        </task>
+        <task id="Post_CollapsedDataParallel_2_311" WCET="723">
+            <memfootprint local-storage="96 b" code-size="54 b" />
+            <prev id="iDCT_1D_reference_fine_244" data-sent="64" data-type="float" />
+        </task>
+        <task id="iDCT_1D_reference_fine_252" WCET="784">
+            <memfootprint local-storage="128 b" code-size="86 b" />
+            <prev id="Post_CollapsedDataParallel_2_311" data-sent="64" data-type="float" />
+        </task>
+        <task id="AnonFilter_a4_260" WCET="76">
+            <memfootprint local-storage="0 b" code-size="37 b" />
+            <prev id="iDCT_1D_reference_fine_252" data-sent="64" data-type="float" />
+        </task>
+        <task id="iDCT8x8_1D_row_fast_263" WCET="138">
+            <memfootprint local-storage="352 b" code-size="356 b" />
+            <prev id="DUPLICATE_Splitter_312" data-sent="64" data-type="int" />
+        </task>
+        <task id="iDCT8x8_1D_col_fast_264" WCET="1576">
+            <memfootprint local-storage="384 b" code-size="546 b" />
+            <prev id="iDCT8x8_1D_row_fast_263" data-sent="64" data-type="int" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_313" WCET="1152">
+            <memfootprint local-storage="32 b" code-size="42 b" />
+            <prev id="iDCT8x8_1D_col_fast_264" data-sent="1" data-type="int" />
+            <prev id="AnonFilter_a4_260" data-sent="64" data-type="int" />
+            <prev id="iDCT_2D_reference_coarse_240" data-sent="1" data-type="int" />
+        </task>
+        <task id="AnonFilter_a2_265" WCET="73">
+            <memfootprint local-storage="160 b" code-size="175 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_313" data-sent="192" data-type="int" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

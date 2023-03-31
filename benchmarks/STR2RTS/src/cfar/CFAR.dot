@@ -1,0 +1,9 @@
+digraph CFAR_SDF {
+node2 [ label="cfar_complex_source", push="64", pop="0" ]
+node3 [ label="cfar_square_and_scale", push="64", pop="64" ]
+node2 -> node3
+node4 [ label="cfar_gather", push="64", pop="64" ]
+node3 -> node4
+node5 [ label="cfar_printer", push="0", pop="64" ]
+node4 -> node5
+}

@@ -1,0 +1,8 @@
+timestamp,core,thread,value0,value1,description
+31900.0,0,0,5,0,OneSource_67
+32300.0,0,0,5,0,Identity_70
+32300.0,0,0,5,0,Multiply_71
+32300.0,0,0,5,0,WEIGHTED_ROUND_ROBIN_Joiner_77
+32900.0,0,0,5,0,Add_73
+33000.0,0,0,5,0,Subtract_74
+33100.0,0,0,5,0,WEIGHTED_ROUND_ROBIN_Joiner_79

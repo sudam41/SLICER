@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="OneSource_67" WCET="3">
+            <memfootprint local-storage="0 b" code-size="6 b" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_76" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="OneSource_67" data-sent="2" data-type="float" />
+        </task>
+        <task id="Identity_70" WCET="6">
+            <memfootprint local-storage="32 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_76" data-sent="1" data-type="float" />
+        </task>
+        <task id="Multiply_71" WCET="8">
+            <memfootprint local-storage="0 b" code-size="17 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_76" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_77" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="Multiply_71" data-sent="1" data-type="float" />
+            <prev id="Identity_70" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_78" WCET="18">
+            <memfootprint local-storage="64 b" code-size="24 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_77" data-sent="2" data-type="float" />
+        </task>
+        <task id="Add_73" WCET="17">
+            <memfootprint local-storage="0 b" code-size="43 b" />
+            <prev id="DUPLICATE_Splitter_78" data-sent="2" data-type="float" />
+        </task>
+        <task id="Subtract_74" WCET="17">
+            <memfootprint local-storage="0 b" code-size="43 b" />
+            <prev id="DUPLICATE_Splitter_78" data-sent="2" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_79" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="Subtract_74" data-sent="1" data-type="float" />
+            <prev id="Add_73" data-sent="1" data-type="float" />
+        </task>
+        <task id="FloatPrinter_75" WCET="6">
+            <memfootprint local-storage="0 b" code-size="16 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_79" data-sent="2" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="FileReader_81" WCET="180">
+            <memfootprint local-storage="0 b" code-size="0 b" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_102" WCET="90">
+            <memfootprint local-storage="32 b" code-size="186 b" />
+            <prev id="FileReader_81" data-sent="15" data-type="float" />
+        </task>
+        <task id="Interpolate_85" WCET="20">
+            <memfootprint local-storage="96 b" code-size="72 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_86" WCET="20">
+            <memfootprint local-storage="96 b" code-size="72 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_87" WCET="20">
+            <memfootprint local-storage="96 b" code-size="92 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_88" WCET="20">
+            <memfootprint local-storage="96 b" code-size="112 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_89" WCET="20">
+            <memfootprint local-storage="96 b" code-size="132 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_90" WCET="20">
+            <memfootprint local-storage="96 b" code-size="152 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_91" WCET="20">
+            <memfootprint local-storage="96 b" code-size="152 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_92" WCET="20">
+            <memfootprint local-storage="96 b" code-size="172 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_93" WCET="20">
+            <memfootprint local-storage="96 b" code-size="192 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_94" WCET="20">
+            <memfootprint local-storage="96 b" code-size="212 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_95" WCET="20">
+            <memfootprint local-storage="96 b" code-size="232 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_96" WCET="20">
+            <memfootprint local-storage="96 b" code-size="252 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_97" WCET="20">
+            <memfootprint local-storage="96 b" code-size="272 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_98" WCET="20">
+            <memfootprint local-storage="96 b" code-size="292 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="Interpolate_99" WCET="20">
+            <memfootprint local-storage="96 b" code-size="312 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_102" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_103" WCET="90">
+            <memfootprint local-storage="32 b" code-size="186 b" />
+            <prev id="Interpolate_99" data-sent="1" data-type="float" />
+            <prev id="Interpolate_98" data-sent="1" data-type="float" />
+            <prev id="Interpolate_97" data-sent="1" data-type="float" />
+            <prev id="Interpolate_96" data-sent="1" data-type="float" />
+            <prev id="Interpolate_95" data-sent="1" data-type="float" />
+            <prev id="Interpolate_94" data-sent="1" data-type="float" />
+            <prev id="Interpolate_93" data-sent="1" data-type="float" />
+            <prev id="Interpolate_92" data-sent="1" data-type="float" />
+            <prev id="Interpolate_91" data-sent="1" data-type="float" />
+            <prev id="Interpolate_90" data-sent="1" data-type="float" />
+            <prev id="Interpolate_89" data-sent="1" data-type="float" />
+            <prev id="Interpolate_88" data-sent="1" data-type="float" />
+            <prev id="Interpolate_87" data-sent="1" data-type="float" />
+            <prev id="Interpolate_86" data-sent="1" data-type="float" />
+            <prev id="Interpolate_85" data-sent="1" data-type="float" />
+        </task>
+        <task id="Average_100" WCET="140">
+            <memfootprint local-storage="96 b" code-size="32 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_103" data-sent="15" data-type="float" />
+        </task>
+        <task id="Printer_101" WCET="25">
+            <memfootprint local-storage="32 b" code-size="73 b" />
+            <prev id="Average_100" data-sent="1" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

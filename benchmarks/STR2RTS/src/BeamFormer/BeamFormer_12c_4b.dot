@@ -1,0 +1,127 @@
+digraph streamit {
+node3 [ label="bf12c4b_split_round_robin" ]
+node4 [ label="bf12c4b_join_round_robin", push=24, pop=2 ]
+node6 [ label="bf12c4b_input_generate", push=4,pop=0, peek=0 ]
+node7 [ label="bf12c4b_beam_fir_filter_coarse", push=4, pop=4, peek=4 ]
+node6 -> node7
+node8 [ label="bf12c4b_beam_fir_filter_fine", push=2, pop=4, peek=4 ]
+node7 -> node8
+node3 -> node6
+node8 -> node4
+node10 [ label="bf12c4b_input_generate", push=4,pop=0, peek=0 ]
+node11 [ label="bf12c4b_beam_fir_filter_coarse", push=4, pop=4, peek=4 ]
+node10 -> node11
+node12 [ label="bf12c4b_beam_fir_filter_fine", push=2, pop=4, peek=4 ]
+node11 -> node12
+node3 -> node10
+node12 -> node4
+node14 [ label="bf12c4b_input_generate", push=4,pop=0, peek=0 ]
+node15 [ label="bf12c4b_beam_fir_filter_coarse", push=4, pop=4, peek=4 ]
+node14 -> node15
+node16 [ label="bf12c4b_beam_fir_filter_fine", push=2, pop=4, peek=4 ]
+node15 -> node16
+node3 -> node14
+node16 -> node4
+node18 [ label="bf12c4b_input_generate", push=4,pop=0, peek=0 ]
+node19 [ label="bf12c4b_beam_fir_filter_coarse", push=4, pop=4, peek=4 ]
+node18 -> node19
+node20 [ label="bf12c4b_beam_fir_filter_fine", push=2, pop=4, peek=4 ]
+node19 -> node20
+node3 -> node18
+node20 -> node4
+node22 [ label="bf12c4b_input_generate", push=4,pop=0, peek=0 ]
+node23 [ label="bf12c4b_beam_fir_filter_coarse", push=4, pop=4, peek=4 ]
+node22 -> node23
+node24 [ label="bf12c4b_beam_fir_filter_fine", push=2, pop=4, peek=4 ]
+node23 -> node24
+node3 -> node22
+node24 -> node4
+node26 [ label="bf12c4b_input_generate", push=4,pop=0, peek=0 ]
+node27 [ label="bf12c4b_beam_fir_filter_coarse", push=4, pop=4, peek=4 ]
+node26 -> node27
+node28 [ label="bf12c4b_beam_fir_filter_fine", push=2, pop=4, peek=4 ]
+node27 -> node28
+node3 -> node26
+node28 -> node4
+node30 [ label="bf12c4b_input_generate", push=4,pop=0, peek=0 ]
+node31 [ label="bf12c4b_beam_fir_filter_coarse", push=4, pop=4, peek=4 ]
+node30 -> node31
+node32 [ label="bf12c4b_beam_fir_filter_fine", push=2, pop=4, peek=4 ]
+node31 -> node32
+node3 -> node30
+node32 -> node4
+node34 [ label="bf12c4b_input_generate", push=4,pop=0, peek=0 ]
+node35 [ label="bf12c4b_beam_fir_filter_coarse", push=4, pop=4, peek=4 ]
+node34 -> node35
+node36 [ label="bf12c4b_beam_fir_filter_fine", push=2, pop=4, peek=4 ]
+node35 -> node36
+node3 -> node34
+node36 -> node4
+node38 [ label="bf12c4b_input_generate", push=4,pop=0, peek=0 ]
+node39 [ label="bf12c4b_beam_fir_filter_coarse", push=4, pop=4, peek=4 ]
+node38 -> node39
+node40 [ label="bf12c4b_beam_fir_filter_fine", push=2, pop=4, peek=4 ]
+node39 -> node40
+node3 -> node38
+node40 -> node4
+node42 [ label="bf12c4b_input_generate", push=4,pop=0, peek=0 ]
+node43 [ label="bf12c4b_beam_fir_filter_coarse", push=4, pop=4, peek=4 ]
+node42 -> node43
+node44 [ label="bf12c4b_beam_fir_filter_fine", push=2, pop=4, peek=4 ]
+node43 -> node44
+node3 -> node42
+node44 -> node4
+node46 [ label="bf12c4b_input_generate", push=4,pop=0, peek=0 ]
+node47 [ label="bf12c4b_beam_fir_filter_coarse", push=4, pop=4, peek=4 ]
+node46 -> node47
+node48 [ label="bf12c4b_beam_fir_filter_fine", push=2, pop=4, peek=4 ]
+node47 -> node48
+node3 -> node46
+node48 -> node4
+node50 [ label="bf12c4b_input_generate", push=4,pop=0, peek=0 ]
+node51 [ label="bf12c4b_beam_fir_filter_coarse", push=4, pop=4, peek=4 ]
+node50 -> node51
+node52 [ label="bf12c4b_beam_fir_filter_fine", push=2, pop=4, peek=4 ]
+node51 -> node52
+node3 -> node50
+node52 -> node4
+node54 [ label="bf12c4b_split_duplicate", pop=24, push=24 ]
+node55 [ label="bf12c4b_join2_round_robin" ]
+node57 [ label="bf12c4b_beam_form", push=2, pop=24 ]
+node58 [ label="bf12c4b_beam_fir_filter_mf", push=2, pop=2 ]
+node57 -> node58
+node59 [ label="bf12c4b_magnitude", push=1, pop=2 ]
+node58 -> node59
+node60 [ label="bf12c4b_float_printer", push=0, pop=1 ]
+node59 -> node60
+node54 -> node57
+node60 -> node55
+node62 [ label="bf12c4b_beam_form", push=2, pop=24 ]
+node63 [ label="bf12c4b_beam_fir_filter_mf", push=2, pop=2 ]
+node62 -> node63
+node64 [ label="bf12c4b_magnitude", push=1, pop=2 ]
+node63 -> node64
+node65 [ label="bf12c4b_float_printer", push=0, pop=1 ]
+node64 -> node65
+node54 -> node62
+node65 -> node55
+node67 [ label="bf12c4b_beam_form", push=2, pop=24 ]
+node68 [ label="bf12c4b_beam_fir_filter_mf", push=2, pop=2 ]
+node67 -> node68
+node69 [ label="bf12c4b_magnitude", push=1, pop=2 ]
+node68 -> node69
+node70 [ label="bf12c4b_float_printer", push=0, pop=1 ]
+node69 -> node70
+node54 -> node67
+node70 -> node55
+node72 [ label="bf12c4b_beam_form", push=2, pop=24 ]
+node73 [ label="bf12c4b_beam_fir_filter_mf", push=2, pop=2 ]
+node72 -> node73
+node74 [ label="bf12c4b_magnitude", push=1, pop=2 ]
+node73 -> node74
+node75 [ label="bf12c4b_float_printer", push=0, pop=1 ]
+node74 -> node75
+node54 -> node72
+node75 -> node55
+node4 -> node54
+}

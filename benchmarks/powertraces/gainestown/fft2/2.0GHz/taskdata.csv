@@ -1,0 +1,9 @@
+task	size
+FFTTestSource_41	46
+FFTReorderSimple_42	192
+CombineDFT_50	72
+CombineDFT_52	32
+FFTReorderSimple_53	196
+CombineDFT_61	69
+CombineDFT_63	32
+WEIGHTED_ROUND_ROBIN_Joiner_66	91

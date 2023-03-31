@@ -1,0 +1,11 @@
+timestamp,core,thread,value0,value1,description
+42400.0,0,0,5,0,source_61
+43600.0,0,0,5,0,Delay_N_64
+50700.0,0,0,5,0,Delay_N_71
+57900.0,0,0,5,0,Delay_N_78
+65000.0,0,0,5,0,Delay_N_85
+72200.0,0,0,5,0,Delay_N_92
+79400.0,0,0,5,0,Delay_N_99
+86400.0,0,0,5,0,Delay_N_106
+93600.0,0,0,5,0,Delay_N_113
+100700.0,0,0,5,0,WEIGHTED_ROUND_ROBIN_Joiner_122

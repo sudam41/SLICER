@@ -1,0 +1,54 @@
+digraph streamit {
+fft2_test_source_pop_0_push_128_1 -> FFTKernel2_2_split
+FFTKernel2_2_join -> FloatPrinter_pop_1_push_0_3
+fft2_test_source_pop_0_push_128_1 [ label="fft2_test_source", pop=0, push=128 ]
+FFTKernel2_2_split [ label="fft2_split1_round_robin" ]
+FFTKernel2_2_join [ label="fft2_join1_round_robin" ]
+fft2_reorder_simple_pop_8_push_8_17 -> fft2_combine_dft_pop_4_push_4_7
+fft2_combine_dft_pop_4_push_4_7 -> fft2_combine_dft_pop_8_push_8_8
+fft2_combine_dft_pop_8_push_8_8 -> fft2_combine_dft_pop_16_push_16_9
+fft2_combine_dft_pop_16_push_16_9 -> fft2_combine_dft_pop_32_push_32_10
+fft2_combine_dft_pop_32_push_32_10 -> fft2_combine_dft_pop_64_push_64_11
+fft2_combine_dft_pop_64_push_64_11 -> fft2_combine_dft_pop_128_push_128_12
+fft2_reorder_simple_pop_128_push_128_13 -> fft2_reorder_simple_pop_64_push_64_14
+fft2_reorder_simple_pop_64_push_64_14 -> fft2_reorder_simple_pop_32_push_32_15
+fft2_reorder_simple_pop_32_push_32_15 -> fft2_reorder_simple_pop_16_push_16_16
+fft2_reorder_simple_pop_16_push_16_16 -> fft2_reorder_simple_pop_8_push_8_17
+fft2_reorder_simple_pop_128_push_128_13 [ label="fft2_reorder_simple", pop=128, push=128 ]
+fft2_reorder_simple_pop_64_push_64_14 [ label="fft2_reorder_simple", pop=64, push=64 ]
+fft2_reorder_simple_pop_32_push_32_15 [ label="fft2_reorder_simple", pop=32, push=32 ]
+fft2_reorder_simple_pop_16_push_16_16 [ label="fft2_reorder_simple", pop=16, push=16 ]
+fft2_reorder_simple_pop_8_push_8_17 [ label="fft2_reorder_simple", pop=8, push=8 ]
+fft2_combine_dft_pop_4_push_4_7 [ label="fft2_combine_dft", pop=4, push=4 ]
+fft2_combine_dft_pop_8_push_8_8 [ label="fft2_combine_dft", pop=8, push=8 ]
+fft2_combine_dft_pop_16_push_16_9 [ label="fft2_combine_dft", pop=16, push=16 ]
+fft2_combine_dft_pop_32_push_32_10 [ label="fft2_combine_dft", pop=32, push=32 ]
+fft2_combine_dft_pop_64_push_64_11 [ label="fft2_combine_dft", pop=64, push=64 ]
+fft2_combine_dft_pop_128_push_128_12 [ label="fft2_combine_dft", pop=128, push=128 ]
+FFTKernel2_2_split -> fft2_reorder_simple_pop_128_push_128_13
+fft2_combine_dft_pop_128_push_128_12 -> FFTKernel2_2_join
+fft2_reorder_simple_pop_8_push_8_39 -> fft2_combine_dft_pop_4_push_4_29
+fft2_combine_dft_pop_4_push_4_29 -> fft2_combine_dft_pop_8_push_8_30
+fft2_combine_dft_pop_8_push_8_30 -> fft2_combine_dft_pop_16_push_16_31
+fft2_combine_dft_pop_16_push_16_31 -> fft2_combine_dft_pop_32_push_32_32
+fft2_combine_dft_pop_32_push_32_32 -> fft2_combine_dft_pop_64_push_64_33
+fft2_combine_dft_pop_64_push_64_33 -> fft2_combine_dft_pop_128_push_128_34
+fft2_reorder_simple_pop_128_push_128_35 -> fft2_reorder_simple_pop_64_push_64_36
+fft2_reorder_simple_pop_64_push_64_36 -> fft2_reorder_simple_pop_32_push_32_37
+fft2_reorder_simple_pop_32_push_32_37 -> fft2_reorder_simple_pop_16_push_16_38
+fft2_reorder_simple_pop_16_push_16_38 -> fft2_reorder_simple_pop_8_push_8_39
+fft2_reorder_simple_pop_128_push_128_35 [ label="fft2_reorder_simple", pop=128, push=128 ]
+fft2_reorder_simple_pop_64_push_64_36 [ label="fft2_reorder_simple", pop=64, push=64 ]
+fft2_reorder_simple_pop_32_push_32_37 [ label="fft2_reorder_simple", pop=32, push=32 ]
+fft2_reorder_simple_pop_16_push_16_38 [ label="fft2_reorder_simple", pop=16, push=16 ]
+fft2_reorder_simple_pop_8_push_8_39 [ label="fft2_reorder_simple", pop=8, push=8 ]
+fft2_combine_dft_pop_4_push_4_29 [ label="fft2_combine_dft", pop=4, push=4 ]
+fft2_combine_dft_pop_8_push_8_30 [ label="fft2_combine_dft", pop=8, push=8 ]
+fft2_combine_dft_pop_16_push_16_31 [ label="fft2_combine_dft", pop=16, push=16 ]
+fft2_combine_dft_pop_32_push_32_32 [ label="fft2_combine_dft", pop=32, push=32 ]
+fft2_combine_dft_pop_64_push_64_33 [ label="fft2_combine_dft", pop=64, push=64 ]
+fft2_combine_dft_pop_128_push_128_34 [ label="fft2_combine_dft", pop=128, push=128 ]
+FFTKernel2_2_split -> fft2_reorder_simple_pop_128_push_128_35
+fft2_combine_dft_pop_128_push_128_34 -> FFTKernel2_2_join
+FloatPrinter_pop_1_push_0_3 [ label="fft2_float_printer", pop=1, push=0 ]
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="Input_8" WCET="10">
+            <memfootprint local-storage="0 b" code-size="32 b" />
+        </task>
+        <task id="FIR_9" WCET="572">
+            <memfootprint local-storage="160 b" code-size="762 b" />
+            <prev id="Input_8" data-sent="2" data-type="float" />
+        </task>
+        <task id="Printer_10" WCET="12">
+            <memfootprint local-storage="0 b" code-size="32 b" />
+            <prev id="FIR_9" data-sent="2" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

@@ -1,0 +1,7 @@
+timestamp,core,thread,value0,value1,description
+47100.0,0,0,5,0,AnonFilter_a0_237
+57100.0,0,0,5,0,DUPLICATE_Splitter_312
+58300.0,0,0,5,0,iDCT_2D_reference_coarse_240
+65900.0,0,0,5,0,AnonFilter_a3_243
+78100.0,0,0,5,0,iDCT8x8_1D_row_fast_263
+81700.0,0,0,5,0,WEIGHTED_ROUND_ROBIN_Joiner_313

@@ -1,0 +1,241 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="source_61" WCET="13">
+            <memfootprint local-storage="0 b" code-size="31 b" />
+        </task>
+        <task id="DUPLICATE_Splitter_121" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="source_61" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_64" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="DUPLICATE_Splitter_121" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_65" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_64" data-sent="8" data-type="float" />
+        </task>
+        <task id="DownSamp_66" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="FirFilter_65" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_67" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_66" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_68" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="UpSamp_67" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_69" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_68" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_71" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="DUPLICATE_Splitter_121" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_72" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_71" data-sent="8" data-type="float" />
+        </task>
+        <task id="DownSamp_73" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="FirFilter_72" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_74" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_73" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_75" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="UpSamp_74" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_76" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_75" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_78" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="DUPLICATE_Splitter_121" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_79" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_78" data-sent="8" data-type="float" />
+        </task>
+        <task id="DownSamp_80" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="FirFilter_79" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_81" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_80" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_82" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="UpSamp_81" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_83" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_82" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_85" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="DUPLICATE_Splitter_121" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_86" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_85" data-sent="8" data-type="float" />
+        </task>
+        <task id="DownSamp_87" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="FirFilter_86" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_88" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_87" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_89" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="UpSamp_88" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_90" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_89" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_92" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="DUPLICATE_Splitter_121" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_93" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_92" data-sent="8" data-type="float" />
+        </task>
+        <task id="DownSamp_94" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="FirFilter_93" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_95" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_94" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_96" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="UpSamp_95" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_97" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_96" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_99" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="DUPLICATE_Splitter_121" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_100" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_99" data-sent="8" data-type="float" />
+        </task>
+        <task id="DownSamp_101" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="FirFilter_100" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_102" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_101" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_103" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="UpSamp_102" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_104" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_103" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_106" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="DUPLICATE_Splitter_121" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_107" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_106" data-sent="8" data-type="float" />
+        </task>
+        <task id="DownSamp_108" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="FirFilter_107" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_109" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_108" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_110" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="UpSamp_109" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_111" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_110" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_113" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="DUPLICATE_Splitter_121" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_114" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_113" data-sent="8" data-type="float" />
+        </task>
+        <task id="DownSamp_115" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="FirFilter_114" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_116" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_115" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_117" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="UpSamp_116" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_118" WCET="390">
+            <memfootprint local-storage="64 b" code-size="680 b" />
+            <prev id="Delay_N_117" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_122" WCET="384">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_118" data-sent="8" data-type="float" />
+            <prev id="FirFilter_111" data-sent="8" data-type="float" />
+            <prev id="FirFilter_104" data-sent="8" data-type="float" />
+            <prev id="FirFilter_97" data-sent="8" data-type="float" />
+            <prev id="FirFilter_90" data-sent="8" data-type="float" />
+            <prev id="FirFilter_83" data-sent="8" data-type="float" />
+            <prev id="FirFilter_76" data-sent="8" data-type="float" />
+            <prev id="FirFilter_69" data-sent="8" data-type="float" />
+        </task>
+        <task id="Combine_119" WCET="59">
+            <memfootprint local-storage="64 b" code-size="27 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_122" data-sent="64" data-type="float" />
+        </task>
+        <task id="sink_120" WCET="6">
+            <memfootprint local-storage="0 b" code-size="16 b" />
+            <prev id="Combine_119" data-sent="8" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

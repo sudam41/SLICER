@@ -1,0 +1,309 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="FloatOneSource_103" WCET="7">
+            <memfootprint local-storage="0 b" code-size="14 b" />
+        </task>
+        <task id="LowPassFilter_105" WCET="730">
+            <memfootprint local-storage="96 b" code-size="1252 b" />
+            <prev id="FloatOneSource_103" data-sent="5" data-type="float" />
+        </task>
+        <task id="FMDemodulator_106" WCET="221">
+            <memfootprint local-storage="32 b" code-size="82 b" />
+            <prev id="LowPassFilter_105" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_180" WCET="33">
+            <memfootprint local-storage="64 b" code-size="72 b" />
+            <prev id="FMDemodulator_106" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_182" WCET="9">
+            <memfootprint local-storage="64 b" code-size="24 b" />
+            <prev id="DUPLICATE_Splitter_180" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_111" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_182" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_112" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_182" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_183" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="LowPassFilter_112" data-sent="1" data-type="float" />
+            <prev id="LowPassFilter_111" data-sent="1" data-type="float" />
+        </task>
+        <task id="Subtracter_113" WCET="17">
+            <memfootprint local-storage="0 b" code-size="43 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_183" data-sent="2" data-type="float" />
+        </task>
+        <task id="Amplify_114" WCET="8">
+            <memfootprint local-storage="0 b" code-size="17 b" />
+            <prev id="Subtracter_113" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_184" WCET="9">
+            <memfootprint local-storage="64 b" code-size="24 b" />
+            <prev id="DUPLICATE_Splitter_180" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_118" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_184" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_119" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_184" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_185" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="LowPassFilter_119" data-sent="1" data-type="float" />
+            <prev id="LowPassFilter_118" data-sent="1" data-type="float" />
+        </task>
+        <task id="Subtracter_120" WCET="17">
+            <memfootprint local-storage="0 b" code-size="43 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_185" data-sent="2" data-type="float" />
+        </task>
+        <task id="Amplify_121" WCET="8">
+            <memfootprint local-storage="0 b" code-size="17 b" />
+            <prev id="Subtracter_120" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_186" WCET="9">
+            <memfootprint local-storage="64 b" code-size="24 b" />
+            <prev id="DUPLICATE_Splitter_180" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_125" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_186" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_126" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_186" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_187" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="LowPassFilter_126" data-sent="1" data-type="float" />
+            <prev id="LowPassFilter_125" data-sent="1" data-type="float" />
+        </task>
+        <task id="Subtracter_127" WCET="17">
+            <memfootprint local-storage="0 b" code-size="43 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_187" data-sent="2" data-type="float" />
+        </task>
+        <task id="Amplify_128" WCET="8">
+            <memfootprint local-storage="0 b" code-size="17 b" />
+            <prev id="Subtracter_127" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_188" WCET="9">
+            <memfootprint local-storage="64 b" code-size="24 b" />
+            <prev id="DUPLICATE_Splitter_180" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_132" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_188" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_133" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_188" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_189" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="LowPassFilter_133" data-sent="1" data-type="float" />
+            <prev id="LowPassFilter_132" data-sent="1" data-type="float" />
+        </task>
+        <task id="Subtracter_134" WCET="17">
+            <memfootprint local-storage="0 b" code-size="43 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_189" data-sent="2" data-type="float" />
+        </task>
+        <task id="Amplify_135" WCET="8">
+            <memfootprint local-storage="0 b" code-size="17 b" />
+            <prev id="Subtracter_134" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_190" WCET="9">
+            <memfootprint local-storage="64 b" code-size="24 b" />
+            <prev id="DUPLICATE_Splitter_180" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_139" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_190" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_140" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_190" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_191" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="LowPassFilter_140" data-sent="1" data-type="float" />
+            <prev id="LowPassFilter_139" data-sent="1" data-type="float" />
+        </task>
+        <task id="Subtracter_141" WCET="17">
+            <memfootprint local-storage="0 b" code-size="43 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_191" data-sent="2" data-type="float" />
+        </task>
+        <task id="Amplify_142" WCET="8">
+            <memfootprint local-storage="0 b" code-size="17 b" />
+            <prev id="Subtracter_141" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_192" WCET="9">
+            <memfootprint local-storage="64 b" code-size="24 b" />
+            <prev id="DUPLICATE_Splitter_180" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_146" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_192" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_147" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_192" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_193" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="LowPassFilter_147" data-sent="1" data-type="float" />
+            <prev id="LowPassFilter_146" data-sent="1" data-type="float" />
+        </task>
+        <task id="Subtracter_148" WCET="17">
+            <memfootprint local-storage="0 b" code-size="43 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_193" data-sent="2" data-type="float" />
+        </task>
+        <task id="Amplify_149" WCET="8">
+            <memfootprint local-storage="0 b" code-size="17 b" />
+            <prev id="Subtracter_148" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_194" WCET="9">
+            <memfootprint local-storage="64 b" code-size="24 b" />
+            <prev id="DUPLICATE_Splitter_180" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_153" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_194" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_154" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_194" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_195" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="LowPassFilter_154" data-sent="1" data-type="float" />
+            <prev id="LowPassFilter_153" data-sent="1" data-type="float" />
+        </task>
+        <task id="Subtracter_155" WCET="17">
+            <memfootprint local-storage="0 b" code-size="43 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_195" data-sent="2" data-type="float" />
+        </task>
+        <task id="Amplify_156" WCET="8">
+            <memfootprint local-storage="0 b" code-size="17 b" />
+            <prev id="Subtracter_155" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_196" WCET="9">
+            <memfootprint local-storage="64 b" code-size="24 b" />
+            <prev id="DUPLICATE_Splitter_180" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_160" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_196" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_161" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_196" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_197" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="LowPassFilter_161" data-sent="1" data-type="float" />
+            <prev id="LowPassFilter_160" data-sent="1" data-type="float" />
+        </task>
+        <task id="Subtracter_162" WCET="17">
+            <memfootprint local-storage="0 b" code-size="43 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_197" data-sent="2" data-type="float" />
+        </task>
+        <task id="Amplify_163" WCET="8">
+            <memfootprint local-storage="0 b" code-size="17 b" />
+            <prev id="Subtracter_162" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_198" WCET="9">
+            <memfootprint local-storage="64 b" code-size="24 b" />
+            <prev id="DUPLICATE_Splitter_180" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_167" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_198" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_168" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_198" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_199" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="LowPassFilter_168" data-sent="1" data-type="float" />
+            <prev id="LowPassFilter_167" data-sent="1" data-type="float" />
+        </task>
+        <task id="Subtracter_169" WCET="17">
+            <memfootprint local-storage="0 b" code-size="43 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_199" data-sent="2" data-type="float" />
+        </task>
+        <task id="Amplify_170" WCET="8">
+            <memfootprint local-storage="0 b" code-size="17 b" />
+            <prev id="Subtracter_169" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_200" WCET="9">
+            <memfootprint local-storage="64 b" code-size="24 b" />
+            <prev id="DUPLICATE_Splitter_180" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_174" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_200" data-sent="1" data-type="float" />
+        </task>
+        <task id="LowPassFilter_175" WCET="710">
+            <memfootprint local-storage="96 b" code-size="1332 b" />
+            <prev id="DUPLICATE_Splitter_200" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_201" WCET="12">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="LowPassFilter_175" data-sent="1" data-type="float" />
+            <prev id="LowPassFilter_174" data-sent="1" data-type="float" />
+        </task>
+        <task id="Subtracter_176" WCET="17">
+            <memfootprint local-storage="0 b" code-size="43 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_201" data-sent="2" data-type="float" />
+        </task>
+        <task id="Amplify_177" WCET="8">
+            <memfootprint local-storage="0 b" code-size="17 b" />
+            <prev id="Subtracter_176" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_181" WCET="60">
+            <memfootprint local-storage="32 b" code-size="126 b" />
+            <prev id="Amplify_177" data-sent="1" data-type="float" />
+            <prev id="Amplify_170" data-sent="1" data-type="float" />
+            <prev id="Amplify_163" data-sent="1" data-type="float" />
+            <prev id="Amplify_156" data-sent="1" data-type="float" />
+            <prev id="Amplify_149" data-sent="1" data-type="float" />
+            <prev id="Amplify_142" data-sent="1" data-type="float" />
+            <prev id="Amplify_135" data-sent="1" data-type="float" />
+            <prev id="Amplify_128" data-sent="1" data-type="float" />
+            <prev id="Amplify_121" data-sent="1" data-type="float" />
+            <prev id="Amplify_114" data-sent="1" data-type="float" />
+        </task>
+        <task id="AnonFilter_a0_178" WCET="73">
+            <memfootprint local-storage="64 b" code-size="27 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_181" data-sent="10" data-type="float" />
+        </task>
+        <task id="FloatPrinter_179" WCET="6">
+            <memfootprint local-storage="0 b" code-size="16 b" />
+            <prev id="AnonFilter_a0_178" data-sent="1" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

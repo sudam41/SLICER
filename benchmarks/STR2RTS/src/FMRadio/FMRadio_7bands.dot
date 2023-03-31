@@ -1,0 +1,98 @@
+digraph streamit {
+FloatOneSource_pop_0_push_1_1 -> fm7b_lowpass_filter_pop_5_peek_64_push_1_4
+AnonFilter_a0_pop_6_push_1_9 -> FloatPrinter_pop_1_push_0_3
+FloatOneSource_pop_0_push_1_1 [ label="fm7b_float_one_source", pop=0, push=5 ]
+fm7b_lowpass_filter_pop_5_peek_64_push_1_4 -> FMDemodulator_pop_1_peek_2_push_1_5
+FMDemodulator_pop_1_peek_2_push_1_5 -> EqSplit_8_split
+fm7b_lowpass_filter_pop_5_peek_64_push_1_4 [ label="fm7b_low_pass_filter_4samp", pop=5, peek=64, push=1 ]
+FMDemodulator_pop_1_peek_2_push_1_5 [ label="fm7b_fmdemodulator", pop=1, peek=2, push=1 ]
+EqSplit_8_join -> AnonFilter_a0_pop_6_push_1_9
+EqSplit_8_split [ label="fm7b_split1_duplicate", pop=1, push=1 ]
+EqSplit_8_join [ label="fm7b_join1_round_robin", pop=1, push=6 ]
+fm7b_subtracter_pop_2_push_1_19 -> fm7b_amplify_pop_1_push_1_17
+BPFCore_18_join -> fm7b_subtracter_pop_2_push_1_19
+BPFCore_18_split [ label="fm7b_split2_duplicate", pop=1, push=1 ]
+BPFCore_18_join [ label="fm7b_join2_round_robin", pop=1, push=2 ]
+fm7b_lowpass_filter_pop_1_peek_64_push_1_20 [ label="fm7b_lowpass_filter", pop=1, peek=64, push=1 ]
+BPFCore_18_split -> fm7b_lowpass_filter_pop_1_peek_64_push_1_20
+fm7b_lowpass_filter_pop_1_peek_64_push_1_20 -> BPFCore_18_join
+fm7b_lowpass_filter_pop_1_peek_64_push_1_21 [ label="fm7b_lowpass_filter", pop=1, peek=64, push=1 ]
+BPFCore_18_split -> fm7b_lowpass_filter_pop_1_peek_64_push_1_21
+fm7b_lowpass_filter_pop_1_peek_64_push_1_21 -> BPFCore_18_join
+fm7b_subtracter_pop_2_push_1_19 [ label="fm7b_subtracter", pop=2, push=1 ]
+fm7b_amplify_pop_1_push_1_17 [ label="fm7b_amplify", pop=1, push=1 ]
+EqSplit_8_split -> BPFCore_18_split
+fm7b_amplify_pop_1_push_1_17 -> EqSplit_8_join
+fm7b_subtracter_pop_2_push_1_27 -> fm7b_amplify_pop_1_push_1_25
+BPFCore_26_join -> fm7b_subtracter_pop_2_push_1_27
+BPFCore_26_split [ label="fm7b_split2_duplicate", pop=1, push=1 ]
+BPFCore_26_join [ label="fm7b_join2_round_robin", pop=1, push=2 ]
+fm7b_lowpass_filter_pop_1_peek_64_push_1_28 [ label="fm7b_lowpass_filter", pop=1, peek=64, push=1 ]
+BPFCore_26_split -> fm7b_lowpass_filter_pop_1_peek_64_push_1_28
+fm7b_lowpass_filter_pop_1_peek_64_push_1_28 -> BPFCore_26_join
+fm7b_lowpass_filter_pop_1_peek_64_push_1_29 [ label="fm7b_lowpass_filter", pop=1, peek=64, push=1 ]
+BPFCore_26_split -> fm7b_lowpass_filter_pop_1_peek_64_push_1_29
+fm7b_lowpass_filter_pop_1_peek_64_push_1_29 -> BPFCore_26_join
+fm7b_subtracter_pop_2_push_1_27 [ label="fm7b_subtracter", pop=2, push=1 ]
+fm7b_amplify_pop_1_push_1_25 [ label="fm7b_amplify", pop=1, push=1 ]
+EqSplit_8_split -> BPFCore_26_split
+fm7b_amplify_pop_1_push_1_25 -> EqSplit_8_join
+fm7b_subtracter_pop_2_push_1_35 -> fm7b_amplify_pop_1_push_1_33
+BPFCore_34_join -> fm7b_subtracter_pop_2_push_1_35
+BPFCore_34_split [ label="fm7b_split2_duplicate", pop=1, push=1 ]
+BPFCore_34_join [ label="fm7b_join2_round_robin", pop=1, push=2 ]
+fm7b_lowpass_filter_pop_1_peek_64_push_1_36 [ label="fm7b_lowpass_filter", pop=1, peek=64, push=1 ]
+BPFCore_34_split -> fm7b_lowpass_filter_pop_1_peek_64_push_1_36
+fm7b_lowpass_filter_pop_1_peek_64_push_1_36 -> BPFCore_34_join
+fm7b_lowpass_filter_pop_1_peek_64_push_1_37 [ label="fm7b_lowpass_filter", pop=1, peek=64, push=1 ]
+BPFCore_34_split -> fm7b_lowpass_filter_pop_1_peek_64_push_1_37
+fm7b_lowpass_filter_pop_1_peek_64_push_1_37 -> BPFCore_34_join
+fm7b_subtracter_pop_2_push_1_35 [ label="fm7b_subtracter", pop=2, push=1 ]
+fm7b_amplify_pop_1_push_1_33 [ label="fm7b_amplify", pop=1, push=1 ]
+EqSplit_8_split -> BPFCore_34_split
+fm7b_amplify_pop_1_push_1_33 -> EqSplit_8_join
+fm7b_subtracter_pop_2_push_1_43 -> fm7b_amplify_pop_1_push_1_41
+BPFCore_42_join -> fm7b_subtracter_pop_2_push_1_43
+BPFCore_42_split [ label="fm7b_split2_duplicate", pop=1, push=1 ]
+BPFCore_42_join [ label="fm7b_join2_round_robin", pop=1, push=2 ]
+fm7b_lowpass_filter_pop_1_peek_64_push_1_44 [ label="fm7b_lowpass_filter", pop=1, peek=64, push=1 ]
+BPFCore_42_split -> fm7b_lowpass_filter_pop_1_peek_64_push_1_44
+fm7b_lowpass_filter_pop_1_peek_64_push_1_44 -> BPFCore_42_join
+fm7b_lowpass_filter_pop_1_peek_64_push_1_45 [ label="fm7b_lowpass_filter", pop=1, peek=64, push=1 ]
+BPFCore_42_split -> fm7b_lowpass_filter_pop_1_peek_64_push_1_45
+fm7b_lowpass_filter_pop_1_peek_64_push_1_45 -> BPFCore_42_join
+fm7b_subtracter_pop_2_push_1_43 [ label="fm7b_subtracter", pop=2, push=1 ]
+fm7b_amplify_pop_1_push_1_41 [ label="fm7b_amplify", pop=1, push=1 ]
+EqSplit_8_split -> BPFCore_42_split
+fm7b_amplify_pop_1_push_1_41 -> EqSplit_8_join
+fm7b_subtracter_pop_2_push_1_51 -> fm7b_amplify_pop_1_push_1_49
+BPFCore_50_join -> fm7b_subtracter_pop_2_push_1_51
+BPFCore_50_split [ label="fm7b_split2_duplicate", pop=1, push=1 ]
+BPFCore_50_join [ label="fm7b_join2_round_robin", pop=1, push=2 ]
+fm7b_lowpass_filter_pop_1_peek_64_push_1_52 [ label="fm7b_lowpass_filter", pop=1, peek=64, push=1 ]
+BPFCore_50_split -> fm7b_lowpass_filter_pop_1_peek_64_push_1_52
+fm7b_lowpass_filter_pop_1_peek_64_push_1_52 -> BPFCore_50_join
+fm7b_lowpass_filter_pop_1_peek_64_push_1_53 [ label="fm7b_lowpass_filter", pop=1, peek=64, push=1 ]
+BPFCore_50_split -> fm7b_lowpass_filter_pop_1_peek_64_push_1_53
+fm7b_lowpass_filter_pop_1_peek_64_push_1_53 -> BPFCore_50_join
+fm7b_subtracter_pop_2_push_1_51 [ label="fm7b_subtracter", pop=2, push=1 ]
+fm7b_amplify_pop_1_push_1_49 [ label="fm7b_amplify", pop=1, push=1 ]
+EqSplit_8_split -> BPFCore_50_split
+fm7b_amplify_pop_1_push_1_49 -> EqSplit_8_join
+fm7b_subtracter_pop_2_push_1_59 -> fm7b_amplify_pop_1_push_1_57
+BPFCore_58_join -> fm7b_subtracter_pop_2_push_1_59
+BPFCore_58_split [ label="fm7b_split2_duplicate", pop=1, push=1 ]
+BPFCore_58_join [ label="fm7b_join2_round_robin", pop=1, push=2 ]
+fm7b_lowpass_filter_pop_1_peek_64_push_1_60 [ label="fm7b_lowpass_filter", pop=1, peek=64, push=1 ]
+BPFCore_58_split -> fm7b_lowpass_filter_pop_1_peek_64_push_1_60
+fm7b_lowpass_filter_pop_1_peek_64_push_1_60 -> BPFCore_58_join
+fm7b_lowpass_filter_pop_1_peek_64_push_1_61 [ label="fm7b_lowpass_filter", pop=1, peek=64, push=1 ]
+BPFCore_58_split -> fm7b_lowpass_filter_pop_1_peek_64_push_1_61
+fm7b_lowpass_filter_pop_1_peek_64_push_1_61 -> BPFCore_58_join
+fm7b_subtracter_pop_2_push_1_59 [ label="fm7b_subtracter", pop=2, push=1 ]
+fm7b_amplify_pop_1_push_1_57 [ label="fm7b_amplify", pop=1, push=1 ]
+EqSplit_8_split -> BPFCore_58_split
+fm7b_amplify_pop_1_push_1_57 -> EqSplit_8_join
+AnonFilter_a0_pop_6_push_1_9 [ label="fm7b_equalizer", pop=6, push=1 ]
+FloatPrinter_pop_1_push_0_3 [ label="fm7b_float_printer", pop=1, push=0 ]
+}

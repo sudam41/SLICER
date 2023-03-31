@@ -1,0 +1,124 @@
+strict digraph FFT2_73 {
+	graph [name=FFT2_73];
+	node [label="\N"];
+	node0	[codeSize="\"40 b\"",
+		contraction="{'node1': {'label': '\"WEIGHTED_ROUND_ROBIN_Splitter_65\"', 'push': '\"256\"', 'pop': '\"256\"', 'peek': '\"0\"', 'pushType': '\"float\"', '\
+popType': '\"float\"', 'peekType': '\"void\"', 'codeSize': '\"42 b\"', 'stackSize': '\"96 b\"', 'work': '\"0\"'}}",
+		label="\"FFTTestSource_41\"",
+		peek="\"0\"",
+		peekType="\"void\"",
+		pop="\"0\"",
+		popType="\"void\"",
+		push="\"256\"",
+		pushType="\"float\"",
+		stackSize="\"32 b\"",
+		work="\"632\""];
+	node2	[codeSize="\"114 b\"",
+		contraction="{'node3': {'label': '\"FFTReorderSimple_43\"', 'push': '\"128\"', 'pop': '\"128\"', 'peek': '\"128\"', 'pushType': '\"float\"', 'popType': '\"\
+float\"', 'peekType': '\"float\"', 'codeSize': '\"114 b\"', 'stackSize': '\"32 b\"', 'work': '\"736\"'}, 'node4': {'label': '\"FFTReorderSimple_\
+44\"', 'push': '\"128\"', 'pop': '\"128\"', 'peek': '\"128\"', 'pushType': '\"float\"', 'popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"\
+114 b\"', 'stackSize': '\"32 b\"', 'work': '\"368\"'}, 'node5': {'label': '\"FFTReorderSimple_45\"', 'push': '\"128\"', 'pop': '\"128\"', '\
+peek': '\"128\"', 'pushType': '\"float\"', 'popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"114 b\"', 'stackSize': '\"32 b\"', '\
+work': '\"184\"'}, 'node6': {'label': '\"FFTReorderSimple_46\"', 'push': '\"128\"', 'pop': '\"128\"', 'peek': '\"128\"', 'pushType': '\"float\"', '\
+popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"114 b\"', 'stackSize': '\"32 b\"', 'work': '\"92\"'}, 'node7': {'label': '\"\
+CombineDFT_47\"', 'push': '\"128\"', 'pop': '\"128\"', 'peek': '\"128\"', 'pushType': '\"float\"', 'popType': '\"float\"', 'peekType': '\"float\"', '\
+codeSize': '\"228 b\"', 'stackSize': '\"448 b\"', 'work': '\"77\"'}, 'node8': {'label': '\"CombineDFT_48\"', 'push': '\"128\"', 'pop': '\"128\"', '\
+peek': '\"128\"', 'pushType': '\"float\"', 'popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"228 b\"', 'stackSize': '\"576 b\"', '\
+work': '\"154\"'}, 'node9': {'label': '\"CombineDFT_49\"', 'push': '\"128\"', 'pop': '\"128\"', 'peek': '\"128\"', 'pushType': '\"float\"', '\
+popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"228 b\"', 'stackSize': '\"832 b\"', 'work': '\"308\"'}}",
+		label="\"FFTReorderSimple_42\"",
+		peek="\"128\"",
+		peekType="\"float\"",
+		pop="\"128\"",
+		popType="\"float\"",
+		push="\"128\"",
+		pushType="\"float\"",
+		stackSize="\"32 b\"",
+		work="\"3391\""];
+	node0 -> node2;
+	node13	[codeSize="\"114 b\"",
+		contraction="{'node14': {'label': '\"FFTReorderSimple_54\"', 'push': '\"128\"', 'pop': '\"128\"', 'peek': '\"128\"', 'pushType': '\"float\"', 'popType': '\"\
+float\"', 'peekType': '\"float\"', 'codeSize': '\"114 b\"', 'stackSize': '\"32 b\"', 'work': '\"736\"'}, 'node15': {'label': '\"FFTReorderSimple_\
+55\"', 'push': '\"128\"', 'pop': '\"128\"', 'peek': '\"128\"', 'pushType': '\"float\"', 'popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"\
+114 b\"', 'stackSize': '\"32 b\"', 'work': '\"368\"'}, 'node16': {'label': '\"FFTReorderSimple_56\"', 'push': '\"128\"', 'pop': '\"128\"', '\
+peek': '\"128\"', 'pushType': '\"float\"', 'popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"114 b\"', 'stackSize': '\"32 b\"', '\
+work': '\"184\"'}, 'node17': {'label': '\"FFTReorderSimple_57\"', 'push': '\"128\"', 'pop': '\"128\"', 'peek': '\"128\"', 'pushType': '\"float\"', '\
+popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"114 b\"', 'stackSize': '\"32 b\"', 'work': '\"92\"'}, 'node18': {'label': '\"\
+CombineDFT_58\"', 'push': '\"128\"', 'pop': '\"128\"', 'peek': '\"128\"', 'pushType': '\"float\"', 'popType': '\"float\"', 'peekType': '\"float\"', '\
+codeSize': '\"228 b\"', 'stackSize': '\"448 b\"', 'work': '\"77\"'}, 'node19': {'label': '\"CombineDFT_59\"', 'push': '\"128\"', 'pop': '\"\
+128\"', 'peek': '\"128\"', 'pushType': '\"float\"', 'popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"228 b\"', 'stackSize': '\"\
+576 b\"', 'work': '\"154\"'}, 'node20': {'label': '\"CombineDFT_60\"', 'push': '\"128\"', 'pop': '\"128\"', 'peek': '\"128\"', 'pushType': '\"\
+float\"', 'popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"228 b\"', 'stackSize': '\"832 b\"', 'work': '\"308\"'}}",
+		label="\"FFTReorderSimple_53\"",
+		peek="\"128\"",
+		peekType="\"float\"",
+		pop="\"128\"",
+		popType="\"float\"",
+		push="\"128\"",
+		pushType="\"float\"",
+		stackSize="\"32 b\"",
+		work="\"3391\""];
+	node0 -> node13;
+	node10	[codeSize="\"228 b\"",
+		contraction="{'node11': {'label': '\"CombineDFT_51\"', 'push': '\"128\"', 'pop': '\"128\"', 'peek': '\"128\"', 'pushType': '\"float\"', 'popType': '\"float\"', '\
+peekType': '\"float\"', 'codeSize': '\"228 b\"', 'stackSize': '\"2368 b\"', 'work': '\"1232\"'}}",
+		label="\"CombineDFT_50\"",
+		peek="\"128\"",
+		peekType="\"float\"",
+		pop="\"128\"",
+		popType="\"float\"",
+		push="\"128\"",
+		pushType="\"float\"",
+		stackSize="\"1344 b\"",
+		work="\"1848\""];
+	node2 -> node10;
+	node12	[codeSize="\"228 b\"",
+		label="\"CombineDFT_52\"",
+		peek="\"128\"",
+		peekType="\"float\"",
+		pop="\"128\"",
+		popType="\"float\"",
+		push="\"128\"",
+		pushType="\"float\"",
+		stackSize="\"4416 b\"",
+		work="\"2464\""];
+	node10 -> node12;
+	node24	[codeSize="\"42 b\"",
+		contraction="{'node25': {'label': '\"FloatPrinter_64\"', 'push': '\"0\"', 'pop': '\"256\"', 'peek': '\"256\"', 'pushType': '\"void\"', 'popType': '\"float\"', '\
+peekType': '\"float\"', 'codeSize': '\"16 b\"', 'stackSize': '\"0 b\"', 'work': '\"6\"'}}",
+		label="\"WEIGHTED_ROUND_ROBIN_Joiner_66\"",
+		peek="\"0\"",
+		peekType="\"void\"",
+		pop="\"256\"",
+		popType="\"float\"",
+		push="\"256\"",
+		pushType="\"float\"",
+		stackSize="\"96 b\"",
+		work="\"6\""];
+	node12 -> node24;
+	node21	[codeSize="\"228 b\"",
+		contraction="{'node22': {'label': '\"CombineDFT_62\"', 'push': '\"128\"', 'pop': '\"128\"', 'peek': '\"128\"', 'pushType': '\"float\"', 'popType': '\"float\"', '\
+peekType': '\"float\"', 'codeSize': '\"228 b\"', 'stackSize': '\"2368 b\"', 'work': '\"1232\"'}}",
+		label="\"CombineDFT_61\"",
+		peek="\"128\"",
+		peekType="\"float\"",
+		pop="\"128\"",
+		popType="\"float\"",
+		push="\"128\"",
+		pushType="\"float\"",
+		stackSize="\"1344 b\"",
+		work="\"1848\""];
+	node13 -> node21;
+	node23	[codeSize="\"228 b\"",
+		label="\"CombineDFT_63\"",
+		peek="\"128\"",
+		peekType="\"float\"",
+		pop="\"128\"",
+		popType="\"float\"",
+		push="\"128\"",
+		pushType="\"float\"",
+		stackSize="\"4416 b\"",
+		work="\"2464\""];
+	node21 -> node23;
+	node23 -> node24;
+}

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<appl>
+    <tasks>
+        <task id="_80211_r6_anon_filter_a20_node77" WCET="56959">
+           <prev id="_80211_r6_join19_weighted_round_robin_node26" data-sent="1820" data-type="complex" />
+        </task>
+        <task id="_80211_r6_header_insert_pilots_node69" WCET="1534">
+           <prev id="_80211_r6_join11_weighted_round_robin_node39" data-sent="52" data-type="complex" />
+        </task>
+        <task id="_80211_r6_join13_hd_weighted_round_robin_node102" WCET="109058">
+           <prev id="_80211_r6_remove_first_hd_node101" data-sent="576" data-type="complex" />
+           <prev id="_80211_r6_identity_node100" data-sent="2304" data-type="complex" />
+           <prev id="_80211_r6_remove_last_hd_node99" data-sent="36" data-type="complex" />
+        </task>
+        <task id="_80211_r6_split13_hd_duplicate_node98" WCET="264974">
+           <prev id="_80211_r6_combine_idft_final_hd_node97" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_join13_addseq_weighted_round_robin_node61" WCET="12070">
+           <prev id="_80211_r6_remove_first_as_node60" data-sent="64" data-type="complex" />
+           <prev id="_80211_r6_identity_node59" data-sent="128" data-type="complex" />
+           <prev id="_80211_r6_identity_node58" data-sent="128" data-type="complex" />
+           <prev id="_80211_r6_remove_last_as_node57" data-sent="2" data-type="complex" />
+        </task>
+        <task id="_80211_r6_split13_addseq_duplicate_node56" WCET="16014">
+           <prev id="_80211_r6_combine_idft_final_as_node55" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_join14_weighted_round_robin_node43" WCET="7573">
+           <prev id="_80211_r6_short_seq_node42" data-sent="64" data-type="complex" />
+           <prev id="_80211_r6_long_seq_node41" data-sent="64" data-type="complex" />
+        </task>
+        <task id="_80211_r6_split14_round_robin_node40" WCET="3">
+           <prev id="_80211_r6_split1_round_robin_node0" data-sent="0" data-type="complex" />
+        </task>
+        <task id="_80211_r6_join15_weighted_round_robin_node68" WCET="7455">
+           <prev id="_80211_r6_halve_as_node67" data-sent="1" data-type="complex" />
+           <prev id="_80211_r6_identity_node66" data-sent="159" data-type="complex" />
+           <prev id="_80211_r6_halve_and_combine_as_node65" data-sent="1" data-type="complex" />
+           <prev id="_80211_r6_identity_node64" data-sent="159" data-type="complex" />
+           <prev id="_80211_r6_identity_node63" data-sent="1" data-type="complex" />
+        </task>
+        <task id="_80211_r6_split15_weighted_round_robin_node62" WCET="7471">
+           <prev id="_80211_r6_join13_addseq_weighted_round_robin_node61" data-sent="322" data-type="complex" />
+        </task>
+        <task id="_80211_r6_join1_weighted_round_robin_node112" WCET="96779">
+           <prev id="_80211_r6_join15_weighted_round_robin_node68" data-sent="321" data-type="complex" />
+           <prev id="_80211_r6_join10_weighted_round_robin_node111" data-sent="2881" data-type="complex" />
+        </task>
+        <task id="_80211_r6_split1_round_robin_node0" WCET="3">
+        </task>
+        <task id="_80211_r6_join8_weighted_round_robin_node117" WCET="96677">
+           <prev id="_80211_r6_identity_node116" data-sent="2880" data-type="complex" />
+           <prev id="_80211_r6_halve_and_combine_final_node115" data-sent="1" data-type="complex" />
+           <prev id="_80211_r6_identity_node114" data-sent="320" data-type="complex" />
+        </task>
+        <task id="_80211_r6_split8_weighted_round_robin_node113" WCET="96693">
+           <prev id="_80211_r6_join1_weighted_round_robin_node112" data-sent="3202" data-type="complex" />
+        </task>
+        <task id="_80211_r6_join9_weighted_round_robin_node85" WCET="57621">
+           <prev id="_80211_r6_join2_weighted_round_robin_node76" data-sent="64" data-type="complex" />
+           <prev id="_80211_r6_join20_weighted_round_robin_node84" data-sent="2240" data-type="complex" />
+        </task>
+        <task id="_80211_r6_split9_weighted_round_robin_node2" WCET="51214">
+           <prev id="FileReader_node1" data-sent="800" data-type="bit" />
+        </task>
+        <task id="_80211_r6_join10_weighted_round_robin_node111" WCET="66342">
+           <prev id="_80211_r6_identity_node110" data-sent="1" data-type="complex" />
+           <prev id="_80211_r6_join6_weighted_round_robin_node109" data-sent="2800" data-type="complex" />
+           <prev id="_80211_r6_identity_node105" data-sent="79" data-type="complex" />
+           <prev id="_80211_r6_halve_hd_node104" data-sent="1" data-type="complex" />
+        </task>
+        <task id="_80211_r6_split10_weighted_round_robin_node103" WCET="67147">
+           <prev id="_80211_r6_join13_hd_weighted_round_robin_node102" data-sent="2916" data-type="complex" />
+        </task>
+        <task id="_80211_r6_anon_filter_a8_data_node14" WCET="53774">
+           <prev id="_80211_r6_zero_tail_bits_node13" data-sent="840" data-type="bit" />
+        </task>
+        <task id="_80211_r6_anon_filter_a8_header_node28" WCET="1550">
+           <prev id="_80211_r6_generate_header_node27" data-sent="24" data-type="bit" />
+        </task>
+        <task id="_80211_r6_join19_weighted_round_robin_node26" WCET="163569">
+           <prev id="_80211_r6_identity_node25" data-sent="1680" data-type="complex" />
+           <prev id="_80211_r6_pilot_generator_node24" data-sent="140" data-type="complex" />
+        </task>
+        <task id="_80211_r6_split19_weighted_round_robin_node23" WCET="159614">
+           <prev id="_80211_r6_bpsk_data_node22" data-sent="1680" data-type="complex" />
+        </task>
+        <task id="_80211_r6_join11_weighted_round_robin_node39" WCET="4673">
+           <prev id="_80211_r6_identity_node38" data-sent="48" data-type="complex" />
+           <prev id="_80211_r6_header_pilot_generator_node37" data-sent="4" data-type="complex" />
+        </task>
+        <task id="_80211_r6_split11_weighted_round_robin_node36" WCET="4574">
+           <prev id="_80211_r6_bpsk_header_node35" data-sent="48" data-type="complex" />
+        </task>
+        <task id="_80211_r6_bpsk_data_node22" WCET="146174">
+           <prev id="_80211_r6_identity_bit_node21" data-sent="1680" data-type="bit" />
+        </task>
+        <task id="_80211_r6_bpsk_header_node35" WCET="4190">
+           <prev id="_80211_r6_join4_round_robin_node34" data-sent="48" data-type="bit" />
+        </task>
+        <task id="_80211_r6_combine_idft_final_hd_node97" WCET="403000">
+           <prev id="_80211_r6_combine_idft_hd5_node96" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_combine_idft_final_as_node55" WCET="11204">
+           <prev id="_80211_r6_combine_idft_as5_node54" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_combine_idft_hd1_node92" WCET="12895504">
+           <prev id="_80211_r6_fft_reorder_simple_hd5_node91" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_combine_idft_hd2_node93" WCET="6447760">
+           <prev id="_80211_r6_combine_idft_hd1_node92" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_combine_idft_hd3_node94" WCET="3223888">
+           <prev id="_80211_r6_combine_idft_hd2_node93" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_combine_idft_hd4_node95" WCET="1611952">
+           <prev id="_80211_r6_combine_idft_hd3_node94" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_combine_idft_hd5_node96" WCET="805984">
+           <prev id="_80211_r6_combine_idft_hd4_node95" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_combine_idft_as1_node50" WCET="716432">
+           <prev id="_80211_r6_fft_reorder_simple_as5_node49" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_combine_idft_as2_node51" WCET="358224">
+           <prev id="_80211_r6_combine_idft_as1_node50" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_combine_idft_as3_node52" WCET="179120">
+           <prev id="_80211_r6_combine_idft_as2_node51" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_combine_idft_as4_node53" WCET="89568">
+           <prev id="_80211_r6_combine_idft_as3_node52" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_combine_idft_as5_node54" WCET="44792">
+           <prev id="_80211_r6_combine_idft_as4_node53" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_fft_reorder_simple_hd1_node87" WCET="343922">
+           <prev id="_80211_r6_fftshift_1d_hd_node86" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_fft_reorder_simple_hd2_node88" WCET="687830">
+           <prev id="_80211_r6_fft_reorder_simple_hd1_node87" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_fft_reorder_simple_hd3_node89" WCET="1375646">
+           <prev id="_80211_r6_fft_reorder_simple_hd2_node88" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_fft_reorder_simple_hd4_node90" WCET="2751278">
+           <prev id="_80211_r6_fft_reorder_simple_hd3_node89" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_fft_reorder_simple_hd5_node91" WCET="5502542">
+           <prev id="_80211_r6_fft_reorder_simple_hd4_node90" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_fft_reorder_simple_as1_node45" WCET="9560">
+           <prev id="_80211_r6_fftshift_1d_as_node44" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_fft_reorder_simple_as2_node46" WCET="38226">
+           <prev id="_80211_r6_fft_reorder_simple_as1_node45" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_fft_reorder_simple_as3_node47" WCET="76438">
+           <prev id="_80211_r6_fft_reorder_simple_as2_node46" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_fft_reorder_simple_as4_node48" WCET="152862">
+           <prev id="_80211_r6_fft_reorder_simple_as3_node47" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_fft_reorder_simple_as5_node49" WCET="305710">
+           <prev id="_80211_r6_fft_reorder_simple_as4_node48" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_join6_weighted_round_robin_node109" WCET="263739">
+           <prev id="_80211_r6_identity_node108" data-sent="2765" data-type="complex" />
+           <prev id="_80211_r6_halve_and_combine_hd_node107" data-sent="35" data-type="complex" />
+        </task>
+        <task id="_80211_r6_split6_weighted_round_robin_node106" WCET="264299">
+           <prev id="_80211_r6_split10_weighted_round_robin_node103" data-sent="2844" data-type="complex" />
+        </task>
+        <task id="_80211_r6_conv_code_data_node15" WCET="139454">
+           <prev id="_80211_r6_anon_filter_a8_data_node14" data-sent="840" data-type="bit" />
+        </task>
+        <task id="_80211_r6_conv_code_header_node29" WCET="3998">
+           <prev id="_80211_r6_anon_filter_a8_header_node28" data-sent="24" data-type="bit" />
+        </task>
+        <task id="_80211_r6_fftshift_1d_hd_node86" WCET="275810">
+           <prev id="_80211_r6_join9_weighted_round_robin_node85" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_fftshift_1d_as_node44" WCET="7667">
+           <prev id="_80211_r6_join14_weighted_round_robin_node43" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_generate_header_node27" WCET="432">
+           <prev id="_80211_r6_split9_weighted_round_robin_node2" data-sent="0" data-type="bit" />
+        </task>
+        <task id="_80211_r6_halve_hd_node104" WCET="144">
+           <prev id="_80211_r6_split10_weighted_round_robin_node103" data-sent="1" data-type="complex" />
+        </task>
+        <task id="_80211_r6_halve_as_node67" WCET="144">
+           <prev id="_80211_r6_split15_weighted_round_robin_node62" data-sent="1" data-type="complex" />
+        </task>
+        <task id="_80211_r6_halve_and_combine_hd_node107" WCET="5509">
+           <prev id="_80211_r6_split6_weighted_round_robin_node106" data-sent="79" data-type="complex" />
+        </task>
+        <task id="_80211_r6_halve_and_combine_final_node115" WCET="157">
+           <prev id="_80211_r6_split8_weighted_round_robin_node113" data-sent="2" data-type="complex" />
+        </task>
+        <task id="_80211_r6_halve_and_combine_as_node65" WCET="157">
+           <prev id="_80211_r6_split15_weighted_round_robin_node62" data-sent="2" data-type="complex" />
+        </task>
+        <task id="_80211_r6_header_pilot_generator_node37" WCET="86">
+           <prev id="_80211_r6_split11_weighted_round_robin_node36" data-sent="0" data-type="complex" />
+        </task>
+        <task id="_80211_r6_join16_weighted_round_robin_node7" WCET="14236">
+           <prev id="_80211_r6_zero_gen_node6" data-sent="16" data-type="bit" />
+           <prev id="_80211_r6_identity_bit_node5" data-sent="800" data-type="bit" />
+           <prev id="_80211_r6_zero_gen_node4" data-sent="24" data-type="bit" />
+        </task>
+        <task id="_80211_r6_split16_weighted_round_robin_node3" WCET="51214">
+           <prev id="_80211_r6_split9_weighted_round_robin_node2" data-sent="800" data-type="bit" />
+        </task>
+        <task id="_80211_r6_join20_weighted_round_robin_node84" WCET="67634">
+           <prev id="_80211_r6_zero_gen_complex_node83" data-sent="210" data-type="complex" />
+           <prev id="_80211_r6_identity_node82" data-sent="910" data-type="complex" />
+           <prev id="_80211_r6_zero_gen_complex_node81" data-sent="35" data-type="complex" />
+           <prev id="_80211_r6_identity_node80" data-sent="910" data-type="complex" />
+           <prev id="_80211_r6_zero_gen_complex_node79" data-sent="175" data-type="complex" />
+        </task>
+        <task id="_80211_r6_split20_weighted_round_robin_node78" WCET="108129">
+           <prev id="_80211_r6_anon_filter_a20_node77" data-sent="1820" data-type="complex" />
+        </task>
+        <task id="_80211_r6_join2_weighted_round_robin_node76" WCET="1932">
+           <prev id="_80211_r6_zero_gen_complex_node75" data-sent="6" data-type="complex" />
+           <prev id="_80211_r6_identity_node74" data-sent="26" data-type="complex" />
+           <prev id="_80211_r6_zero_gen_complex_node73" data-sent="1" data-type="complex" />
+           <prev id="_80211_r6_identity_node72" data-sent="26" data-type="complex" />
+           <prev id="_80211_r6_zero_gen_complex_node71" data-sent="5" data-type="complex" />
+        </task>
+        <task id="_80211_r6_split2_weighted_round_robin_node70" WCET="3089">
+           <prev id="_80211_r6_header_insert_pilots_node69" data-sent="52" data-type="complex" />
+        </task>
+        <task id="_80211_r6_join3_round_robin_node11" WCET="61334">
+           <prev id="_80211_r6_identity_bit_node10" data-sent="840" data-type="bit" />
+           <prev id="_80211_r6_scramble_seq_node9" data-sent="840" data-type="bit" />
+        </task>
+        <task id="_80211_r6_split3_weighted_round_robin_node8" WCET="53774">
+           <prev id="_80211_r6_join16_weighted_round_robin_node7" data-sent="840" data-type="bit" />
+        </task>
+        <task id="_80211_r6_long_seq_node41" WCET="690">
+           <prev id="_80211_r6_split14_round_robin_node40" data-sent="0" data-type="complex" />
+        </task>
+        <task id="_80211_r6_printer_node118" WCET="240089">
+           <prev id="_80211_r6_join8_weighted_round_robin_node117" data-sent="3201" data-type="complex" />
+        </task>
+        <task id="_80211_r6_join17_round_robin_node20" WCET="134344">
+           <prev id="_80211_r6_identity_bit_node19" data-sent="520" data-type="bit" />
+           <prev id="_80211_r6_identity_bit_node18" data-sent="520" data-type="bit" />
+           <prev id="_80211_r6_identity_bit_node17" data-sent="520" data-type="bit" />
+        </task>
+        <task id="_80211_r6_split17_round_robin_node16" WCET="124616">
+           <prev id="_80211_r6_conv_code_data_node15" data-sent="1680" data-type="bit" />
+        </task>
+        <task id="_80211_r6_join4_round_robin_node34" WCET="1326">
+           <prev id="_80211_r6_identity_bit_node33" data-sent="16" data-type="bit" />
+           <prev id="_80211_r6_identity_bit_node32" data-sent="16" data-type="bit" />
+           <prev id="_80211_r6_identity_bit_node31" data-sent="16" data-type="bit" />
+        </task>
+        <task id="_80211_r6_split4_round_robin_node30" WCET="1564">
+           <prev id="_80211_r6_conv_code_header_node29" data-sent="48" data-type="bit" />
+        </task>
+        <task id="_80211_r6_pilot_generator_node24" WCET="7644">
+           <prev id="_80211_r6_split19_weighted_round_robin_node23" data-sent="0" data-type="complex" />
+        </task>
+        <task id="_80211_r6_remove_first_hd_node101" WCET="155966">
+           <prev id="_80211_r6_split13_hd_duplicate_node98" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_remove_first_as_node60" WCET="17342">
+           <prev id="_80211_r6_split13_addseq_duplicate_node56" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_remove_last_hd_node99" WCET="31838">
+           <prev id="_80211_r6_split13_hd_duplicate_node98" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_remove_last_as_node57" WCET="3550">
+           <prev id="_80211_r6_split13_addseq_duplicate_node56" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_scramble_seq_node9" WCET="131054">
+           <prev id="_80211_r6_split3_weighted_round_robin_node8" data-sent="0" data-type="bit" />
+        </task>
+        <task id="_80211_r6_short_seq_node42" WCET="719">
+           <prev id="_80211_r6_split14_round_robin_node40" data-sent="0" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_bit_node5" WCET="258066">
+           <prev id="_80211_r6_split16_weighted_round_robin_node3" data-sent="800" data-type="bit" />
+        </task>
+        <task id="_80211_r6_identity_bit_node10" WCET="258066">
+           <prev id="_80211_r6_split3_weighted_round_robin_node8" data-sent="840" data-type="bit" />
+        </task>
+        <task id="_80211_r6_identity_bit_node19" WCET="258066">
+           <prev id="_80211_r6_split17_round_robin_node16" data-sent="520" data-type="bit" />
+        </task>
+        <task id="_80211_r6_identity_bit_node18" WCET="258066">
+           <prev id="_80211_r6_split17_round_robin_node16" data-sent="520" data-type="bit" />
+        </task>
+        <task id="_80211_r6_identity_bit_node17" WCET="258066">
+           <prev id="_80211_r6_split17_round_robin_node16" data-sent="520" data-type="bit" />
+        </task>
+        <task id="_80211_r6_identity_bit_node21" WCET="258066">
+           <prev id="_80211_r6_join17_round_robin_node20" data-sent="1680" data-type="bit" />
+        </task>
+        <task id="_80211_r6_identity_node25" WCET="385042">
+           <prev id="_80211_r6_split19_weighted_round_robin_node23" data-sent="1680" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node82" WCET="385042">
+           <prev id="_80211_r6_split20_weighted_round_robin_node78" data-sent="910" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node80" WCET="385042">
+           <prev id="_80211_r6_split20_weighted_round_robin_node78" data-sent="910" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node100" WCET="385042">
+           <prev id="_80211_r6_split13_hd_duplicate_node98" data-sent="2304" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node110" WCET="385042">
+           <prev id="_80211_r6_split10_weighted_round_robin_node103" data-sent="1" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node105" WCET="385042">
+           <prev id="_80211_r6_split10_weighted_round_robin_node103" data-sent="79" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node108" WCET="385042">
+           <prev id="_80211_r6_split6_weighted_round_robin_node106" data-sent="2765" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node116" WCET="385042">
+           <prev id="_80211_r6_split8_weighted_round_robin_node113" data-sent="2880" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node114" WCET="385042">
+           <prev id="_80211_r6_split8_weighted_round_robin_node113" data-sent="320" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node59" WCET="385042">
+           <prev id="_80211_r6_split13_addseq_duplicate_node56" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node58" WCET="385042">
+           <prev id="_80211_r6_split13_addseq_duplicate_node56" data-sent="128" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node66" WCET="385042">
+           <prev id="_80211_r6_split15_weighted_round_robin_node62" data-sent="159" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node64" WCET="385042">
+           <prev id="_80211_r6_split15_weighted_round_robin_node62" data-sent="159" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node63" WCET="385042">
+           <prev id="_80211_r6_split15_weighted_round_robin_node62" data-sent="1" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_bit_node33" WCET="258066">
+           <prev id="_80211_r6_split4_round_robin_node30" data-sent="16" data-type="bit" />
+        </task>
+        <task id="_80211_r6_identity_bit_node32" WCET="258066">
+           <prev id="_80211_r6_split4_round_robin_node30" data-sent="16" data-type="bit" />
+        </task>
+        <task id="_80211_r6_identity_bit_node31" WCET="258066">
+           <prev id="_80211_r6_split4_round_robin_node30" data-sent="16" data-type="bit" />
+        </task>
+        <task id="_80211_r6_identity_node38" WCET="385042">
+           <prev id="_80211_r6_split11_weighted_round_robin_node36" data-sent="48" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node74" WCET="385042">
+           <prev id="_80211_r6_split2_weighted_round_robin_node70" data-sent="26" data-type="complex" />
+        </task>
+        <task id="_80211_r6_identity_node72" WCET="385042">
+           <prev id="_80211_r6_split2_weighted_round_robin_node70" data-sent="26" data-type="complex" />
+        </task>
+        <task id="FileReader_node1" WCET="15">
+           <prev id="_80211_r6_split1_round_robin_node0" data-sent="0" data-type="bit" />
+        </task>
+        <task id="_80211_r6_xor_pair_node12" WCET="60496">
+           <prev id="_80211_r6_join3_round_robin_node11" data-sent="1680" data-type="bit" />
+        </task>
+        <task id="_80211_r6_zero_gen_node6" WCET="10101">
+           <prev id="_80211_r6_split16_weighted_round_robin_node3" data-sent="0" data-type="bit" />
+        </task>
+        <task id="_80211_r6_zero_gen_node4" WCET="10101">
+           <prev id="_80211_r6_split16_weighted_round_robin_node3" data-sent="0" data-type="bit" />
+        </task>
+        <task id="_80211_r6_zero_gen_complex_node83" WCET="10101">
+           <prev id="_80211_r6_split20_weighted_round_robin_node78" data-sent="0" data-type="complex" />
+        </task>
+        <task id="_80211_r6_zero_gen_complex_node81" WCET="10101">
+           <prev id="_80211_r6_split20_weighted_round_robin_node78" data-sent="0" data-type="complex" />
+        </task>
+        <task id="_80211_r6_zero_gen_complex_node79" WCET="10101">
+           <prev id="_80211_r6_split20_weighted_round_robin_node78" data-sent="0" data-type="complex" />
+        </task>
+        <task id="_80211_r6_zero_gen_complex_node75" WCET="10101">
+           <prev id="_80211_r6_split2_weighted_round_robin_node70" data-sent="0" data-type="complex" />
+        </task>
+        <task id="_80211_r6_zero_gen_complex_node73" WCET="10101">
+           <prev id="_80211_r6_split2_weighted_round_robin_node70" data-sent="0" data-type="complex" />
+        </task>
+        <task id="_80211_r6_zero_gen_complex_node71" WCET="10101">
+           <prev id="_80211_r6_split2_weighted_round_robin_node70" data-sent="0" data-type="complex" />
+        </task>
+        <task id="_80211_r6_zero_tail_bits_node13" WCET="52637">
+           <prev id="_80211_r6_xor_pair_node12" data-sent="840" data-type="bit" />
+        </task>
+    </tasks>
+   <config clean="false">
+       <communication type="BUS" arbiter="FAIR" active-window-time="3" token-per-timeunit="1" mechanism="shared" behavior="non-blocking" />
+       <solving type="worst_concurrency" solve="true" solver="gurobi" timeout="120"/>
+       <memory check="true" local_size="2kB">
+           <data-type name="complex" size="16B" />
+           <data-type name="bit" size="1B" />
+       </memory>
+   </config>
+    <processors>
+        <processor id="P16"/>
+        <processor id="P15"/>
+        <processor id="P14"/>
+        <processor id="P13"/>
+        <processor id="P12"/>
+        <processor id="P11"/>
+        <processor id="P10"/>
+        <processor id="P9"/>
+        <processor id="P8"/>
+        <processor id="P7"/>
+        <processor id="P6"/>
+        <processor id="P5"/>
+        <processor id="P4"/>
+        <processor id="P3"/>
+        <processor id="P2"/>
+        <processor id="P1"/>
+    </processors>
+</appl>

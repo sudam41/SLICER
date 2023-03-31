@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="AnonFilter_a0_239" WCET="36480">
+            <memfootprint local-storage="32 b" code-size="44 b" />
+        </task>
+        <task id="DUPLICATE_Splitter_248" WCET="576">
+            <memfootprint local-storage="64 b" code-size="24 b" />
+            <prev id="AnonFilter_a0_239" data-sent="64" data-type="int" />
+        </task>
+        <task id="DCT_2D_reference_coarse_243" WCET="16032">
+            <memfootprint local-storage="384 b" code-size="273 b" />
+            <prev id="DUPLICATE_Splitter_248" data-sent="64" data-type="int" />
+        </task>
+        <task id="iDCT_2D_reference_coarse_245" WCET="16032">
+            <memfootprint local-storage="384 b" code-size="273 b" />
+            <prev id="DCT_2D_reference_coarse_243" data-sent="64" data-type="int" />
+        </task>
+        <task id="Identity_246" WCET="384">
+            <memfootprint local-storage="32 b" code-size="12 b" />
+            <prev id="DUPLICATE_Splitter_248" data-sent="64" data-type="int" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_249" WCET="768">
+            <memfootprint local-storage="32 b" code-size="30 b" />
+            <prev id="Identity_246" data-sent="64" data-type="int" />
+            <prev id="iDCT_2D_reference_coarse_245" data-sent="1" data-type="int" />
+        </task>
+        <task id="AnonFilter_a3_247" WCET="44">
+            <memfootprint local-storage="96 b" code-size="119 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_249" data-sent="128" data-type="int" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

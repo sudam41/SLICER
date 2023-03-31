@@ -1,0 +1,16 @@
+digraph DCTverify_255 {
+node0 [label="AnonFilter_a0_239", push="64", pop="0", peek="0", pushType="int", popType="void", peekType="void", codeSize="44 b", stackSize="32 b", work="36480"];
+node1 [label="DUPLICATE_Splitter_248", push="64", pop="64", peek="0", pushType="int", popType="int", peekType="void", codeSize="24 b", stackSize="64 b", work="0"];
+node0 -> node1;
+node2 [label="DCT_2D_reference_coarse_243", push="64", pop="64", peek="64", pushType="int", popType="int", peekType="int", codeSize="273 b", stackSize="384 b", work="16032"];
+node1 -> node2;
+node3 [label="iDCT_2D_reference_coarse_245", push="64", pop="64", peek="64", pushType="int", popType="int", peekType="int", codeSize="273 b", stackSize="384 b", work="16032"];
+node2 -> node3;
+node4 [label="Identity_246", push="64", pop="64", peek="64", pushType="int", popType="int", peekType="int", codeSize="12 b", stackSize="32 b", work="6"];
+node1 -> node4;
+node5 [label="WEIGHTED_ROUND_ROBIN_Joiner_249", push="128", pop="128", peek="0", pushType="int", popType="int", peekType="void", codeSize="30 b", stackSize="32 b", work="0"];
+node3 -> node5;
+node4 -> node5;
+node6 [label="AnonFilter_a3_247", push="0", pop="128", peek="128", pushType="void", popType="int", peekType="int", codeSize="119 b", stackSize="96 b", work="44"];
+node5 -> node6;
+}

@@ -1,0 +1,1660 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="source_231" WCET="13">
+            <memfootprint local-storage="0 b" code-size="31 b" />
+        </task>
+        <task id="DUPLICATE_Splitter_291" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="source_231" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_311" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="DUPLICATE_Splitter_291" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_313" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_311" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_314" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_311" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_315" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_311" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_316" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_311" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_317" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_311" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_318" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_311" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_319" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_311" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_320" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_311" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_312" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_320" data-sent="1" data-type="float" />
+            <prev id="Delay_N_319" data-sent="1" data-type="float" />
+            <prev id="Delay_N_318" data-sent="1" data-type="float" />
+            <prev id="Delay_N_317" data-sent="1" data-type="float" />
+            <prev id="Delay_N_316" data-sent="1" data-type="float" />
+            <prev id="Delay_N_315" data-sent="1" data-type="float" />
+            <prev id="Delay_N_314" data-sent="1" data-type="float" />
+            <prev id="Delay_N_313" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_321" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_312" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_323" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_321" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_324" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_321" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_325" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_321" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_326" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_321" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_327" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_321" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_328" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_321" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_329" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_321" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_330" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_321" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_322" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_330" data-sent="1" data-type="float" />
+            <prev id="FirFilter_329" data-sent="1" data-type="float" />
+            <prev id="FirFilter_328" data-sent="1" data-type="float" />
+            <prev id="FirFilter_327" data-sent="1" data-type="float" />
+            <prev id="FirFilter_326" data-sent="1" data-type="float" />
+            <prev id="FirFilter_325" data-sent="1" data-type="float" />
+            <prev id="FirFilter_324" data-sent="1" data-type="float" />
+            <prev id="FirFilter_323" data-sent="1" data-type="float" />
+        </task>
+        <task id="DownSamp_236" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_322" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_237" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_236" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_331" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="UpSamp_237" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_333" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_331" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_334" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_331" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_335" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_331" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_336" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_331" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_337" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_331" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_338" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_331" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_339" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_331" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_340" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_331" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_332" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_340" data-sent="1" data-type="float" />
+            <prev id="Delay_N_339" data-sent="1" data-type="float" />
+            <prev id="Delay_N_338" data-sent="1" data-type="float" />
+            <prev id="Delay_N_337" data-sent="1" data-type="float" />
+            <prev id="Delay_N_336" data-sent="1" data-type="float" />
+            <prev id="Delay_N_335" data-sent="1" data-type="float" />
+            <prev id="Delay_N_334" data-sent="1" data-type="float" />
+            <prev id="Delay_N_333" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_341" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_332" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_343" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_341" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_344" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_341" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_345" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_341" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_346" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_341" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_347" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_341" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_348" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_341" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_349" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_341" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_350" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_341" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_342" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_350" data-sent="1" data-type="float" />
+            <prev id="FirFilter_349" data-sent="1" data-type="float" />
+            <prev id="FirFilter_348" data-sent="1" data-type="float" />
+            <prev id="FirFilter_347" data-sent="1" data-type="float" />
+            <prev id="FirFilter_346" data-sent="1" data-type="float" />
+            <prev id="FirFilter_345" data-sent="1" data-type="float" />
+            <prev id="FirFilter_344" data-sent="1" data-type="float" />
+            <prev id="FirFilter_343" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_351" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="DUPLICATE_Splitter_291" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_353" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_351" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_354" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_351" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_355" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_351" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_356" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_351" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_357" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_351" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_358" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_351" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_359" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_351" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_360" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_351" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_352" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_360" data-sent="1" data-type="float" />
+            <prev id="Delay_N_359" data-sent="1" data-type="float" />
+            <prev id="Delay_N_358" data-sent="1" data-type="float" />
+            <prev id="Delay_N_357" data-sent="1" data-type="float" />
+            <prev id="Delay_N_356" data-sent="1" data-type="float" />
+            <prev id="Delay_N_355" data-sent="1" data-type="float" />
+            <prev id="Delay_N_354" data-sent="1" data-type="float" />
+            <prev id="Delay_N_353" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_361" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_352" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_363" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_361" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_364" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_361" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_365" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_361" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_366" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_361" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_367" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_361" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_368" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_361" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_369" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_361" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_370" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_361" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_362" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_370" data-sent="1" data-type="float" />
+            <prev id="FirFilter_369" data-sent="1" data-type="float" />
+            <prev id="FirFilter_368" data-sent="1" data-type="float" />
+            <prev id="FirFilter_367" data-sent="1" data-type="float" />
+            <prev id="FirFilter_366" data-sent="1" data-type="float" />
+            <prev id="FirFilter_365" data-sent="1" data-type="float" />
+            <prev id="FirFilter_364" data-sent="1" data-type="float" />
+            <prev id="FirFilter_363" data-sent="1" data-type="float" />
+        </task>
+        <task id="DownSamp_243" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_362" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_244" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_243" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_371" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="UpSamp_244" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_373" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_371" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_374" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_371" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_375" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_371" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_376" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_371" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_377" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_371" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_378" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_371" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_379" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_371" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_380" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_371" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_372" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_380" data-sent="1" data-type="float" />
+            <prev id="Delay_N_379" data-sent="1" data-type="float" />
+            <prev id="Delay_N_378" data-sent="1" data-type="float" />
+            <prev id="Delay_N_377" data-sent="1" data-type="float" />
+            <prev id="Delay_N_376" data-sent="1" data-type="float" />
+            <prev id="Delay_N_375" data-sent="1" data-type="float" />
+            <prev id="Delay_N_374" data-sent="1" data-type="float" />
+            <prev id="Delay_N_373" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_381" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_372" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_383" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_381" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_384" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_381" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_385" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_381" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_386" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_381" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_387" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_381" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_388" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_381" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_389" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_381" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_390" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_381" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_382" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_390" data-sent="1" data-type="float" />
+            <prev id="FirFilter_389" data-sent="1" data-type="float" />
+            <prev id="FirFilter_388" data-sent="1" data-type="float" />
+            <prev id="FirFilter_387" data-sent="1" data-type="float" />
+            <prev id="FirFilter_386" data-sent="1" data-type="float" />
+            <prev id="FirFilter_385" data-sent="1" data-type="float" />
+            <prev id="FirFilter_384" data-sent="1" data-type="float" />
+            <prev id="FirFilter_383" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_391" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="DUPLICATE_Splitter_291" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_393" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_391" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_394" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_391" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_395" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_391" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_396" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_391" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_397" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_391" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_398" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_391" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_399" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_391" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_400" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_391" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_392" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_400" data-sent="1" data-type="float" />
+            <prev id="Delay_N_399" data-sent="1" data-type="float" />
+            <prev id="Delay_N_398" data-sent="1" data-type="float" />
+            <prev id="Delay_N_397" data-sent="1" data-type="float" />
+            <prev id="Delay_N_396" data-sent="1" data-type="float" />
+            <prev id="Delay_N_395" data-sent="1" data-type="float" />
+            <prev id="Delay_N_394" data-sent="1" data-type="float" />
+            <prev id="Delay_N_393" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_401" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_392" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_403" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_401" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_404" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_401" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_405" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_401" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_406" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_401" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_407" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_401" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_408" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_401" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_409" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_401" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_410" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_401" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_402" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_410" data-sent="1" data-type="float" />
+            <prev id="FirFilter_409" data-sent="1" data-type="float" />
+            <prev id="FirFilter_408" data-sent="1" data-type="float" />
+            <prev id="FirFilter_407" data-sent="1" data-type="float" />
+            <prev id="FirFilter_406" data-sent="1" data-type="float" />
+            <prev id="FirFilter_405" data-sent="1" data-type="float" />
+            <prev id="FirFilter_404" data-sent="1" data-type="float" />
+            <prev id="FirFilter_403" data-sent="1" data-type="float" />
+        </task>
+        <task id="DownSamp_250" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_402" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_251" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_250" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_411" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="UpSamp_251" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_413" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_411" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_414" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_411" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_415" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_411" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_416" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_411" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_417" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_411" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_418" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_411" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_419" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_411" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_420" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_411" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_412" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_420" data-sent="1" data-type="float" />
+            <prev id="Delay_N_419" data-sent="1" data-type="float" />
+            <prev id="Delay_N_418" data-sent="1" data-type="float" />
+            <prev id="Delay_N_417" data-sent="1" data-type="float" />
+            <prev id="Delay_N_416" data-sent="1" data-type="float" />
+            <prev id="Delay_N_415" data-sent="1" data-type="float" />
+            <prev id="Delay_N_414" data-sent="1" data-type="float" />
+            <prev id="Delay_N_413" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_421" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_412" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_423" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_421" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_424" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_421" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_425" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_421" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_426" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_421" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_427" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_421" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_428" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_421" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_429" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_421" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_430" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_421" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_422" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_430" data-sent="1" data-type="float" />
+            <prev id="FirFilter_429" data-sent="1" data-type="float" />
+            <prev id="FirFilter_428" data-sent="1" data-type="float" />
+            <prev id="FirFilter_427" data-sent="1" data-type="float" />
+            <prev id="FirFilter_426" data-sent="1" data-type="float" />
+            <prev id="FirFilter_425" data-sent="1" data-type="float" />
+            <prev id="FirFilter_424" data-sent="1" data-type="float" />
+            <prev id="FirFilter_423" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_431" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="DUPLICATE_Splitter_291" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_433" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_431" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_434" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_431" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_435" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_431" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_436" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_431" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_437" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_431" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_438" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_431" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_439" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_431" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_440" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_431" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_432" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_440" data-sent="1" data-type="float" />
+            <prev id="Delay_N_439" data-sent="1" data-type="float" />
+            <prev id="Delay_N_438" data-sent="1" data-type="float" />
+            <prev id="Delay_N_437" data-sent="1" data-type="float" />
+            <prev id="Delay_N_436" data-sent="1" data-type="float" />
+            <prev id="Delay_N_435" data-sent="1" data-type="float" />
+            <prev id="Delay_N_434" data-sent="1" data-type="float" />
+            <prev id="Delay_N_433" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_441" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_432" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_443" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_441" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_444" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_441" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_445" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_441" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_446" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_441" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_447" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_441" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_448" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_441" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_449" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_441" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_450" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_441" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_442" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_450" data-sent="1" data-type="float" />
+            <prev id="FirFilter_449" data-sent="1" data-type="float" />
+            <prev id="FirFilter_448" data-sent="1" data-type="float" />
+            <prev id="FirFilter_447" data-sent="1" data-type="float" />
+            <prev id="FirFilter_446" data-sent="1" data-type="float" />
+            <prev id="FirFilter_445" data-sent="1" data-type="float" />
+            <prev id="FirFilter_444" data-sent="1" data-type="float" />
+            <prev id="FirFilter_443" data-sent="1" data-type="float" />
+        </task>
+        <task id="DownSamp_257" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_442" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_258" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_257" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_451" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="UpSamp_258" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_453" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_451" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_454" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_451" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_455" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_451" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_456" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_451" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_457" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_451" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_458" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_451" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_459" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_451" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_460" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_451" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_452" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_460" data-sent="1" data-type="float" />
+            <prev id="Delay_N_459" data-sent="1" data-type="float" />
+            <prev id="Delay_N_458" data-sent="1" data-type="float" />
+            <prev id="Delay_N_457" data-sent="1" data-type="float" />
+            <prev id="Delay_N_456" data-sent="1" data-type="float" />
+            <prev id="Delay_N_455" data-sent="1" data-type="float" />
+            <prev id="Delay_N_454" data-sent="1" data-type="float" />
+            <prev id="Delay_N_453" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_461" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_452" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_463" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_461" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_464" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_461" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_465" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_461" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_466" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_461" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_467" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_461" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_468" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_461" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_469" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_461" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_470" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_461" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_462" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_470" data-sent="1" data-type="float" />
+            <prev id="FirFilter_469" data-sent="1" data-type="float" />
+            <prev id="FirFilter_468" data-sent="1" data-type="float" />
+            <prev id="FirFilter_467" data-sent="1" data-type="float" />
+            <prev id="FirFilter_466" data-sent="1" data-type="float" />
+            <prev id="FirFilter_465" data-sent="1" data-type="float" />
+            <prev id="FirFilter_464" data-sent="1" data-type="float" />
+            <prev id="FirFilter_463" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_471" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="DUPLICATE_Splitter_291" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_473" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_471" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_474" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_471" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_475" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_471" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_476" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_471" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_477" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_471" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_478" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_471" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_479" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_471" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_480" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_471" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_472" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_480" data-sent="1" data-type="float" />
+            <prev id="Delay_N_479" data-sent="1" data-type="float" />
+            <prev id="Delay_N_478" data-sent="1" data-type="float" />
+            <prev id="Delay_N_477" data-sent="1" data-type="float" />
+            <prev id="Delay_N_476" data-sent="1" data-type="float" />
+            <prev id="Delay_N_475" data-sent="1" data-type="float" />
+            <prev id="Delay_N_474" data-sent="1" data-type="float" />
+            <prev id="Delay_N_473" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_481" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_472" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_483" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_481" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_484" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_481" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_485" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_481" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_486" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_481" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_487" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_481" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_488" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_481" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_489" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_481" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_490" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_481" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_482" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_490" data-sent="1" data-type="float" />
+            <prev id="FirFilter_489" data-sent="1" data-type="float" />
+            <prev id="FirFilter_488" data-sent="1" data-type="float" />
+            <prev id="FirFilter_487" data-sent="1" data-type="float" />
+            <prev id="FirFilter_486" data-sent="1" data-type="float" />
+            <prev id="FirFilter_485" data-sent="1" data-type="float" />
+            <prev id="FirFilter_484" data-sent="1" data-type="float" />
+            <prev id="FirFilter_483" data-sent="1" data-type="float" />
+        </task>
+        <task id="DownSamp_264" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_482" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_265" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_264" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_491" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="UpSamp_265" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_493" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_491" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_494" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_491" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_495" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_491" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_496" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_491" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_497" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_491" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_498" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_491" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_499" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_491" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_500" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_491" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_492" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_500" data-sent="1" data-type="float" />
+            <prev id="Delay_N_499" data-sent="1" data-type="float" />
+            <prev id="Delay_N_498" data-sent="1" data-type="float" />
+            <prev id="Delay_N_497" data-sent="1" data-type="float" />
+            <prev id="Delay_N_496" data-sent="1" data-type="float" />
+            <prev id="Delay_N_495" data-sent="1" data-type="float" />
+            <prev id="Delay_N_494" data-sent="1" data-type="float" />
+            <prev id="Delay_N_493" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_501" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_492" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_503" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_501" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_504" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_501" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_505" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_501" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_506" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_501" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_507" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_501" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_508" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_501" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_509" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_501" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_510" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_501" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_502" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_510" data-sent="1" data-type="float" />
+            <prev id="FirFilter_509" data-sent="1" data-type="float" />
+            <prev id="FirFilter_508" data-sent="1" data-type="float" />
+            <prev id="FirFilter_507" data-sent="1" data-type="float" />
+            <prev id="FirFilter_506" data-sent="1" data-type="float" />
+            <prev id="FirFilter_505" data-sent="1" data-type="float" />
+            <prev id="FirFilter_504" data-sent="1" data-type="float" />
+            <prev id="FirFilter_503" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_511" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="DUPLICATE_Splitter_291" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_513" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_511" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_514" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_511" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_515" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_511" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_516" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_511" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_517" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_511" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_518" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_511" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_519" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_511" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_520" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_511" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_512" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_520" data-sent="1" data-type="float" />
+            <prev id="Delay_N_519" data-sent="1" data-type="float" />
+            <prev id="Delay_N_518" data-sent="1" data-type="float" />
+            <prev id="Delay_N_517" data-sent="1" data-type="float" />
+            <prev id="Delay_N_516" data-sent="1" data-type="float" />
+            <prev id="Delay_N_515" data-sent="1" data-type="float" />
+            <prev id="Delay_N_514" data-sent="1" data-type="float" />
+            <prev id="Delay_N_513" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_521" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_512" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_523" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_521" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_524" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_521" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_525" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_521" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_526" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_521" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_527" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_521" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_528" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_521" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_529" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_521" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_530" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_521" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_522" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_530" data-sent="1" data-type="float" />
+            <prev id="FirFilter_529" data-sent="1" data-type="float" />
+            <prev id="FirFilter_528" data-sent="1" data-type="float" />
+            <prev id="FirFilter_527" data-sent="1" data-type="float" />
+            <prev id="FirFilter_526" data-sent="1" data-type="float" />
+            <prev id="FirFilter_525" data-sent="1" data-type="float" />
+            <prev id="FirFilter_524" data-sent="1" data-type="float" />
+            <prev id="FirFilter_523" data-sent="1" data-type="float" />
+        </task>
+        <task id="DownSamp_271" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_522" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_272" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_271" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_531" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="UpSamp_272" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_533" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_531" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_534" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_531" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_535" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_531" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_536" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_531" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_537" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_531" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_538" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_531" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_539" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_531" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_540" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_531" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_532" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_540" data-sent="1" data-type="float" />
+            <prev id="Delay_N_539" data-sent="1" data-type="float" />
+            <prev id="Delay_N_538" data-sent="1" data-type="float" />
+            <prev id="Delay_N_537" data-sent="1" data-type="float" />
+            <prev id="Delay_N_536" data-sent="1" data-type="float" />
+            <prev id="Delay_N_535" data-sent="1" data-type="float" />
+            <prev id="Delay_N_534" data-sent="1" data-type="float" />
+            <prev id="Delay_N_533" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_541" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_532" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_543" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_541" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_544" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_541" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_545" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_541" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_546" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_541" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_547" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_541" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_548" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_541" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_549" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_541" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_550" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_541" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_542" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_550" data-sent="1" data-type="float" />
+            <prev id="FirFilter_549" data-sent="1" data-type="float" />
+            <prev id="FirFilter_548" data-sent="1" data-type="float" />
+            <prev id="FirFilter_547" data-sent="1" data-type="float" />
+            <prev id="FirFilter_546" data-sent="1" data-type="float" />
+            <prev id="FirFilter_545" data-sent="1" data-type="float" />
+            <prev id="FirFilter_544" data-sent="1" data-type="float" />
+            <prev id="FirFilter_543" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_551" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="DUPLICATE_Splitter_291" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_553" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_551" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_554" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_551" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_555" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_551" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_556" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_551" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_557" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_551" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_558" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_551" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_559" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_551" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_560" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_551" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_552" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_560" data-sent="1" data-type="float" />
+            <prev id="Delay_N_559" data-sent="1" data-type="float" />
+            <prev id="Delay_N_558" data-sent="1" data-type="float" />
+            <prev id="Delay_N_557" data-sent="1" data-type="float" />
+            <prev id="Delay_N_556" data-sent="1" data-type="float" />
+            <prev id="Delay_N_555" data-sent="1" data-type="float" />
+            <prev id="Delay_N_554" data-sent="1" data-type="float" />
+            <prev id="Delay_N_553" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_561" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_552" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_563" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_561" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_564" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_561" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_565" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_561" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_566" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_561" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_567" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_561" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_568" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_561" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_569" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_561" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_570" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_561" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_562" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_570" data-sent="1" data-type="float" />
+            <prev id="FirFilter_569" data-sent="1" data-type="float" />
+            <prev id="FirFilter_568" data-sent="1" data-type="float" />
+            <prev id="FirFilter_567" data-sent="1" data-type="float" />
+            <prev id="FirFilter_566" data-sent="1" data-type="float" />
+            <prev id="FirFilter_565" data-sent="1" data-type="float" />
+            <prev id="FirFilter_564" data-sent="1" data-type="float" />
+            <prev id="FirFilter_563" data-sent="1" data-type="float" />
+        </task>
+        <task id="DownSamp_278" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_562" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_279" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_278" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_571" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="UpSamp_279" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_573" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_571" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_574" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_571" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_575" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_571" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_576" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_571" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_577" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_571" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_578" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_571" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_579" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_571" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_580" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_571" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_572" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_580" data-sent="1" data-type="float" />
+            <prev id="Delay_N_579" data-sent="1" data-type="float" />
+            <prev id="Delay_N_578" data-sent="1" data-type="float" />
+            <prev id="Delay_N_577" data-sent="1" data-type="float" />
+            <prev id="Delay_N_576" data-sent="1" data-type="float" />
+            <prev id="Delay_N_575" data-sent="1" data-type="float" />
+            <prev id="Delay_N_574" data-sent="1" data-type="float" />
+            <prev id="Delay_N_573" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_581" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_572" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_583" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_581" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_584" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_581" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_585" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_581" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_586" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_581" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_587" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_581" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_588" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_581" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_589" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_581" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_590" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_581" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_582" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_590" data-sent="1" data-type="float" />
+            <prev id="FirFilter_589" data-sent="1" data-type="float" />
+            <prev id="FirFilter_588" data-sent="1" data-type="float" />
+            <prev id="FirFilter_587" data-sent="1" data-type="float" />
+            <prev id="FirFilter_586" data-sent="1" data-type="float" />
+            <prev id="FirFilter_585" data-sent="1" data-type="float" />
+            <prev id="FirFilter_584" data-sent="1" data-type="float" />
+            <prev id="FirFilter_583" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_591" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="DUPLICATE_Splitter_291" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_593" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_591" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_594" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_591" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_595" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_591" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_596" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_591" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_597" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_591" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_598" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_591" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_599" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_591" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_600" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_591" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_592" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_600" data-sent="1" data-type="float" />
+            <prev id="Delay_N_599" data-sent="1" data-type="float" />
+            <prev id="Delay_N_598" data-sent="1" data-type="float" />
+            <prev id="Delay_N_597" data-sent="1" data-type="float" />
+            <prev id="Delay_N_596" data-sent="1" data-type="float" />
+            <prev id="Delay_N_595" data-sent="1" data-type="float" />
+            <prev id="Delay_N_594" data-sent="1" data-type="float" />
+            <prev id="Delay_N_593" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_601" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_592" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_603" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_601" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_604" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_601" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_605" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_601" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_606" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_601" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_607" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_601" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_608" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_601" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_609" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_601" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_610" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_601" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_602" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_610" data-sent="1" data-type="float" />
+            <prev id="FirFilter_609" data-sent="1" data-type="float" />
+            <prev id="FirFilter_608" data-sent="1" data-type="float" />
+            <prev id="FirFilter_607" data-sent="1" data-type="float" />
+            <prev id="FirFilter_606" data-sent="1" data-type="float" />
+            <prev id="FirFilter_605" data-sent="1" data-type="float" />
+            <prev id="FirFilter_604" data-sent="1" data-type="float" />
+            <prev id="FirFilter_603" data-sent="1" data-type="float" />
+        </task>
+        <task id="DownSamp_285" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_602" data-sent="8" data-type="float" />
+        </task>
+        <task id="UpSamp_286" WCET="41">
+            <memfootprint local-storage="32 b" code-size="28 b" />
+            <prev id="DownSamp_285" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_611" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="UpSamp_286" data-sent="8" data-type="float" />
+        </task>
+        <task id="Delay_N_613" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_611" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_614" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_611" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_615" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_611" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_616" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_611" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_617" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_611" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_618" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_611" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_619" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_611" data-sent="1" data-type="float" />
+        </task>
+        <task id="Delay_N_620" WCET="6">
+            <memfootprint local-storage="0 b" code-size="12 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_611" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_612" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Delay_N_620" data-sent="1" data-type="float" />
+            <prev id="Delay_N_619" data-sent="1" data-type="float" />
+            <prev id="Delay_N_618" data-sent="1" data-type="float" />
+            <prev id="Delay_N_617" data-sent="1" data-type="float" />
+            <prev id="Delay_N_616" data-sent="1" data-type="float" />
+            <prev id="Delay_N_615" data-sent="1" data-type="float" />
+            <prev id="Delay_N_614" data-sent="1" data-type="float" />
+            <prev id="Delay_N_613" data-sent="1" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_621" WCET="216">
+            <memfootprint local-storage="64 b" code-size="60 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_612" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_623" WCET="425">
+            <memfootprint local-storage="96 b" code-size="556 b" />
+            <prev id="DUPLICATE_Splitter_621" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_624" WCET="423">
+            <memfootprint local-storage="96 b" code-size="582 b" />
+            <prev id="DUPLICATE_Splitter_621" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_625" WCET="425">
+            <memfootprint local-storage="128 b" code-size="612 b" />
+            <prev id="DUPLICATE_Splitter_621" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_626" WCET="425">
+            <memfootprint local-storage="128 b" code-size="632 b" />
+            <prev id="DUPLICATE_Splitter_621" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_627" WCET="425">
+            <memfootprint local-storage="128 b" code-size="652 b" />
+            <prev id="DUPLICATE_Splitter_621" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_628" WCET="425">
+            <memfootprint local-storage="128 b" code-size="672 b" />
+            <prev id="DUPLICATE_Splitter_621" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_629" WCET="423">
+            <memfootprint local-storage="96 b" code-size="682 b" />
+            <prev id="DUPLICATE_Splitter_621" data-sent="8" data-type="float" />
+        </task>
+        <task id="FirFilter_630" WCET="425">
+            <memfootprint local-storage="96 b" code-size="696 b" />
+            <prev id="DUPLICATE_Splitter_621" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_622" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="FirFilter_630" data-sent="1" data-type="float" />
+            <prev id="FirFilter_629" data-sent="1" data-type="float" />
+            <prev id="FirFilter_628" data-sent="1" data-type="float" />
+            <prev id="FirFilter_627" data-sent="1" data-type="float" />
+            <prev id="FirFilter_626" data-sent="1" data-type="float" />
+            <prev id="FirFilter_625" data-sent="1" data-type="float" />
+            <prev id="FirFilter_624" data-sent="1" data-type="float" />
+            <prev id="FirFilter_623" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_292" WCET="384">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_622" data-sent="1" data-type="float" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_582" data-sent="1" data-type="float" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_542" data-sent="1" data-type="float" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_502" data-sent="1" data-type="float" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_462" data-sent="1" data-type="float" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_422" data-sent="1" data-type="float" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_382" data-sent="1" data-type="float" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_342" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_631" WCET="48">
+            <memfootprint local-storage="288 b" code-size="150 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_292" data-sent="64" data-type="float" />
+        </task>
+        <task id="Combine_633" WCET="59">
+            <memfootprint local-storage="64 b" code-size="27 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_631" data-sent="8" data-type="float" />
+        </task>
+        <task id="Combine_634" WCET="59">
+            <memfootprint local-storage="64 b" code-size="27 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_631" data-sent="8" data-type="float" />
+        </task>
+        <task id="Combine_635" WCET="59">
+            <memfootprint local-storage="64 b" code-size="27 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_631" data-sent="8" data-type="float" />
+        </task>
+        <task id="Combine_636" WCET="59">
+            <memfootprint local-storage="64 b" code-size="27 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_631" data-sent="8" data-type="float" />
+        </task>
+        <task id="Combine_637" WCET="59">
+            <memfootprint local-storage="64 b" code-size="27 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_631" data-sent="8" data-type="float" />
+        </task>
+        <task id="Combine_638" WCET="59">
+            <memfootprint local-storage="64 b" code-size="27 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_631" data-sent="8" data-type="float" />
+        </task>
+        <task id="Combine_639" WCET="59">
+            <memfootprint local-storage="64 b" code-size="27 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_631" data-sent="8" data-type="float" />
+        </task>
+        <task id="Combine_640" WCET="59">
+            <memfootprint local-storage="64 b" code-size="27 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_631" data-sent="8" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_632" WCET="48">
+            <memfootprint local-storage="32 b" code-size="102 b" />
+            <prev id="Combine_640" data-sent="1" data-type="float" />
+            <prev id="Combine_639" data-sent="1" data-type="float" />
+            <prev id="Combine_638" data-sent="1" data-type="float" />
+            <prev id="Combine_637" data-sent="1" data-type="float" />
+            <prev id="Combine_636" data-sent="1" data-type="float" />
+            <prev id="Combine_635" data-sent="1" data-type="float" />
+            <prev id="Combine_634" data-sent="1" data-type="float" />
+            <prev id="Combine_633" data-sent="1" data-type="float" />
+        </task>
+        <task id="sink_290" WCET="6">
+            <memfootprint local-storage="0 b" code-size="16 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_632" data-sent="8" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

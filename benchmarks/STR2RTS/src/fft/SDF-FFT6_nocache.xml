@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="FFTTestSource_22" WCET="324">
+            <memfootprint local-storage="1056 b" code-size="44 b" />
+        </task>
+        <task id="FFTReorderSimple_23" WCET="832">
+            <memfootprint local-storage="1056 b" code-size="68 b" />
+            <prev id="FFTTestSource_22" data-sent="64" data-type="complex" />
+        </task>
+        <task id="FFTReorderSimple_24" WCET="416">
+            <memfootprint local-storage="1056 b" code-size="68 b" />
+            <prev id="FFTReorderSimple_23" data-sent="64" data-type="complex" />
+        </task>
+        <task id="FFTReorderSimple_25" WCET="208">
+            <memfootprint local-storage="1056 b" code-size="68 b" />
+            <prev id="FFTReorderSimple_24" data-sent="64" data-type="complex" />
+        </task>
+        <task id="FFTReorderSimple_26" WCET="104">
+            <memfootprint local-storage="1056 b" code-size="68 b" />
+            <prev id="FFTReorderSimple_25" data-sent="64" data-type="complex" />
+        </task>
+        <task id="FFTReorderSimple_27" WCET="52">
+            <memfootprint local-storage="1056 b" code-size="68 b" />
+            <prev id="FFTReorderSimple_26" data-sent="64" data-type="complex" />
+        </task>
+        <task id="CombineDFT_28" WCET="159">
+            <memfootprint local-storage="4640 b" code-size="394 b" />
+            <prev id="FFTReorderSimple_27" data-sent="64" data-type="complex" />
+        </task>
+        <task id="CombineDFT_29" WCET="314">
+            <memfootprint local-storage="5664 b" code-size="394 b" />
+            <prev id="CombineDFT_28" data-sent="64" data-type="complex" />
+        </task>
+        <task id="CombineDFT_30" WCET="624">
+            <memfootprint local-storage="7712 b" code-size="394 b" />
+            <prev id="CombineDFT_29" data-sent="64" data-type="complex" />
+        </task>
+        <task id="CombineDFT_31" WCET="1244">
+            <memfootprint local-storage="11808 b" code-size="394 b" />
+            <prev id="CombineDFT_30" data-sent="64" data-type="complex" />
+        </task>
+        <task id="CombineDFT_32" WCET="2484">
+            <memfootprint local-storage="20000 b" code-size="394 b" />
+            <prev id="CombineDFT_31" data-sent="64" data-type="complex" />
+        </task>
+        <task id="CombineDFT_33" WCET="4964">
+            <memfootprint local-storage="36384 b" code-size="394 b" />
+            <prev id="CombineDFT_32" data-sent="64" data-type="complex" />
+        </task>
+        <task id="CPrinter_34" WCET="13">
+            <memfootprint local-storage="512 b" code-size="34 b" />
+            <prev id="CombineDFT_33" data-sent="64" data-type="complex" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

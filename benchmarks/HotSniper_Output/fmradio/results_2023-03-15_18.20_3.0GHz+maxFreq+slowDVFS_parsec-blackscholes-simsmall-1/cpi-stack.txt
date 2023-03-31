@@ -1,0 +1,14 @@
+CPI                  Core 0     Core 1   
+base                   0.25       0.00
+depend-int             0.12       0.00
+depend-fp              0.23       0.00
+depend-branch          0.02       0.00
+issue-port2            0.01       0.00
+branch                 0.26       0.00
+ifetch                 0.31       0.00
+mem-l1d                0.16       0.00
+mem-dram               0.05       0.00
+imbalance-end          0.00   942022.00
+other                  0.00       0.00
+
+total                  1.41   942022.00

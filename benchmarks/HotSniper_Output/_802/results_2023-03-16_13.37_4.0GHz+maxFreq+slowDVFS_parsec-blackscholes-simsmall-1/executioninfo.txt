@@ -1,0 +1,5 @@
+started:    2023-03-16 13:37:18
+ended:      2023-03-16 14:18:09
+duration:   0:40:50.863053
+host:       96172ee1a74d
+tasks:      parsec-blackscholes-simsmall-1

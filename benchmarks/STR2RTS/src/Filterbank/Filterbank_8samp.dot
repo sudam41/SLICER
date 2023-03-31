@@ -1,0 +1,114 @@
+digraph streamit {
+source_pop_0_push_1_1 -> Branches_4_split
+Combine_pop_8_push_1_5 -> sink_pop_1_push_0_3
+source_pop_0_push_1_1 [ label="fb8s_source", pop=0, push=8 ]
+Branches_4_join -> Combine_pop_8_push_1_5
+Branches_4_split [ label="fb8s_split_duplicate", pop=8, push=8 ]
+Branches_4_join [ label="fb8s_join_round_robin", pop=8, push=64 ]
+Delay_N_initPop_0_initPush_31_pop_8_push_8_14 -> FirFilter_pop_8_peek_32_push_8_15
+FirFilter_pop_8_peek_32_push_8_15 -> DownSamp_pop_8_push_1_16
+DownSamp_pop_8_push_1_16 -> UpSamp_pop_1_push_8_17
+UpSamp_pop_1_push_8_17 -> Delay_N_initPop_0_initPush_31_pop_8_push_8_18
+Delay_N_initPop_0_initPush_31_pop_8_push_8_18 -> FirFilter_pop_8_peek_32_push_8_19
+Delay_N_initPop_0_initPush_31_pop_8_push_8_14 [ label="fb8s_delay_n_start", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_15 [ label="fb8s_fir_filter_h", pop=8, peek=32, push=8 ]
+DownSamp_pop_8_push_1_16 [ label="fb8s_down_samp", pop=8, push=1 ]
+UpSamp_pop_1_push_8_17 [ label="fb8s_up_samp", pop=1, push=8 ]
+Delay_N_initPop_0_initPush_31_pop_8_push_8_18 [ label="fb8s_delay_n_end", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_19 [ label="fb8s_fir_filter_f", pop=8, peek=32, push=8 ]
+Branches_4_split -> Delay_N_initPop_0_initPush_31_pop_8_push_8_14
+FirFilter_pop_8_peek_32_push_8_19 -> Branches_4_join
+Delay_N_initPop_0_initPush_31_pop_8_push_8_25 -> FirFilter_pop_8_peek_32_push_8_26
+FirFilter_pop_8_peek_32_push_8_26 -> DownSamp_pop_8_push_1_27
+DownSamp_pop_8_push_1_27 -> UpSamp_pop_1_push_8_28
+UpSamp_pop_1_push_8_28 -> Delay_N_initPop_0_initPush_31_pop_8_push_8_29
+Delay_N_initPop_0_initPush_31_pop_8_push_8_29 -> FirFilter_pop_8_peek_32_push_8_30
+Delay_N_initPop_0_initPush_31_pop_8_push_8_25 [ label="fb8s_delay_n_start", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_26 [ label="fb8s_fir_filter_h", pop=8, peek=32, push=8 ]
+DownSamp_pop_8_push_1_27 [ label="fb8s_down_samp", pop=8, push=1 ]
+UpSamp_pop_1_push_8_28 [ label="fb8s_up_samp", pop=1, push=8 ]
+Delay_N_initPop_0_initPush_31_pop_8_push_8_29 [ label="fb8s_delay_n_end", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_30 [ label="fb8s_fir_filter_f", pop=8, peek=32, push=8 ]
+Branches_4_split -> Delay_N_initPop_0_initPush_31_pop_8_push_8_25
+FirFilter_pop_8_peek_32_push_8_30 -> Branches_4_join
+Delay_N_initPop_0_initPush_31_pop_8_push_8_36 -> FirFilter_pop_8_peek_32_push_8_37
+FirFilter_pop_8_peek_32_push_8_37 -> DownSamp_pop_8_push_1_38
+DownSamp_pop_8_push_1_38 -> UpSamp_pop_1_push_8_39
+UpSamp_pop_1_push_8_39 -> Delay_N_initPop_0_initPush_31_pop_8_push_8_40
+Delay_N_initPop_0_initPush_31_pop_8_push_8_40 -> FirFilter_pop_8_peek_32_push_8_41
+Delay_N_initPop_0_initPush_31_pop_8_push_8_36 [ label="fb8s_delay_n_start", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_37 [ label="fb8s_fir_filter_h", pop=8, peek=32, push=8 ]
+DownSamp_pop_8_push_1_38 [ label="fb8s_down_samp", pop=8, push=1 ]
+UpSamp_pop_1_push_8_39 [ label="fb8s_up_samp", pop=1, push=8 ]
+Delay_N_initPop_0_initPush_31_pop_8_push_8_40 [ label="fb8s_delay_n_end", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_41 [ label="fb8s_fir_filter_f", pop=8, peek=32, push=8 ]
+Branches_4_split -> Delay_N_initPop_0_initPush_31_pop_8_push_8_36
+FirFilter_pop_8_peek_32_push_8_41 -> Branches_4_join
+Delay_N_initPop_0_initPush_31_pop_8_push_8_47 -> FirFilter_pop_8_peek_32_push_8_48
+FirFilter_pop_8_peek_32_push_8_48 -> DownSamp_pop_8_push_1_49
+DownSamp_pop_8_push_1_49 -> UpSamp_pop_1_push_8_50
+UpSamp_pop_1_push_8_50 -> Delay_N_initPop_0_initPush_31_pop_8_push_8_51
+Delay_N_initPop_0_initPush_31_pop_8_push_8_51 -> FirFilter_pop_8_peek_32_push_8_52
+Delay_N_initPop_0_initPush_31_pop_8_push_8_47 [ label="fb8s_delay_n_start", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_48 [ label="fb8s_fir_filter_h", pop=8, peek=32, push=8 ]
+DownSamp_pop_8_push_1_49 [ label="fb8s_down_samp", pop=8, push=1 ]
+UpSamp_pop_1_push_8_50 [ label="fb8s_up_samp", pop=1, push=8 ]
+Delay_N_initPop_0_initPush_31_pop_8_push_8_51 [ label="fb8s_delay_n_end", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_52 [ label="fb8s_fir_filter_f", pop=8, peek=32, push=8 ]
+Branches_4_split -> Delay_N_initPop_0_initPush_31_pop_8_push_8_47
+FirFilter_pop_8_peek_32_push_8_52 -> Branches_4_join
+Delay_N_initPop_0_initPush_31_pop_8_push_8_58 -> FirFilter_pop_8_peek_32_push_8_59
+FirFilter_pop_8_peek_32_push_8_59 -> DownSamp_pop_8_push_1_60
+DownSamp_pop_8_push_1_60 -> UpSamp_pop_1_push_8_61
+UpSamp_pop_1_push_8_61 -> Delay_N_initPop_0_initPush_31_pop_8_push_8_62
+Delay_N_initPop_0_initPush_31_pop_8_push_8_62 -> FirFilter_pop_8_peek_32_push_8_63
+Delay_N_initPop_0_initPush_31_pop_8_push_8_58 [ label="fb8s_delay_n_start", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_59 [ label="fb8s_fir_filter_h", pop=8, peek=32, push=8 ]
+DownSamp_pop_8_push_1_60 [ label="fb8s_down_samp", pop=8, push=1 ]
+UpSamp_pop_1_push_8_61 [ label="fb8s_up_samp", pop=1, push=8 ]
+Delay_N_initPop_0_initPush_31_pop_8_push_8_62 [ label="fb8s_delay_n_end", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_63 [ label="fb8s_fir_filter_f", pop=8, peek=32, push=8 ]
+Branches_4_split -> Delay_N_initPop_0_initPush_31_pop_8_push_8_58
+FirFilter_pop_8_peek_32_push_8_63 -> Branches_4_join
+Delay_N_initPop_0_initPush_31_pop_8_push_8_69 -> FirFilter_pop_8_peek_32_push_8_70
+FirFilter_pop_8_peek_32_push_8_70 -> DownSamp_pop_8_push_1_71
+DownSamp_pop_8_push_1_71 -> UpSamp_pop_1_push_8_72
+UpSamp_pop_1_push_8_72 -> Delay_N_initPop_0_initPush_31_pop_8_push_8_73
+Delay_N_initPop_0_initPush_31_pop_8_push_8_73 -> FirFilter_pop_8_peek_32_push_8_74
+Delay_N_initPop_0_initPush_31_pop_8_push_8_69 [ label="fb8s_delay_n_start", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_70 [ label="fb8s_fir_filter_h", pop=8, peek=32, push=8 ]
+DownSamp_pop_8_push_1_71 [ label="fb8s_down_samp", pop=8, push=1 ]
+UpSamp_pop_1_push_8_72 [ label="fb8s_up_samp", pop=1, push=8 ]
+Delay_N_initPop_0_initPush_31_pop_8_push_8_73 [ label="fb8s_delay_n_end", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_74 [ label="fb8s_fir_filter_f", pop=8, peek=32, push=8 ]
+Branches_4_split -> Delay_N_initPop_0_initPush_31_pop_8_push_8_69
+FirFilter_pop_8_peek_32_push_8_74 -> Branches_4_join
+Delay_N_initPop_0_initPush_31_pop_8_push_8_80 -> FirFilter_pop_8_peek_32_push_8_81
+FirFilter_pop_8_peek_32_push_8_81 -> DownSamp_pop_8_push_1_82
+DownSamp_pop_8_push_1_82 -> UpSamp_pop_1_push_8_83
+UpSamp_pop_1_push_8_83 -> Delay_N_initPop_0_initPush_31_pop_8_push_8_84
+Delay_N_initPop_0_initPush_31_pop_8_push_8_84 -> FirFilter_pop_8_peek_32_push_8_85
+Delay_N_initPop_0_initPush_31_pop_8_push_8_80 [ label="fb8s_delay_n_start", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_81 [ label="fb8s_fir_filter_h", pop=8, peek=32, push=8 ]
+DownSamp_pop_8_push_1_82 [ label="fb8s_down_samp", pop=8, push=1 ]
+UpSamp_pop_1_push_8_83 [ label="fb8s_up_samp", pop=1, push=8 ]
+Delay_N_initPop_0_initPush_31_pop_8_push_8_84 [ label="fb8s_delay_n_end", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_85 [ label="fb8s_fir_filter_f", pop=8, peek=32, push=8 ]
+Branches_4_split -> Delay_N_initPop_0_initPush_31_pop_8_push_8_80
+FirFilter_pop_8_peek_32_push_8_85 -> Branches_4_join
+Delay_N_initPop_0_initPush_31_pop_8_push_8_91 -> FirFilter_pop_8_peek_32_push_8_92
+FirFilter_pop_8_peek_32_push_8_92 -> DownSamp_pop_8_push_1_93
+DownSamp_pop_8_push_1_93 -> UpSamp_pop_1_push_8_94
+UpSamp_pop_1_push_8_94 -> Delay_N_initPop_0_initPush_31_pop_8_push_8_95
+Delay_N_initPop_0_initPush_31_pop_8_push_8_95 -> FirFilter_pop_8_peek_32_push_8_96
+Delay_N_initPop_0_initPush_31_pop_8_push_8_91 [ label="fb8s_delay_n_start", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_92 [ label="fb8s_fir_filter_h", pop=8, peek=32, push=8 ]
+DownSamp_pop_8_push_1_93 [ label="fb8s_down_samp", pop=8, push=1 ]
+UpSamp_pop_1_push_8_94 [ label="fb8s_up_samp", pop=1, push=8 ]
+Delay_N_initPop_0_initPush_31_pop_8_push_8_95 [ label="fb8s_delay_n_end", initPop=0, initPush=31, pop=8, push=8 ]
+FirFilter_pop_8_peek_32_push_8_96 [ label="fb8s_fir_filter_f", pop=8, peek=32, push=8 ]
+Branches_4_split -> Delay_N_initPop_0_initPush_31_pop_8_push_8_91
+FirFilter_pop_8_peek_32_push_8_96 -> Branches_4_join
+Combine_pop_8_push_1_5 [ label="fb8s_combine", pop=64, push=8 ]
+sink_pop_1_push_0_3 [ label="fb8s_sink", pop=8, push=0 ]
+}

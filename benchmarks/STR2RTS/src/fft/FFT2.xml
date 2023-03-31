@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<appl>
+    <tasks>
+        <task id="fft2_combine_dft_1__node22" WCET="621359">
+            <memfootprint local-storage="888 b" code-size="8672 b" />
+            <prev id="fft2_combine_dft_2__node20" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_combine_dft_1__node21" WCET="621359">
+            <memfootprint local-storage="888 b" code-size="8672 b" />
+            <prev id="fft2_combine_dft_2__node19" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_combine_dft_8__node15" WCET="621359">
+            <memfootprint local-storage="896 b" code-size="8992 b" />
+            <prev id="fft2_combine_dft_16__node13" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_combine_dft_8__node16" WCET="621359">
+            <memfootprint local-storage="896 b" code-size="8992 b" />
+            <prev id="fft2_combine_dft_16__node14" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_combine_dft_4__node18" WCET="621359">
+            <memfootprint local-storage="896 b" code-size="8992 b" />
+            <prev id="fft2_combine_dft_8__node16" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_combine_dft_4__node17" WCET="621359">
+            <memfootprint local-storage="896 b" code-size="8992 b" />
+            <prev id="fft2_combine_dft_8__node15" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_combine_dft_32__node11" WCET="621359">
+            <memfootprint local-storage="896 b" code-size="12128 b" />
+            <prev id="fft2_reorder_simple_16__node9" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_combine_dft_32__node12" WCET="621359">
+            <memfootprint local-storage="896 b" code-size="12128 b" />
+            <prev id="fft2_reorder_simple_16__node10" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_combine_dft_2__node20" WCET="621359">
+            <memfootprint local-storage="888 b" code-size="9440 b" />
+            <prev id="fft2_combine_dft_4__node18" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_combine_dft_2__node19" WCET="621359">
+            <memfootprint local-storage="888 b" code-size="9440 b" />
+            <prev id="fft2_combine_dft_4__node17" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_combine_dft_16__node13" WCET="621359">
+            <memfootprint local-storage="896 b" code-size="8992 b" />
+            <prev id="fft2_combine_dft_32__node11" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_combine_dft_16__node14" WCET="621359">
+            <memfootprint local-storage="896 b" code-size="8992 b" />
+            <prev id="fft2_combine_dft_32__node12" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_join1_round_robin" WCET="10389">
+            <memfootprint local-storage="32 b" code-size="3648 b" />
+            <prev id="fft2_combine_dft_1__node22" data-sent="128" data-type="float" />
+            <prev id="fft2_combine_dft_1__node21" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_split1_round_robin" WCET="10389">
+            <memfootprint local-storage="32 b" code-size="3648 b" />
+            <prev id="fft2_test_source" data-sent="256" data-type="float" />
+        </task>
+        <task id="fft2_reorder_simple_1__node2" WCET="14853">
+            <memfootprint local-storage="64 b" code-size="7232 b" />
+            <prev id="fft2_split1_round_robin" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_reorder_simple_1__node1" WCET="14853">
+            <memfootprint local-storage="64 b" code-size="7232 b" />
+            <prev id="fft2_split1_round_robin" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_reorder_simple_8__node8" WCET="14853">
+            <memfootprint local-storage="72 b" code-size="4800 b" />
+            <prev id="fft2_reorder_simple_4__node6" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_reorder_simple_8__node7" WCET="14853">
+            <memfootprint local-storage="72 b" code-size="4800 b" />
+            <prev id="fft2_reorder_simple_4__node5" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_reorder_simple_4__node6" WCET="14853">
+            <memfootprint local-storage="72 b" code-size="4800 b" />
+            <prev id="fft2_reorder_simple_2__node4" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_reorder_simple_4__node5" WCET="14853">
+            <memfootprint local-storage="72 b" code-size="4800 b" />
+            <prev id="fft2_reorder_simple_2__node3" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_reorder_simple_2__node4" WCET="14853">
+            <memfootprint local-storage="64 b" code-size="5248 b" />
+            <prev id="fft2_reorder_simple_1__node2" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_reorder_simple_2__node3" WCET="14853">
+            <memfootprint local-storage="64 b" code-size="5248 b" />
+            <prev id="fft2_reorder_simple_1__node1" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_reorder_simple_16__node10" WCET="14853">
+            <memfootprint local-storage="72 b" code-size="4800 b" />
+            <prev id="fft2_reorder_simple_8__node8" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_reorder_simple_16__node9" WCET="14853">
+            <memfootprint local-storage="72 b" code-size="4800 b" />
+            <prev id="fft2_reorder_simple_8__node7" data-sent="128" data-type="float" />
+        </task>
+        <task id="fft2_test_source" WCET="3063">
+            <memfootprint local-storage="32 b" code-size="3680 b" />
+        </task>
+        <task id="fft2_float_prfloater" WCET="12814">
+            <memfootprint local-storage="32 b" code-size="2240 b" />
+            <prev id="fft2_join1_round_robin" data-sent="256" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <communication type="BUS" arbiter="FAIR" active-window-time="3" token-per-timeunit="1" mechanism="shared" behavior="non-blocking" />
+        <solving type="worst_concurrency" solve="true" solver="fls" timeout="120"/>
+        <architecture prefetch_code="false">
+            <memory>
+            </memory>
+            <spm store-code="true" assign_region="true" />
+            <processors>
+                <processor id="P16" spm-size="32kb"/>
+                <processor id="P15" spm-size="32kb"/>
+                <processor id="P14" spm-size="32kb"/>
+                <processor id="P13" spm-size="32kb"/>
+                <processor id="P12" spm-size="32kb"/>
+                <processor id="P11" spm-size="32kb"/>
+                <processor id="P10" spm-size="32kb"/>
+                <processor id="P9" spm-size="32kb"/>
+                <processor id="P8" spm-size="32kb"/>
+                <processor id="P7" spm-size="32kb"/>
+                <processor id="P6" spm-size="32kb"/>
+                <processor id="P5" spm-size="32kb"/>
+                <processor id="P4" spm-size="32kb"/>
+                <processor id="P3" spm-size="32kb"/>
+                <processor id="P2" spm-size="32kb"/>
+                <processor id="P1" spm-size="32kb"/>
+            </processors>
+        </architecture>
+    </config>
+</appl>

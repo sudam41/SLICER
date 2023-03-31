@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="ComplexSource_14" WCET="61760">
+            <memfootprint local-storage="544 b" code-size="309 b" />
+        </task>
+        <task id="SquareAndScale_16" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="ComplexSource_14" data-sent="64" data-type="complex" />
+        </task>
+        <task id="CFAR_gather_17" WCET="202">
+            <memfootprint local-storage="128 b" code-size="354 b" />
+            <prev id="SquareAndScale_16" data-sent="64" data-type="float" />
+        </task>
+        <task id="AnonFilter_a0_18" WCET="6">
+            <memfootprint local-storage="0 b" code-size="16 b" />
+            <prev id="CFAR_gather_17" data-sent="64" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

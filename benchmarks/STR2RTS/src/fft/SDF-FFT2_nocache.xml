@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="FFTTestSource_41" WCET="632">
+            <memfootprint local-storage="32 b" code-size="40 b" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_65" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="FFTTestSource_41" data-sent="256" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_42" WCET="1472">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_65" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_43" WCET="736">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="FFTReorderSimple_42" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_44" WCET="368">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="FFTReorderSimple_43" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_45" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="FFTReorderSimple_44" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_46" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="FFTReorderSimple_45" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_47" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="FFTReorderSimple_46" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_48" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="CombineDFT_47" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_49" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="CombineDFT_48" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_50" WCET="616">
+            <memfootprint local-storage="1344 b" code-size="228 b" />
+            <prev id="CombineDFT_49" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_51" WCET="1232">
+            <memfootprint local-storage="2368 b" code-size="228 b" />
+            <prev id="CombineDFT_50" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_52" WCET="2464">
+            <memfootprint local-storage="4416 b" code-size="228 b" />
+            <prev id="CombineDFT_51" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_53" WCET="1472">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_65" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_54" WCET="736">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="FFTReorderSimple_53" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_55" WCET="368">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="FFTReorderSimple_54" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_56" WCET="184">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="FFTReorderSimple_55" data-sent="128" data-type="float" />
+        </task>
+        <task id="FFTReorderSimple_57" WCET="92">
+            <memfootprint local-storage="32 b" code-size="114 b" />
+            <prev id="FFTReorderSimple_56" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_58" WCET="77">
+            <memfootprint local-storage="448 b" code-size="228 b" />
+            <prev id="FFTReorderSimple_57" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_59" WCET="154">
+            <memfootprint local-storage="576 b" code-size="228 b" />
+            <prev id="CombineDFT_58" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_60" WCET="308">
+            <memfootprint local-storage="832 b" code-size="228 b" />
+            <prev id="CombineDFT_59" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_61" WCET="616">
+            <memfootprint local-storage="1344 b" code-size="228 b" />
+            <prev id="CombineDFT_60" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_62" WCET="1232">
+            <memfootprint local-storage="2368 b" code-size="228 b" />
+            <prev id="CombineDFT_61" data-sent="128" data-type="float" />
+        </task>
+        <task id="CombineDFT_63" WCET="2464">
+            <memfootprint local-storage="4416 b" code-size="228 b" />
+            <prev id="CombineDFT_62" data-sent="128" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_66" WCET="12">
+            <memfootprint local-storage="96 b" code-size="42 b" />
+            <prev id="CombineDFT_63" data-sent="128" data-type="float" />
+            <prev id="CombineDFT_52" data-sent="128" data-type="float" />
+        </task>
+        <task id="FloatPrinter_64" WCET="6">
+            <memfootprint local-storage="0 b" code-size="16 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_66" data-sent="256" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

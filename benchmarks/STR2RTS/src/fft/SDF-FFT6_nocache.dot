@@ -1,0 +1,27 @@
+digraph FFT6_35 {
+node0 [label="FFTTestSource_22", push="64", pop="0", peek="0", pushType="complex", popType="void", peekType="void", codeSize="44 b", stackSize="1056 b", work="324"];
+node1 [label="FFTReorderSimple_23", push="64", pop="64", peek="64", pushType="complex", popType="complex", peekType="complex", codeSize="68 b", stackSize="1056 b", work="832"];
+node0 -> node1;
+node2 [label="FFTReorderSimple_24", push="64", pop="64", peek="64", pushType="complex", popType="complex", peekType="complex", codeSize="68 b", stackSize="1056 b", work="416"];
+node1 -> node2;
+node3 [label="FFTReorderSimple_25", push="64", pop="64", peek="64", pushType="complex", popType="complex", peekType="complex", codeSize="68 b", stackSize="1056 b", work="208"];
+node2 -> node3;
+node4 [label="FFTReorderSimple_26", push="64", pop="64", peek="64", pushType="complex", popType="complex", peekType="complex", codeSize="68 b", stackSize="1056 b", work="104"];
+node3 -> node4;
+node5 [label="FFTReorderSimple_27", push="64", pop="64", peek="64", pushType="complex", popType="complex", peekType="complex", codeSize="68 b", stackSize="1056 b", work="52"];
+node4 -> node5;
+node6 [label="CombineDFT_28", push="64", pop="64", peek="64", pushType="complex", popType="complex", peekType="complex", codeSize="394 b", stackSize="4640 b", work="159"];
+node5 -> node6;
+node7 [label="CombineDFT_29", push="64", pop="64", peek="64", pushType="complex", popType="complex", peekType="complex", codeSize="394 b", stackSize="5664 b", work="314"];
+node6 -> node7;
+node8 [label="CombineDFT_30", push="64", pop="64", peek="64", pushType="complex", popType="complex", peekType="complex", codeSize="394 b", stackSize="7712 b", work="624"];
+node7 -> node8;
+node9 [label="CombineDFT_31", push="64", pop="64", peek="64", pushType="complex", popType="complex", peekType="complex", codeSize="394 b", stackSize="11808 b", work="1244"];
+node8 -> node9;
+node10 [label="CombineDFT_32", push="64", pop="64", peek="64", pushType="complex", popType="complex", peekType="complex", codeSize="394 b", stackSize="20000 b", work="2484"];
+node9 -> node10;
+node11 [label="CombineDFT_33", push="64", pop="64", peek="64", pushType="complex", popType="complex", peekType="complex", codeSize="394 b", stackSize="36384 b", work="4964"];
+node10 -> node11;
+node12 [label="CPrinter_34", push="0", pop="64", peek="64", pushType="void", popType="complex", peekType="complex", codeSize="34 b", stackSize="512 b", work="13"];
+node11 -> node12;
+}

@@ -1,0 +1,88 @@
+strict digraph FFT4_92 {
+	graph [name=FFT4_92];
+	node [label="\N"];
+	node0	[codeSize="\"6 b\"",
+		contraction="{'node1': {'label': '\"WEIGHTED_ROUND_ROBIN_Splitter_76\"', 'push': '\"2\"', 'pop': '\"2\"', 'peek': '\"0\"', 'pushType': '\"float\"', 'popType': '\"\
+float\"', 'peekType': '\"void\"', 'codeSize': '\"30 b\"', 'stackSize': '\"32 b\"', 'work': '\"0\"'}}",
+		label="\"OneSource_67\"",
+		peek="\"0\"",
+		peekType="\"void\"",
+		pop="\"0\"",
+		popType="\"void\"",
+		push="\"2\"",
+		pushType="\"float\"",
+		stackSize="\"0 b\"",
+		work="\"3\""];
+	node2	[codeSize="\"12 b\"",
+		label="\"Identity_70\"",
+		peek="\"1\"",
+		peekType="\"float\"",
+		pop="\"1\"",
+		popType="\"float\"",
+		push="\"1\"",
+		pushType="\"float\"",
+		stackSize="\"32 b\"",
+		work="\"6\""];
+	node0 -> node2;
+	node3	[codeSize="\"17 b\"",
+		label="\"Multiply_71\"",
+		peek="\"1\"",
+		peekType="\"float\"",
+		pop="\"1\"",
+		popType="\"float\"",
+		push="\"1\"",
+		pushType="\"float\"",
+		stackSize="\"0 b\"",
+		work="\"8\""];
+	node0 -> node3;
+	node4	[codeSize="\"30 b\"",
+		contraction="{'node5': {'label': '\"DUPLICATE_Splitter_78\"', 'push': '\"2\"', 'pop': '\"2\"', 'peek': '\"0\"', 'pushType': '\"float\"', 'popType': '\"float\"', '\
+peekType': '\"void\"', 'codeSize': '\"24 b\"', 'stackSize': '\"64 b\"', 'work': '\"0\"'}}",
+		label="\"WEIGHTED_ROUND_ROBIN_Joiner_77\"",
+		peek="\"0\"",
+		peekType="\"void\"",
+		pop="\"2\"",
+		popType="\"float\"",
+		push="\"2\"",
+		pushType="\"float\"",
+		stackSize="\"32 b\"",
+		work="\"0\""];
+	node2 -> node4;
+	node3 -> node4;
+	node6	[codeSize="\"43 b\"",
+		label="\"Add_73\"",
+		peek="\"2\"",
+		peekType="\"float\"",
+		pop="\"2\"",
+		popType="\"float\"",
+		push="\"1\"",
+		pushType="\"float\"",
+		stackSize="\"0 b\"",
+		work="\"17\""];
+	node4 -> node6;
+	node7	[codeSize="\"43 b\"",
+		label="\"Subtract_74\"",
+		peek="\"2\"",
+		peekType="\"float\"",
+		pop="\"2\"",
+		popType="\"float\"",
+		push="\"1\"",
+		pushType="\"float\"",
+		stackSize="\"0 b\"",
+		work="\"17\""];
+	node4 -> node7;
+	node8	[codeSize="\"30 b\"",
+		contraction="{'node9': {'label': '\"FloatPrinter_75\"', 'push': '\"0\"', 'pop': '\"2\"', 'peek': '\"2\"', 'pushType': '\"void\"', 'popType': '\"float\"', '\
+peekType': '\"float\"', 'codeSize': '\"16 b\"', 'stackSize': '\"0 b\"', 'work': '\"6\"'}}",
+		label="\"WEIGHTED_ROUND_ROBIN_Joiner_79\"",
+		peek="\"0\"",
+		peekType="\"void\"",
+		pop="\"2\"",
+		popType="\"float\"",
+		push="\"2\"",
+		pushType="\"float\"",
+		stackSize="\"32 b\"",
+		work="\"6\""];
+	node6 -> node8;
+	node7 -> node8;
+}

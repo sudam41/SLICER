@@ -1,0 +1,84 @@
+strict digraph iDCTcompare_321 {
+	graph [name=iDCTcompare_321];
+	node [label="\N"];
+	node0	[codeSize="\"44 b\"",
+		label="\"AnonFilter_a0_237\"",
+		peek="\"0\"",
+		peekType="\"void\"",
+		pop="\"0\"",
+		popType="\"void\"",
+		push="\"64\"",
+		pushType="\"int\"",
+		stackSize="\"32 b\"",
+		work="\"36480\""];
+	node1	[codeSize="\"30 b\"",
+		label="\"DUPLICATE_Splitter_312\"",
+		peek="\"0\"",
+		peekType="\"void\"",
+		pop="\"64\"",
+		popType="\"int\"",
+		push="\"64\"",
+		pushType="\"int\"",
+		stackSize="\"64 b\"",
+		work="\"0\""];
+	node0 -> node1;
+	node2	[codeSize="\"273 b\"",
+		label="\"iDCT_2D_reference_coarse_240\"",
+		peek="\"64\"",
+		peekType="\"int\"",
+		pop="\"64\"",
+		popType="\"int\"",
+		push="\"64\"",
+		pushType="\"int\"",
+		stackSize="\"384 b\"",
+		work="\"16032\""];
+	node1 -> node2;
+	node3	[codeSize="\"12 b\"",
+		contraction="{'node4': {'label': '\"Pre_CollapsedDataParallel_1_310\"', 'push': '\"64\"', 'pop': '\"64\"', 'peek': '\"64\"', 'pushType': '\"float\"', '\
+popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"50 b\"', 'stackSize': '\"96 b\"', 'work': '\"659\"'}, 'node5': {'label': '\"\
+iDCT_1D_reference_fine_244\"', 'push': '\"64\"', 'pop': '\"64\"', 'peek': '\"64\"', 'pushType': '\"float\"', 'popType': '\"float\"', 'peekType': '\"\
+float\"', 'codeSize': '\"86 b\"', 'stackSize': '\"128 b\"', 'work': '\"784\"'}, 'node6': {'label': '\"Post_CollapsedDataParallel_2_311\"', '\
+push': '\"64\"', 'pop': '\"64\"', 'peek': '\"64\"', 'pushType': '\"float\"', 'popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"\
+54 b\"', 'stackSize': '\"96 b\"', 'work': '\"723\"'}, 'node7': {'label': '\"iDCT_1D_reference_fine_252\"', 'push': '\"64\"', 'pop': '\"64\"', '\
+peek': '\"64\"', 'pushType': '\"float\"', 'popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"86 b\"', 'stackSize': '\"128 b\"', '\
+work': '\"784\"'}, 'node8': {'label': '\"AnonFilter_a4_260\"', 'push': '\"64\"', 'pop': '\"64\"', 'peek': '\"64\"', 'pushType': '\"int\"', '\
+popType': '\"float\"', 'peekType': '\"float\"', 'codeSize': '\"37 b\"', 'stackSize': '\"0 b\"', 'work': '\"76\"'}}",
+		label="\"AnonFilter_a3_243\"",
+		peek="\"64\"",
+		peekType="\"int\"",
+		pop="\"64\"",
+		popType="\"int\"",
+		push="\"64\"",
+		pushType="\"float\"",
+		stackSize="\"0 b\"",
+		work="\"3032\""];
+	node1 -> node3;
+	node9	[codeSize="\"356 b\"",
+		contraction="{'node10': {'label': '\"iDCT8x8_1D_col_fast_264\"', 'push': '\"64\"', 'pop': '\"64\"', 'peek': '\"64\"', 'pushType': '\"int\"', 'popType': '\"\
+int\"', 'peekType': '\"int\"', 'codeSize': '\"546 b\"', 'stackSize': '\"384 b\"', 'work': '\"1576\"'}}",
+		label="\"iDCT8x8_1D_row_fast_263\"",
+		peek="\"64\"",
+		peekType="\"int\"",
+		pop="\"64\"",
+		popType="\"int\"",
+		push="\"64\"",
+		pushType="\"int\"",
+		stackSize="\"352 b\"",
+		work="\"1714\""];
+	node1 -> node9;
+	node11	[codeSize="\"42 b\"",
+		contraction="{'node12': {'label': '\"AnonFilter_a2_265\"', 'push': '\"0\"', 'pop': '\"192\"', 'peek': '\"192\"', 'pushType': '\"void\"', 'popType': '\"int\"', '\
+peekType': '\"int\"', 'codeSize': '\"175 b\"', 'stackSize': '\"160 b\"', 'work': '\"73\"'}}",
+		label="\"WEIGHTED_ROUND_ROBIN_Joiner_313\"",
+		peek="\"0\"",
+		peekType="\"void\"",
+		pop="\"192\"",
+		popType="\"int\"",
+		push="\"192\"",
+		pushType="\"int\"",
+		stackSize="\"32 b\"",
+		work="\"73\""];
+	node2 -> node11;
+	node3 -> node11;
+	node9 -> node11;
+}

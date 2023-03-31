@@ -1,0 +1,361 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="ComplexSource_27" WCET="61760">
+            <memfootprint local-storage="544 b" code-size="309 b" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_33" WCET="384">
+            <memfootprint local-storage="32 b" code-size="774 b" />
+            <prev id="ComplexSource_27" data-sent="64" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_35" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_36" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_37" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_38" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_39" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_40" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_41" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_42" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_43" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_44" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_45" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_46" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_47" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_48" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_49" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_50" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_51" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_52" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_53" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_54" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_55" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_56" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_57" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_58" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_59" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_60" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_61" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_62" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_63" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_64" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_65" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_66" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_67" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_68" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_69" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_70" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_71" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_72" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_73" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_74" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_75" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_76" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_77" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_78" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_79" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_80" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_81" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_82" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_83" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_84" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_85" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_86" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_87" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_88" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_89" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_90" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_91" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_92" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_93" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_94" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_95" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_96" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_97" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="SquareAndScale_98" WCET="361">
+            <memfootprint local-storage="544 b" code-size="73 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_33" data-sent="1" data-type="complex" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_34" WCET="384">
+            <memfootprint local-storage="32 b" code-size="774 b" />
+            <prev id="SquareAndScale_98" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_97" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_96" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_95" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_94" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_93" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_92" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_91" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_90" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_89" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_88" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_87" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_86" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_85" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_84" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_83" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_82" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_81" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_80" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_79" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_78" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_77" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_76" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_75" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_74" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_73" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_72" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_71" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_70" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_69" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_68" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_67" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_66" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_65" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_64" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_63" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_62" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_61" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_60" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_59" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_58" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_57" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_56" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_55" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_54" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_53" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_52" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_51" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_50" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_49" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_48" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_47" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_46" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_45" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_44" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_43" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_42" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_41" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_40" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_39" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_38" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_37" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_36" data-sent="1" data-type="float" />
+            <prev id="SquareAndScale_35" data-sent="1" data-type="float" />
+        </task>
+        <task id="CFAR_gather_30" WCET="202">
+            <memfootprint local-storage="128 b" code-size="354 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_34" data-sent="64" data-type="float" />
+        </task>
+        <task id="AnonFilter_a0_31" WCET="6">
+            <memfootprint local-storage="0 b" code-size="16 b" />
+            <prev id="CFAR_gather_30" data-sent="64" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

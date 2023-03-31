@@ -1,0 +1,260 @@
+<?xml version="1.0" ?>
+<appl>
+    <tasks>
+        <task id="WEIGHTED_ROUND_ROBIN_Splitter_126" WCET="72">
+            <memfootprint local-storage="32 b" code-size="150 b" />
+        </task>
+        <task id="InputGenerate_59" WCET="643">
+            <memfootprint local-storage="0 b" code-size="174 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_126" data-sent="0" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_60" WCET="2538">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="InputGenerate_59" data-sent="4" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_61" WCET="2548">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamFirFilter_60" data-sent="4" data-type="float" />
+        </task>
+        <task id="InputGenerate_63" WCET="643">
+            <memfootprint local-storage="0 b" code-size="174 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_126" data-sent="0" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_64" WCET="2538">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="InputGenerate_63" data-sent="4" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_65" WCET="2548">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamFirFilter_64" data-sent="4" data-type="float" />
+        </task>
+        <task id="InputGenerate_67" WCET="643">
+            <memfootprint local-storage="0 b" code-size="174 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_126" data-sent="0" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_68" WCET="2538">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="InputGenerate_67" data-sent="4" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_69" WCET="2548">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamFirFilter_68" data-sent="4" data-type="float" />
+        </task>
+        <task id="InputGenerate_71" WCET="643">
+            <memfootprint local-storage="0 b" code-size="174 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_126" data-sent="0" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_72" WCET="2538">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="InputGenerate_71" data-sent="4" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_73" WCET="2548">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamFirFilter_72" data-sent="4" data-type="float" />
+        </task>
+        <task id="InputGenerate_75" WCET="643">
+            <memfootprint local-storage="0 b" code-size="174 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_126" data-sent="0" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_76" WCET="2538">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="InputGenerate_75" data-sent="4" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_77" WCET="2548">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamFirFilter_76" data-sent="4" data-type="float" />
+        </task>
+        <task id="InputGenerate_79" WCET="643">
+            <memfootprint local-storage="0 b" code-size="174 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_126" data-sent="0" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_80" WCET="2538">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="InputGenerate_79" data-sent="4" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_81" WCET="2548">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamFirFilter_80" data-sent="4" data-type="float" />
+        </task>
+        <task id="InputGenerate_83" WCET="643">
+            <memfootprint local-storage="0 b" code-size="174 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_126" data-sent="0" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_84" WCET="2538">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="InputGenerate_83" data-sent="4" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_85" WCET="2548">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamFirFilter_84" data-sent="4" data-type="float" />
+        </task>
+        <task id="InputGenerate_87" WCET="643">
+            <memfootprint local-storage="0 b" code-size="174 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_126" data-sent="0" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_88" WCET="2538">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="InputGenerate_87" data-sent="4" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_89" WCET="2548">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamFirFilter_88" data-sent="4" data-type="float" />
+        </task>
+        <task id="InputGenerate_91" WCET="643">
+            <memfootprint local-storage="0 b" code-size="174 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_126" data-sent="0" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_92" WCET="2538">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="InputGenerate_91" data-sent="4" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_93" WCET="2548">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamFirFilter_92" data-sent="4" data-type="float" />
+        </task>
+        <task id="InputGenerate_95" WCET="643">
+            <memfootprint local-storage="0 b" code-size="174 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_126" data-sent="0" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_96" WCET="2538">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="InputGenerate_95" data-sent="4" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_97" WCET="2548">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamFirFilter_96" data-sent="4" data-type="float" />
+        </task>
+        <task id="InputGenerate_99" WCET="643">
+            <memfootprint local-storage="0 b" code-size="174 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_126" data-sent="0" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_100" WCET="2538">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="InputGenerate_99" data-sent="4" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_101" WCET="2548">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamFirFilter_100" data-sent="4" data-type="float" />
+        </task>
+        <task id="InputGenerate_103" WCET="643">
+            <memfootprint local-storage="0 b" code-size="174 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Splitter_126" data-sent="0" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_104" WCET="2538">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="InputGenerate_103" data-sent="4" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_105" WCET="2548">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamFirFilter_104" data-sent="4" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_127" WCET="72">
+            <memfootprint local-storage="416 b" code-size="222 b" />
+            <prev id="BeamFirFilter_105" data-sent="2" data-type="float" />
+            <prev id="BeamFirFilter_101" data-sent="2" data-type="float" />
+            <prev id="BeamFirFilter_97" data-sent="2" data-type="float" />
+            <prev id="BeamFirFilter_93" data-sent="2" data-type="float" />
+            <prev id="BeamFirFilter_89" data-sent="2" data-type="float" />
+            <prev id="BeamFirFilter_85" data-sent="2" data-type="float" />
+            <prev id="BeamFirFilter_81" data-sent="2" data-type="float" />
+            <prev id="BeamFirFilter_77" data-sent="2" data-type="float" />
+            <prev id="BeamFirFilter_73" data-sent="2" data-type="float" />
+            <prev id="BeamFirFilter_69" data-sent="2" data-type="float" />
+            <prev id="BeamFirFilter_65" data-sent="2" data-type="float" />
+            <prev id="BeamFirFilter_61" data-sent="2" data-type="float" />
+        </task>
+        <task id="DUPLICATE_Splitter_128" WCET="360">
+            <memfootprint local-storage="64 b" code-size="36 b" />
+            <prev id="WEIGHTED_ROUND_ROBIN_Joiner_127" data-sent="24" data-type="float" />
+        </task>
+        <task id="BeamForm_107" WCET="390">
+            <memfootprint local-storage="160 b" code-size="130 b" />
+            <prev id="DUPLICATE_Splitter_128" data-sent="24" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_108" WCET="20010">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamForm_107" data-sent="2" data-type="float" />
+        </task>
+        <task id="Magnitude_109" WCET="332">
+            <memfootprint local-storage="64 b" code-size="77 b" />
+            <prev id="BeamFirFilter_108" data-sent="2" data-type="float" />
+        </task>
+        <task id="FloatPrinter_110" WCET="6">
+            <memfootprint local-storage="0 b" code-size="16 b" />
+            <prev id="Magnitude_109" data-sent="1" data-type="float" />
+        </task>
+        <task id="BeamForm_112" WCET="390">
+            <memfootprint local-storage="160 b" code-size="130 b" />
+            <prev id="DUPLICATE_Splitter_128" data-sent="24" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_113" WCET="20010">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamForm_112" data-sent="2" data-type="float" />
+        </task>
+        <task id="Magnitude_114" WCET="332">
+            <memfootprint local-storage="64 b" code-size="77 b" />
+            <prev id="BeamFirFilter_113" data-sent="2" data-type="float" />
+        </task>
+        <task id="FloatPrinter_115" WCET="6">
+            <memfootprint local-storage="0 b" code-size="16 b" />
+            <prev id="Magnitude_114" data-sent="1" data-type="float" />
+        </task>
+        <task id="BeamForm_117" WCET="390">
+            <memfootprint local-storage="160 b" code-size="130 b" />
+            <prev id="DUPLICATE_Splitter_128" data-sent="24" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_118" WCET="20010">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamForm_117" data-sent="2" data-type="float" />
+        </task>
+        <task id="Magnitude_119" WCET="332">
+            <memfootprint local-storage="64 b" code-size="77 b" />
+            <prev id="BeamFirFilter_118" data-sent="2" data-type="float" />
+        </task>
+        <task id="FloatPrinter_120" WCET="6">
+            <memfootprint local-storage="0 b" code-size="16 b" />
+            <prev id="Magnitude_119" data-sent="1" data-type="float" />
+        </task>
+        <task id="BeamForm_122" WCET="390">
+            <memfootprint local-storage="160 b" code-size="130 b" />
+            <prev id="DUPLICATE_Splitter_128" data-sent="24" data-type="float" />
+        </task>
+        <task id="BeamFirFilter_123" WCET="20010">
+            <memfootprint local-storage="128 b" code-size="332 b" />
+            <prev id="BeamForm_122" data-sent="2" data-type="float" />
+        </task>
+        <task id="Magnitude_124" WCET="332">
+            <memfootprint local-storage="64 b" code-size="77 b" />
+            <prev id="BeamFirFilter_123" data-sent="2" data-type="float" />
+        </task>
+        <task id="FloatPrinter_125" WCET="6">
+            <memfootprint local-storage="0 b" code-size="16 b" />
+            <prev id="Magnitude_124" data-sent="1" data-type="float" />
+        </task>
+        <task id="WEIGHTED_ROUND_ROBIN_Joiner_129" WCET="24">
+            <memfootprint local-storage="32 b" code-size="54 b" />
+            <prev id="FloatPrinter_125" data-sent="0" data-type="float" />
+            <prev id="FloatPrinter_120" data-sent="0" data-type="float" />
+            <prev id="FloatPrinter_115" data-sent="0" data-type="float" />
+            <prev id="FloatPrinter_110" data-sent="0" data-type="float" />
+        </task>
+    </tasks>
+    <config clean="false">
+        <solving solve="true" timeout="180" type="synchronized" solver="fls" />
+        <architecture prefetch_code="false">
+            <communication type="BUS" arbiter="FAIR" active-window-time="3" mechanism="sharedonly" behavior="blocking" />
+            
+            <memory size="32 Kb">
+                <data-type name="int" size="64 b" />
+                <data-type name="complex" size="100 b" />
+                <data-type name="dummy" size="42 b" />
+            </memory>
+            
+            <spm store_code="true" assign_region="true" />
+            
+            <processors>
+            </processors>
+        </architecture>
+        <view dot="false" trdot="false" svg="true" />
+    </config>
+</appl>

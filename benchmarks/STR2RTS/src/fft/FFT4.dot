@@ -1,0 +1,95 @@
+digraph streamit {
+fft4_source_1 -> AnonFilter_a0_9_split
+AnonFilter_a1_41_join -> FloatPrinter_3
+fft4_source_1 [ label="fft4_source", push=32, pop=0 ]
+AnonFilter_a1_10_join -> AnonFilter_a0_16_split
+AnonFilter_a1_17_join -> AnonFilter_a0_24_split
+AnonFilter_a1_25_join -> AnonFilter_a0_32_split
+AnonFilter_a1_33_join -> AnonFilter_a0_40_split
+AnonFilter_a0_9_join -> AnonFilter_a1_10_split
+AnonFilter_a0_9_split [ label="fft4_split_weighted_round_robin_1", pop=32, push=32 ]
+AnonFilter_a0_9_join [ label="fft4_join_round_robin", push=32, pop=32 ]
+streamit_library_fft4_identity_11 [ label="fft4_identity", push=16, pop=16 ]
+AnonFilter_a0_9_split -> streamit_library_fft4_identity_11
+streamit_library_fft4_identity_11 -> AnonFilter_a0_9_join
+fft4_multiply_12 [ label="fft4_multiply", push=16, pop=16 ]
+AnonFilter_a0_9_split -> fft4_multiply_12
+fft4_multiply_12 -> AnonFilter_a0_9_join
+AnonFilter_a1_10_split [ label="fft4_split_duplicate", push=32, pop=32 ]
+AnonFilter_a1_10_join [ label="fft4_join_weighted_round_robin_1", pop=32, push=32 ]
+fft4_add_13 [ label="fft4_add", pop=16, push=16 ]
+AnonFilter_a1_10_split -> fft4_add_13
+fft4_add_13 -> AnonFilter_a1_10_join
+fft4_subtract_14 [ label="fft4_subtract", pop=16, push=16 ]
+AnonFilter_a1_10_split -> fft4_subtract_14
+fft4_subtract_14 -> AnonFilter_a1_10_join
+AnonFilter_a0_16_join -> AnonFilter_a1_17_split
+AnonFilter_a0_16_split [ label="fft4_split_weighted_round_robin_2", pop=32, push=32 ]
+AnonFilter_a0_16_join [ label="fft4_join_round_robin", push=32, pop=32 ]
+streamit_library_fft4_identity_18 [ label="fft4_identity", push=16, pop=16 ]
+AnonFilter_a0_16_split -> streamit_library_fft4_identity_18
+streamit_library_fft4_identity_18 -> AnonFilter_a0_16_join
+fft4_multiply_19 [ label="fft4_multiply", push=16, pop=16 ]
+AnonFilter_a0_16_split -> fft4_multiply_19
+fft4_multiply_19 -> AnonFilter_a0_16_join
+AnonFilter_a1_17_split [ label="fft4_split_duplicate", push=32, pop=32 ]
+AnonFilter_a1_17_join [ label="fft4_join_weighted_round_robin_2", pop=32, push=32 ]
+fft4_add_20 [ label="fft4_add", pop=16, push=16 ]
+AnonFilter_a1_17_split -> fft4_add_20
+fft4_add_20 -> AnonFilter_a1_17_join
+fft4_subtract_21 [ label="fft4_subtract", pop=16, push=16 ]
+AnonFilter_a1_17_split -> fft4_subtract_21
+fft4_subtract_21 -> AnonFilter_a1_17_join
+AnonFilter_a0_24_join -> AnonFilter_a1_25_split
+AnonFilter_a0_24_split [ label="fft4_split_weighted_round_robin_4", pop=32, push=32 ]
+AnonFilter_a0_24_join [ label="fft4_join_round_robin", push=32, pop=32 ]
+streamit_library_fft4_identity_26 [ label="fft4_identity", push=16, pop=16 ]
+AnonFilter_a0_24_split -> streamit_library_fft4_identity_26
+streamit_library_fft4_identity_26 -> AnonFilter_a0_24_join
+fft4_multiply_27 [ label="fft4_multiply", push=16, pop=16 ]
+AnonFilter_a0_24_split -> fft4_multiply_27
+fft4_multiply_27 -> AnonFilter_a0_24_join
+AnonFilter_a1_25_split [ label="fft4_split_duplicate", push=32, pop=32 ]
+AnonFilter_a1_25_join [ label="fft4_join_weighted_round_robin_4", pop=32, push=32 ]
+fft4_add_28 [ label="fft4_add", pop=16, push=16 ]
+AnonFilter_a1_25_split -> fft4_add_28
+fft4_add_28 -> AnonFilter_a1_25_join
+fft4_subtract_29 [ label="fft4_subtract", pop=16, push=16 ]
+AnonFilter_a1_25_split -> fft4_subtract_29
+fft4_subtract_29 -> AnonFilter_a1_25_join
+AnonFilter_a0_32_join -> AnonFilter_a1_33_split
+AnonFilter_a0_32_split [ label="fft4_split_weighted_round_robin_8", pop=32, push=32 ]
+AnonFilter_a0_32_join [ label="fft4_join_round_robin", push=32, pop=32 ]
+streamit_library_fft4_identity_34 [ label="fft4_identity", push=16, pop=16 ]
+AnonFilter_a0_32_split -> streamit_library_fft4_identity_34
+streamit_library_fft4_identity_34 -> AnonFilter_a0_32_join
+fft4_multiply_35 [ label="fft4_multiply", push=16, pop=16 ]
+AnonFilter_a0_32_split -> fft4_multiply_35
+fft4_multiply_35 -> AnonFilter_a0_32_join
+AnonFilter_a1_33_split [ label="fft4_split_duplicate", push=32, pop=32 ]
+AnonFilter_a1_33_join [ label="fft4_join_weighted_round_robin_8", pop=32, push=32 ]
+fft4_add_36 [ label="fft4_add", pop=16, push=16 ]
+AnonFilter_a1_33_split -> fft4_add_36
+fft4_add_36 -> AnonFilter_a1_33_join
+fft4_subtract_37 [ label="fft4_subtract", pop=16, push=16 ]
+AnonFilter_a1_33_split -> fft4_subtract_37
+fft4_subtract_37 -> AnonFilter_a1_33_join
+AnonFilter_a0_40_join -> AnonFilter_a1_41_split
+AnonFilter_a0_40_split [ label="fft4_split_weighted_round_robin_16", pop=32, push=32 ]
+AnonFilter_a0_40_join [ label="fft4_join_round_robin", push=32, pop=32 ]
+streamit_library_fft4_identity_42 [ label="fft4_identity", push=16, pop=16 ]
+AnonFilter_a0_40_split -> streamit_library_fft4_identity_42
+streamit_library_fft4_identity_42 -> AnonFilter_a0_40_join
+fft4_multiply_43 [ label="fft4_multiply", push=16, pop=16 ]
+AnonFilter_a0_40_split -> fft4_multiply_43
+fft4_multiply_43 -> AnonFilter_a0_40_join
+AnonFilter_a1_41_split [ label="fft4_split_duplicate", push=32, pop=32 ]
+AnonFilter_a1_41_join [ label="fft4_join_weighted_round_robin_16", pop=32, push=32 ]
+fft4_add_44 [ label="fft4_add", pop=16, push=16 ]
+AnonFilter_a1_41_split -> fft4_add_44
+fft4_add_44 -> AnonFilter_a1_41_join
+fft4_subtract_45 [ label="fft4_subtract", pop=16, push=16 ]
+AnonFilter_a1_41_split -> fft4_subtract_45
+fft4_subtract_45 -> AnonFilter_a1_41_join
+FloatPrinter_3 [ label="fft4_float_printer", pop=32, push=0 ]
+}

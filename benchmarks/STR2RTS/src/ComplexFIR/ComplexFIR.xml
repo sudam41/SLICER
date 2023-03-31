@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<appl>
+    <tasks>
+        <task id="FileReader" WCET="15">
+            <memfootprint local-storage="56 b" code-size="23232 b" />
+        </task>
+        <task id="complex_fir" WCET="1427">
+            <memfootprint local-storage="48 b" code-size="6144 b" />
+           <prev id="FileReader" data-sent="2" data-type="float" />
+        </task>
+        <task id="complexfir_printer" WCET="61">
+            <memfootprint local-storage="24 b" code-size="2208 b" />
+           <prev id="complex_fir" data-sent="2" data-type="float" />
+        </task>
+    </tasks>
+   <config clean="false">
+       <communication type="BUS" arbiter="FAIR" active-window-time="3" token-per-timeunit="1" mechanism="shared" behavior="non-blocking" />
+       <solving type="worst_concurrency" solve="true" solver="fls" timeout="120"/>
+        <architecture prefetch_code="false">
+            <memory>
+            </memory>
+            <spm store-code="true" assign_region="true" />
+            <processors>
+                <processor id="P16" spm-size="32kb"/>
+                <processor id="P15" spm-size="32kb"/>
+                <processor id="P14" spm-size="32kb"/>
+                <processor id="P13" spm-size="32kb"/>
+                <processor id="P12" spm-size="32kb"/>
+                <processor id="P11" spm-size="32kb"/>
+                <processor id="P10" spm-size="32kb"/>
+                <processor id="P9" spm-size="32kb"/>
+                <processor id="P8" spm-size="32kb"/>
+                <processor id="P7" spm-size="32kb"/>
+                <processor id="P6" spm-size="32kb"/>
+                <processor id="P5" spm-size="32kb"/>
+                <processor id="P4" spm-size="32kb"/>
+                <processor id="P3" spm-size="32kb"/>
+                <processor id="P2" spm-size="32kb"/>
+                <processor id="P1" spm-size="32kb"/>
+            </processors>
+        </architecture>
+   </config>
+</appl>
